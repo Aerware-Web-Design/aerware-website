@@ -13,11 +13,13 @@ p, i, b {
 	display: block;
 	padding: 20px 0;
 	background: black;
-	width: 40vw;
+	max-width: calc(100vw - 40px);
+	width: 770px;
 }
 
 #logo > img {
-	max-height: 200px;
+	width: 300px;
+	max-width: calc(100vw - 80px)
 }
 
 /* Create a Parallax Effect */
