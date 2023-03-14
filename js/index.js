@@ -33,3 +33,8 @@ function toggleFunction() {
 		x.className = x.className.replace(" w3-show", "");
 	}
 }
+
+// If dark mode is enabled, change the favicon
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	document.getElementById("light-icon").href = "/img/dark-logo.png";
+}
