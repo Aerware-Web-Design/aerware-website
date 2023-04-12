@@ -10,7 +10,6 @@ p, i, b {
 }
 
 #logo {
-	margin-top: -40vh;
 	display: block;
 	padding: 20px 0;
 	background: black;
@@ -33,7 +32,7 @@ p, i, b {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-	background-image: url('/img/park-bridge.jpg');
+	background-image: url('/img/seattle-skyline.jpg');
 	min-height: 100%;
 }
 
