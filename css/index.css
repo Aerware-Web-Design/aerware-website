@@ -61,15 +61,26 @@ nav {
 		display: none;
 		text-align: right;
 		cursor: pointer;
+		height: 20px;
+		padding: 20px;
+
+		.menu-button-image {
+			display: inline-block;
+			height: 20px;
+			width: 20px;
+			background: no-repeat center / 100% url('../img/bars-white-solid.svg');
+		}
 	}
 
 	@media (max-width: 600px) {
 		top: 0;
-		height: 40px;
+		height: 60px;
 		overflow: hidden;
+		padding: 0;
 
 		a, .menu-button {
 			display: block;
+			padding: 20px;
 		}
 	}
 }
@@ -81,23 +92,27 @@ nav.opaque {
 	a {
 		color: black;
 	}
+
+	.menu-button-image {
+		background: no-repeat center / 100% url('../img/bars-solid.svg');
+	}
 }
 
 nav.expand {
-	height: 280px;
+	height: 300px;
 	background: white;
 	
 	a {
 		color: black;
 	}
 
-	a:not(.menu-button) {
-		padding: 20px;
-	}
-
 	a:not(.menu-button):hover {
 		color: white;
 		background: black;
+	}
+
+	.menu-button-image {
+		background: no-repeat center / 100% url('../img/bars-solid.svg');
 	}
 }
 
@@ -184,9 +199,8 @@ footer {
 
 	.more {
 		display: none;
-		color: gray;
-		font-size: 60px;
-		text-align: center;
+		margin: auto;
+		height: 50px;
 	}
 
 	@media (max-width: 800px) {
@@ -234,19 +248,19 @@ footer {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	padding: 0 0 80px 0;
+	grid-gap: 80px;
+	padding: 0 0 100px 0;
 
 	img {
 		width: 300px;
 		border: 1px solid gray;
 		border-radius: 5px;
-		margin: 40px;
 		transition: 0.5s;
 	}
 
 	img:hover {
 		box-shadow: 5px 5px 5px lightgray;
-		margin: 30px 40px 50px 40px;
+		margin: -10px 0 10px 0;
 	}
 }
 

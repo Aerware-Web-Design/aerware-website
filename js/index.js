@@ -20,10 +20,10 @@ const handleScroll = () => {
 const toggleTeam = () => {
 	if ($('.team-pics').classList.contains('expand')) {
 		$('.team-pics').classList.remove('expand')
-		$('.more').textContent = '⌄'
+		$('.more').src = 'img/angle-down-solid.svg'
 	} else {
 		$('.team-pics').classList.add('expand')
-		$('.more').textContent = '⌃'
+		$('.more').src = 'img/angle-up-solid.svg'
 	}
 }
 
