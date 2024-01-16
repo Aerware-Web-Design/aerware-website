@@ -1,40 +1,40 @@
-function myMap() {
-	myCenter=new google.maps.LatLng(47.61, -122.34);
-	var mapOptions= {
-		center:myCenter,
-		zoom:12, scrollwheel: false, draggable: false,
-		mapTypeId:google.maps.MapTypeId.ROADMAP
-	};
-	var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+const $ = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
 
-	var marker = new google.maps.Marker({
-	position: myCenter,
-	});
-	marker.setMap(map);
+// Toggle navbar visibility for mobile
+const toggleNav = () => $('nav').classList.contains('expand')
+		? $('nav').classList.remove('expand')
+		: $('nav').classList.add('expand')
+
+// Do things when the user scrolls
+const handleScroll = () => {
+	scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+	
+	// Make the navbar opaque after 100px
+	scrollTop > 100
+		? $('nav').classList.add('opaque')
+		: $('nav').classList.remove('opaque')
 }
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-	var navbar = document.getElementById("myNavbar");
-	if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-		navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+// Toggle the team section height when the more button is pressed on mobile
+const toggleTeam = () => {
+	if ($('.team-pics').classList.contains('expand')) {
+		$('.team-pics').classList.remove('expand')
+		$('.more').textContent = '⌄'
 	} else {
-		navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-	}
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-	var x = document.getElementById("navDemo");
-	if (x.className.indexOf("w3-show") == -1) {
-		x.className += " w3-show";
-	} else {
-		x.className = x.className.replace(" w3-show", "");
+		$('.team-pics').classList.add('expand')
+		$('.more').textContent = '⌃'
 	}
 }
 
 // If dark mode is enabled, change the favicon
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-	document.getElementById("light-icon").href = "/img/dark-logo.png";
+	$("#light-icon").href = "/img/dark-logo.png";
 }
+
+// Attach event handlers
+$('.menu-button').onclick = toggleNav 
+$('.more').onclick = toggleTeam
+
+// Poll the scroll position twice a second
+setInterval(handleScroll, 500)

@@ -5,41 +5,60 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" type="image/png" href="/img/light-logo.png" id="light-icon">
-		<link rel="stylesheet" href="css/w3.css">
 		<link rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
+		<nav>
+			<a class="menu-button">☰</a>
+			<a href="#about">about</a>
+			<a href="#services">services</a>
+			<a href="#portfolio">portfolio</a>
+			<a href="#contact">contact</a>
+		</nav>
 
-		<!-- Navbar (sit on top) -->
-		<div class="w3-top w3-text-white">
-			<div class="w3-bar" id="myNavbar">
-			<a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-				<i class="fa fa-bars"></i>
-			</a>
-			<a href="#home" class="w3-bar-item w3-button">HOME</a>
-			<a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-			<a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-			</div>
-
-			<!-- Navbar on small screens -->
-			<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-			<a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-			<a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+		<div id="home">
+			<div class="logo-container">
+				<img class="logo" src="/img/logo-and-name-black-background.jpg">
 			</div>
 		</div>
 
-		<!-- First Parallax Image with Logo Text -->
-		<div class="bgimg-1 w3-display-container" id="home">
-			<div class="w3-display-middle" style="white-space:nowrap;">
-				<span class="w3-center w3-animate-opacity" id="logo"><img src="/img/logo-and-name-black-background.jpg"></img></span>
+		<div id="about">
+			<h1>about us</h1>
+			<p class="slogan">
+				Making your solutions a breeze.
+			</p>
+			<div class="content">
+				<p>
+					Aerware Technologies originated as a consulting company dedicated to helping bring internal and client-facing technologies to realization. Our expanding team possesses extensive expertise in the technology industry coupled with an entrepreneurial mindset. We've collaborated with entities of all scales, ranging from Fortune 500 corporations to small nonprofits. Our passion is helping other small businesses and entrepreneurs realize their dreams. We specialize in crafting, executing, and overseeing tailored solutions aligned with our clients' requirements.
+				</p>
+				<p>
+					Contact us today!
+				</p>
 			</div>
+			<div class="team-pics">
+				<div class="teammate">
+					<img src="img/aspen.jpg">
+					<label>Aspen White <span class="title">CEO</span></label>
+				</div>
+				<div class="teammate">
+					<img src="img/sarah.jpg">
+					<label>Sarah Chae <span class="title">UX Designer</span></label>
+				</div>
+				<div class="teammate">
+					<img src="img/madison.jpg">
+					<label>Madison Hanberry <span class="title">Software Engineer</span></label>
+				</div>
+				<div class="teammate">
+					<img src="img/aeryn.jpg">
+					<label>Aeryn White <span class="title">Software Engineer</span><label>
+				</div>
+			</div>
+			<div class="more">⌄</div>
 		</div>
 
-		<!-- Container (Our Services) -->
-		<div class="w3-content w3-container w3-padding-64" id="about">
-			<h3 class="w3-center">OUR SERVICES</h3>
+		<div id="services">
+			<h1>our services</h1>
 			<p>
 				We excel in providing a range of services tailored to fulfill your business requirements. Our services include:
 			</p>
@@ -56,61 +75,40 @@
 				<li>SEO Optimization and Social Media</li>
 			</ul>
 			<p>
-				If you are interested in learning more or if you are ready to set up a free 30 minute consultation, please contact us <a href="https://aerware.com/#contact">here</a>. 
+				If you are interested in learning more or if you are ready to set up a free 30 minute consultation, please contact us <a href="#contact">here</a>.
 			</p>
-
 		</div>
 
-		<!-- Second Parallax Image with Portfolio Text -->
-		<div class="bgimg-2 w3-display-container">
+		<div id="portfolio">
+			<h1>our portfolio</h1>
+			<a target="_blank" href="https://upright.coffee">
+				<img src="img/upright-tree-screenshot.png">
+			</a>
+			<a target="_blank" href="https://mhanberry1.github.io/nails-by-maya">
+				<img src="img/nails-by-maya-screenshot.png">
+			</a>
 		</div>
 
-		<!-- Container (About Section) -->
-		<div class="w3-content w3-container w3-padding-64" id="about">
-			<h3 class="w3-center">ABOUT US</h3>
-			<p class="w3-center"><em>Making your technology solutions a breeze.</em></p>
-			<p>
-				Aerware Technologies originated as a consulting company dedicated to helping bring internal and client-facing technologies to realization. Our expanding team possesses extensive expertise in the technology industry coupled with an entrepreneurial mindset. We've collaborated with entities of all scales, ranging from Fortune 500 corporations to small nonprofits. Our passion is helping other small businesses and entrepreneurs realize their dreams. We specialize in crafting, executing, and overseeing tailored solutions aligned with our clients' requirements.
-			</p>
-			<p>Contact us today!</p>
-			<div class="w3-row">
-				<div class="w3-col m6 w3-center w3-padding-large">
-					<img src="/img/person-standing-near-lake.jpg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
-				</div>
-			</div>
+		<div id="contact">
+			<h1>get in touch</h1>
+			<span class="contact-method">
+				<img class="location" src="img/location-dot-solid.svg">
+				Seattle Washington, US
+			</span>
+			<span class="contact-method">
+				<img class="phone" src="img/phone-solid.svg">
+				Phone: <a href="tel:4252099022">(425)209-9022</a>
+			</span>
+			<span class="contact-method">
+				<img class="envelope" src="img/envelope-solid.svg">
+				Email: <a href="mailto:info@aerware.com">info@aerware.com</a>
+			</span>
 		</div>
 
-		<!-- Third Parallax Image with Portfolio Text -->
-		<div class="bgimg-3 w3-display-container">
-		</div>
-
-		<!-- Container (Contact Section) -->
-		<div class="w3-content w3-container w3-padding-64" id="contact">
-			<h3 class="w3-center">GET IN TOUCH</h3>
-
-			<div class="w3-row w3-padding-32 w3-section">
-			<div class="w3-col w3-panel">
-				<div class="w3-large w3-margin-bottom w3-centered">
-					<div class="w3-container w3-third">
-						<i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Seattle, Washington, US
-					</div>
-					<div class="w3-container w3-third">
-						<i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: <a href="tel:4252099022">(425)209-9022</a>
-					</div>
-					<div class="w3-container w3-third">
-						<i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: <a href="mailto:info@aerware.com">info@aerware.com</a><br>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-
-		<!-- Footer -->
-		<footer class="w3-center w3-black w3-padding-64 w3-opacity">
-			<a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+		<footer>
+			© 2024 Aerware Technologies
 		</footer>
-		 
-		<script src="/js/index.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6hE5Kgkaj4DqeUNleI58T69A67y7dzjE&callback=myMap"></script>
+
+		<script src="js/index.js"></script>
 	</body>
 </html>

@@ -1,71 +1,277 @@
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-	height: 100%;
-	color: #777;
-	line-height: 1.8;
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+html {
+	scroll-behavior: smooth;
 }
 
-p, i, b {
-	font-size: 1.2em;
+body {
+	font-family: 'Lato', sans-serif;
+	margin: 0;
 }
 
-#logo {
-	display: block;
-	padding: 20px 0;
+h1 {
+	color: white;
 	background: black;
-	max-width: calc(100vw - 40px);
-	width: 770px;
-}
+	text-transform: uppercase;
+	font-size: 60px;
+	font-weight: normal;
+	text-align: center;
+	margin: 0 0 80px 0;
+	width: 100%;
+	line-height: 200px;
 
-#logo > img {
-	width: 300px;
-	max-width: calc(100vw - 80px)
-}
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-	background-image: url('/img/seattle-skyline.jpg');
-	min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-	background-image: url("/img/lights-on-wall.jpg");
-	min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-	background-image: url("/img/macbook-pro-on-brown-wooden-table.jpg");
-	min-height: 400px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-	.bgimg-1, .bgimg-2, .bgimg-3 {
-		background-attachment: scroll;
+	@media(max-width: 800px) {
+		font-size: 30px;
+		line-height: 100px;
 	}
 }
 
-@media (max-device-width: 600px) {
-	.name-field {
-		margin-bottom: 8px;
+p {
+	color: gray;
+	max-width: 800px;
+	font-size: 20px;
+	margin: 30px auto;
+	padding: 0 20px;
+	line-height: 35px;
+}
+
+
+nav {
+	position: fixed;
+	display: block;
+	background: transparent;
+	transition: 0.5s;
+	width: 100%;
+	padding: 10px 0;
+
+	a {
+		padding: 10px 20px;
+		color: white;
+		text-transform: uppercase;
+		text-decoration: white;
+		transition: none;
+	}
+
+	a:hover {
+		color: black;
+		background: rgba(255, 255, 255, 0.5);
+	}
+
+	.menu-button {
+		display: none;
+		text-align: right;
+		cursor: pointer;
+	}
+
+	@media (max-width: 600px) {
+		top: 0;
+		height: 40px;
+		overflow: hidden;
+
+		a, .menu-button {
+			display: block;
+		}
 	}
 }
 
-@media (min-device-width: 601px) {
-	.name-field, .email-field {
-		margin-bottom: 8px;
+nav.opaque {
+	background: white;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+	a {
+		color: black;
+	}
+}
+
+nav.expand {
+	height: 280px;
+	background: white;
+	
+	a {
+		color: black;
+	}
+
+	a:not(.menu-button) {
+		padding: 20px;
+	}
+
+	a:not(.menu-button):hover {
+		color: white;
+		background: black;
+	}
+}
+
+footer {
+	background: black;
+	color: white;
+	font-size: 16px;
+	display: block;
+	line-height: 200px;
+	width: 100%;
+	text-align: center;
+
+	@media(max-width: 800px) {
+		line-height: 100px;
+	}
+}
+
+#home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: url('/img/seattle-skyline.jpg');
+
+	.logo-container {
+		background: black;
+		text-align: center;
+		width: 770px;
+		padding: 10px 0;
+		max-width: calc(100% - 40px);
+
+		.logo {
+			width: 300px;
+			max-width: 100%;
+		}
+	}
+}
+
+#about {
+	padding: 0 0 80px 0;
+	transition: 0.5s;
+
+	.slogan {
+		font-style: italic;
+		text-align: center;
+	}
+
+	.content {
+		margin-bottom: 60px;
+	}
+
+	.team-pics {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		grid-gap: 40px;
+		width: 100%;
+		flex-wrap: wrap;
+
+		.teammate {
+			text-align: center;
+
+			img {
+				min-width: 100px;
+				max-width: 200px;
+				height: 200px;
+				border-radius: 50%;
+			}
+
+			label {
+				display: block;
+				margin: 20px 0;
+				font-size: 20px;
+				line-height: 25px;
+
+				.title {
+					font-size: 16px;
+					color: gray;
+					display: block;
+				}
+			}
+		}
+	}
+
+	.more {
+		display: none;
+		color: gray;
+		font-size: 60px;
+		text-align: center;
+	}
+
+	@media (max-width: 800px) {
+		.team-pics {
+			height: 300px;
+			overflow: hidden;
+			align-content: baseline;
+			transition: 0.5s;
+		}
+
+		.team-pics.expand {
+			height: 1330px;
+		}
+
+		.more {
+			display: block;
+		}
+	}
+}
+
+#services {
+	padding: 0 0 80px 0;
+
+	ul {
+		color: gray;
+		max-width: 800px;
+		font-size: 20px;
+		margin: 30px auto;
+		padding: 0 20px 0 100px;
+		line-height: 35px;
+	}
+
+	a {
+		color: gray;
+	}
+
+	@media (max-width: 800px) {
+		ul {
+			padding-left: 60px;
+		}
+	}
+}
+
+#portfolio {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0 0 80px 0;
+
+	img {
+		width: 300px;
+		border: 1px solid gray;
+		border-radius: 5px;
+		margin: 40px;
+		transition: 0.5s;
+	}
+
+	img:hover {
+		box-shadow: 5px 5px 5px lightgray;
+		margin: 30px 40px 50px 40px;
+	}
+}
+
+#contact {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0 0 80px 0;
+
+	.contact-method {
+		color: gray;
+		font-size: 20px;
+		line-height: 35px;
+		padding: 0 40px;
+
+		a {
+			color: gray;
+		}
+
+		img {
+			height: 25px;
+			padding: 10px;
+			vertical-align: middle;
+			padding: 10px;
+			margin: 0 0 5px 0;
+		}
 	}
 }
