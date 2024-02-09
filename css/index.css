@@ -20,10 +20,6 @@ h1 {
   line-height: 200px;
 }
 
-a {
-  color: gray;
-}
-
 @media (max-width: 800px) {
   h1 {
     font-size: 30px;
@@ -183,6 +179,7 @@ footer {
 
 #about .team-pics .teammate {
   text-align: center;
+  max-width: 200px;
 }
 
 #about .team-pics .teammate img {
@@ -237,6 +234,10 @@ footer {
   margin: 30px auto;
   padding: 0 20px 0 100px;
   line-height: 35px;
+}
+
+#services a {
+  color: gray;
 }
 
 @media (max-width: 800px) {
