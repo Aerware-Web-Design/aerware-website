@@ -15,7 +15,7 @@ h1 {
   font-size: 60px;
   font-weight: normal;
   text-align: center;
-  margin: 0 0 80px 0;
+  margin: 0;
   width: 100%;
   line-height: 200px;
 }
@@ -34,6 +34,10 @@ p {
   margin: 30px auto;
   padding: 0 20px;
   line-height: 35px;
+}
+
+section {
+	padding: 0 0 80px 0;
 }
 
 nav {
@@ -155,7 +159,6 @@ footer {
 }
 
 #about {
-  padding: 0 0 80px 0;
   transition: 0.5s;
 }
 
@@ -223,16 +226,11 @@ footer {
   }
 }
 
-#services {
-  padding: 0 0 80px 0;
-}
-
 #services ul {
   color: gray;
   max-width: 800px;
   font-size: 20px;
   margin: 30px auto;
-  padding: 0 20px 0 100px;
   line-height: 35px;
 }
 
@@ -251,7 +249,6 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   grid-gap: 80px;
-  padding: 0 0 100px 0;
 }
 
 #portfolio img {
@@ -266,11 +263,27 @@ footer {
   margin: -10px 0 10px 0;
 }
 
+#testimonials {
+	text-align: center;
+}
+
+#testimonials .signature {
+	text-align: right;
+	font-style: italic;
+}
+
+#testimonials .review {
+	margin: 20px;
+	max-width: 400px;
+	display: inline-block;
+	text-align: justify;
+	vertical-align: top;
+}
+
 #contact {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0 0 80px 0;
 }
 
 #contact .contact-method {
@@ -290,4 +303,10 @@ footer {
   vertical-align: middle;
   padding: 10px;
   margin: 0 0 5px 0;
+}
+
+.spacer {
+	display: block;
+	height: 80px;
+	width: 100%
 }
