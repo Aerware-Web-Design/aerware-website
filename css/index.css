@@ -156,6 +156,7 @@ footer {
 #home .logo-container .logo {
   width: 300px;
   max-width: 100%;
+  margin-top: -20px; /* Adjust this value as needed to move the logo up */	
 }
 
 #about {
