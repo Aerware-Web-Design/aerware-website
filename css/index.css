@@ -151,7 +151,7 @@ footer {
   width: 770px;
   padding: 10px 0;
   max-width: calc(100% - 40px);
-  margin-top: -60px; /* Moves the container 30px upward */	
+  margin-top: -100px; /* Moves the container 30px upward */	
 }
 
 #home .logo-container .logo {
