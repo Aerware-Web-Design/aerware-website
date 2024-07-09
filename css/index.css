@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
 }
 
@@ -37,7 +37,7 @@ p {
 }
 
 section {
-	padding: 0 0 80px 0;
+  padding: 0 0 80px 0;
 }
 
 nav {
@@ -84,7 +84,8 @@ nav .menu-button .menu-button-image {
     overflow: hidden;
     padding: 0;
   }
-  nav a, nav .menu-button {
+  nav a,
+  nav .menu-button {
     display: block;
     padding: 20px;
   }
@@ -150,7 +151,7 @@ footer {
   text-align: center;
   width: 770px;
   padding: 10px 0;
-  max-width: calc(100% - 40px);	
+  max-width: calc(100% - 40px);
 }
 
 #home .logo-container .logo {
@@ -264,20 +265,20 @@ footer {
 }
 
 #testimonials {
-	text-align: center;
+  text-align: center;
 }
 
 #testimonials .signature {
-	text-align: right;
-	font-style: italic;
+  text-align: right;
+  font-style: italic;
 }
 
 #testimonials .review {
-	margin: 20px;
-	max-width: 400px;
-	display: inline-block;
-	text-align: justify;
-	vertical-align: top;
+  margin: 20px;
+  max-width: 60%;
+  display: inline-block;
+  text-align: justify;
+  vertical-align: top;
 }
 
 #contact {
@@ -306,7 +307,21 @@ footer {
 }
 
 .spacer {
-	display: block;
-	height: 80px;
-	width: 100%
+  display: block;
+  height: 80px;
+  width: 100%;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #829b98;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.unselected-dot {
+  opacity: 60%;
 }
