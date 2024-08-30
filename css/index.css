@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,7 +16,7 @@ h1 {
   font-size: 60px;
   font-weight: normal;
   text-align: center;
-  margin: 0;
+  margin: 0 0 80px 0;
   width: 100%;
   line-height: 200px;
 }
@@ -36,10 +37,6 @@ p {
   line-height: 35px;
 }
 
-section {
-	padding: 0 0 80px 0;
-}
-
 nav {
   position: fixed;
   display: block;
@@ -47,13 +44,14 @@ nav {
   transition: 0.5s;
   width: 100%;
   padding: 10px 0;
+  z-index: 1000;
 }
 
 nav a {
   padding: 10px 20px;
   color: white;
   text-transform: uppercase;
-  text-decoration: white;
+  text-decoration: none;
   transition: none;
 }
 
@@ -140,10 +138,12 @@ footer {
 #home {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
   background: url('/img/seattle-skyline-3.jpg') no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
+  padding-top: 100px; /* Adjust this value to fine-tune the vertical position */
 }
 
 #home .logo-container {
@@ -155,14 +155,15 @@ footer {
 }
 
 #home .logo-container .logo {
+  display: block;
   width: 300px;
   max-width: 100%;
-  background: url('/img/logo-and-name-black-bakground.jpg') no-repeat center center;
-  position: relative;
-  top: -50px;  /* Moves the logo 50px upward */
+  height: auto;
+  transform: translateY(-50px); /* Move the logo up by 50px */
 }
 
 #about {
+  padding: 0 0 80px 0;
   transition: 0.5s;
 }
 
@@ -179,7 +180,7 @@ footer {
   display: flex;
   justify-content: center;
   align-content: center;
-  grid-gap: 40px;
+  gap: 40px;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -230,11 +231,16 @@ footer {
   }
 }
 
+#services {
+  padding: 0 0 80px 0;
+}
+
 #services ul {
   color: gray;
   max-width: 800px;
   font-size: 20px;
   margin: 30px auto;
+  padding: 0 20px 0 100px;
   line-height: 35px;
 }
 
@@ -252,7 +258,8 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  grid-gap: 80px;
+  gap: 80px;
+  padding: 0 0 100px 0;
 }
 
 #portfolio img {
@@ -268,26 +275,28 @@ footer {
 }
 
 #testimonials {
-	text-align: center;
+  text-align: center;
+  padding: 0 0 80px 0;
 }
 
 #testimonials .signature {
-	text-align: right;
-	font-style: italic;
+  text-align: right;
+  font-style: italic;
 }
 
 #testimonials .review {
-	margin: 20px;
-	max-width: 400px;
-	display: inline-block;
-	text-align: justify;
-	vertical-align: top;
+  margin: 20px;
+  max-width: 400px;
+  display: inline-block;
+  text-align: justify;
+  vertical-align: top;
 }
 
 #contact {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 0 0 80px 0;
 }
 
 #contact .contact-method {
@@ -305,12 +314,25 @@ footer {
   height: 25px;
   padding: 10px;
   vertical-align: middle;
-  padding: 10px;
   margin: 0 0 5px 0;
 }
 
 .spacer {
-	display: block;
-	height: 80px;
-	width: 100%
+  display: block;
+  height: 80px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  #home {
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+    padding-top: 80px;
+  }
+
+  #home .logo-container .logo {
+    width: 250px;
+    transform: translateY(-30px);
+  }
 }
