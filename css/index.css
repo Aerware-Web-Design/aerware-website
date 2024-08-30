@@ -140,10 +140,9 @@ footer {
 #home {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Aligns items to the top */
-  padding-top: 50px; /* Adds space at the top to move the logo down slightly */
+  align-items: center;
   height: 100vh;
-  background: url("/img/seattle-skyline-3.jpg");
+  background: url('/img/seattle-skyline-3.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -152,14 +151,15 @@ footer {
   text-align: center;
   width: 770px;
   padding: 10px 0;
-  max-width: calc(100% - 40px);	
+  max-width: calc(100% - 40px);
 }
 
 #home .logo-container .logo {
   width: 300px;
   max-width: 100%;
   background: url('/img/logo-and-name-black-bakground.jpg') no-repeat center center;
-  transform: translateY(-50px); /* Moves the logo up by 50px */
+  position: relative;
+  top: -50px;  /* Moves the logo 50px upward */
 }
 
 #about {
