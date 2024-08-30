@@ -146,7 +146,7 @@ footer {
 }
 
 #home .logo-container {
-  background: black;
+  background: none;
   text-align: center;
   width: 770px;
   padding: 10px 0;
