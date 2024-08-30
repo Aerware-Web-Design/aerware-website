@@ -140,7 +140,8 @@ footer {
 #home {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Aligns items to the top */
+  padding-top: 50px; /* Adds space at the top to move the logo down slightly */
   height: 100vh;
   background: url("/img/seattle-skyline-3.jpg");
   background-size: cover;
@@ -158,6 +159,7 @@ footer {
   width: 300px;
   max-width: 100%;
   background: url('/img/logo-and-name-black-bakground.jpg') no-repeat center center;
+  transform: translateY(-50px); /* Moves the logo up by 50px */
 }
 
 #about {
