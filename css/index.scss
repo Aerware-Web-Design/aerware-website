@@ -143,11 +143,14 @@ footer {
 		width: 770px;
 		padding: 0px 0;
 		max-width: calc(100% - 40px);
-
+	
 		.logo {
-			display: none;
+			display: block; // Ensure the logo is visible
 			width: 300px;
 			max-width: 100%;
+			background: url('/img/dark-logo.png') no-repeat center center;
+			background-size: contain;
+			height: 300px; // Adjust the height to fit the logo
 		}
 	}
 }
