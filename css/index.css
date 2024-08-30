@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 html {
   scroll-behavior: smooth;
@@ -139,19 +139,20 @@ footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding-top: 100px;
   height: 100vh;
   background: url('/img/seattle-skyline-3.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  padding-top: 100px; /* Adjust this value to fine-tune the vertical position */
+  background-position: center center;
 }
 
 #home .logo-container {
   background: none;
   text-align: center;
-  width: 770px;
+  width: 100%;
+  max-width: 770px;
   padding: 10px 0;
-  max-width: calc(100% - 40px);
 }
 
 #home .logo-container .logo {
@@ -159,7 +160,21 @@ footer {
   width: 300px;
   max-width: 100%;
   height: auto;
-  transform: translateY(-50px); /* Move the logo up by 50px */
+  margin: 0 auto;
+  transform: translateY(-50px);
+}
+
+@media (max-width: 600px) {
+  #home {
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+    padding-top: 80px;
+  }
+  #home .logo-container .logo {
+    width: 250px;
+    transform: translateY(-30px);
+  }
 }
 
 #about {
@@ -321,18 +336,4 @@ footer {
   display: block;
   height: 80px;
   width: 100%;
-}
-
-@media (max-width: 600px) {
-  #home {
-    background-position: center center;
-    background-size: cover;
-    background-attachment: scroll;
-    padding-top: 80px;
-  }
-
-  #home .logo-container .logo {
-    width: 250px;
-    transform: translateY(-30px);
-  }
 }
