@@ -143,6 +143,7 @@ footer {
   align-items: center;
   height: 100vh;
   background: url("/img/seattle-skyline.jpg");
+  background-size: cover;
 }
 
 #home .logo-container {
