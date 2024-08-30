@@ -35,7 +35,6 @@ p {
 	line-height: 35px;
 }
 
-
 nav {
 	position: fixed;
 	display: block;
@@ -43,12 +42,13 @@ nav {
 	transition: 0.5s;
 	width: 100%;
 	padding: 10px 0;
+	z-index: 1000;
 
 	a {
 		padding: 10px 20px;
 		color: white;
 		text-transform: uppercase;
-		text-decoration: white;
+		text-decoration: none;
 		transition: none;
 	}
 
@@ -101,7 +101,7 @@ nav.opaque {
 nav.expand {
 	height: 300px;
 	background: white;
-	
+
 	a {
 		color: black;
 	}
@@ -133,45 +133,42 @@ footer {
 #home {
 	display: flex;
 	justify-content: center;
-	align-items: flex-start; /* Aligns items to the top */
-	padding-top: 50px; /* Adjust the padding to move the logo down slightly */
+	align-items: flex-start;
+	padding-top: 100px; /* Adjust this value to fine-tune the vertical position */
 	height: 100vh;
 	background: url('/img/seattle-skyline-3.jpg') no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center center;
-  
+
 	.logo-container {
-	  background: none;
-	  text-align: center;
-	  width: 770px;
-	  padding: 10px 0;
-	  max-width: calc(100% - 40px);
-  
-	  .logo {
-		display: block; // Ensure the logo is visible
-		width: 300px;
-		max-width: 100%;
-		background: url('/img/logo-and-name-black-background.jpg') no-repeat center center;
-		background-size: contain;
-		height: 300px; // Adjust the height to fit the logo
-		transform: translateY(-50px); /* Move the logo up by 50px */
-	  }
+		background: none;
+		text-align: center;
+		width: 770px;
+		padding: 10px 0;
+		max-width: calc(100% - 40px);
+
+		.logo {
+			display: block;
+			width: 300px;
+			max-width: 100%;
+			height: auto;
+			transform: translateY(-50px); /* Move the logo up by 50px */
+		}
+	}
+
+	@media (max-width: 600px) {
+		background-position: center center;
+		background-size: cover;
+		background-attachment: scroll;
+		padding-top: 80px;
+
+		.logo-container .logo {
+			width: 250px;
+			transform: translateY(-30px);
+		}
 	}
 }
-  
-  @media (max-width: 600px) {
-	#home {
-	  background-position: center center;
-	  background-size: cover;
-	  background-attachment: scroll; // Adjusts for potential shifting issues on mobile
-	}
-  
-	.logo-container .logo {
-	  width: 250px; // Slightly smaller logo for mobile view
-	  background-size: contain;
-	}
-  }
 
 #about {
 	padding: 0 0 80px 0;
@@ -190,7 +187,7 @@ footer {
 		display: flex;
 		justify-content: center;
 		align-content: center;
-		grid-gap: 40px;
+		gap: 40px;
 		width: 100%;
 		flex-wrap: wrap;
 
@@ -271,7 +268,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	grid-gap: 80px;
+	gap: 80px;
 	padding: 0 0 100px 0;
 
 	img {
@@ -284,6 +281,24 @@ footer {
 	img:hover {
 		box-shadow: 5px 5px 5px lightgray;
 		margin: -10px 0 10px 0;
+	}
+}
+
+#testimonials {
+	text-align: center;
+	padding: 0 0 80px 0;
+
+	.signature {
+		text-align: right;
+		font-style: italic;
+	}
+
+	.review {
+		margin: 20px;
+		max-width: 400px;
+		display: inline-block;
+		text-align: justify;
+		vertical-align: top;
 	}
 }
 
@@ -307,8 +322,13 @@ footer {
 			height: 25px;
 			padding: 10px;
 			vertical-align: middle;
-			padding: 10px;
 			margin: 0 0 5px 0;
 		}
 	}
+}
+
+.spacer {
+	display: block;
+	height: 80px;
+	width: 100%;
 }
