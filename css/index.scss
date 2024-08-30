@@ -137,6 +137,8 @@ footer {
 	height: 100vh;
 	background: url('/img/seattle-skyline.jpg') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed; // Keeps the background fixed relative to the viewport
+	background-position: center center;
   
 	.logo-container {
 	  background: none;
@@ -153,6 +155,19 @@ footer {
 		background-size: contain;
 		height: 300px; // Adjust the height to fit the logo
 	  }
+	}
+  }
+  
+  @media (max-width: 600px) {
+	#home {
+	  background-position: center center;
+	  background-size: cover;
+	  background-attachment: scroll; // Adjusts for potential shifting issues on mobile
+	}
+  
+	.logo-container .logo {
+	  width: 250px; // Slightly smaller logo for mobile view
+	  background-size: contain;
 	}
   }
 
