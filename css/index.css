@@ -156,6 +156,7 @@ footer {
 #home .logo-container .logo {
   width: 300px;
   max-width: 100%;
+  background: url('/img/dark-logo.png') no-repeat center center;
 }
 
 #about {
