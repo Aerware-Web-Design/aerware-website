@@ -72,7 +72,7 @@ nav .menu-button .menu-button-image {
   display: inline-block;
   height: 20px;
   width: 20px;
-  background: no-repeat center/100% url("../img/bars-white-solid.svg");
+  background: no-repeat center / 100% url('../img/bars-white-solid.svg');
 }
 
 @media (max-width: 600px) {
@@ -98,7 +98,7 @@ nav.opaque a {
 }
 
 nav.opaque .menu-button-image {
-  background: no-repeat center/100% url("../img/bars-solid.svg");
+  background: no-repeat center / 100% url('../img/bars-solid.svg');
 }
 
 nav.expand {
@@ -116,7 +116,7 @@ nav.expand a:not(.menu-button):hover {
 }
 
 nav.expand .menu-button-image {
-  background: no-repeat center/100% url("../img/bars-solid.svg");
+  background: no-repeat center / 100% url('../img/bars-solid.svg');
 }
 
 footer {
@@ -137,8 +137,9 @@ footer {
 
 #home {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   padding-top: 100px;
   height: 100vh;
   background: url('/img/seattle-skyline-3.jpg') no-repeat center center;
@@ -168,7 +169,8 @@ footer {
   color: white;
   font-size: 18px;
   line-height: 1.5;
-  margin-top: 20px;
+  margin-top: auto;
+  margin-bottom: 100px;
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
@@ -191,7 +193,147 @@ footer {
   #home .logo-container .tagline {
     font-size: 16px;
     padding: 10px;
+    margin-bottom: 50px;
   }
 }
 
-/* ... (rest of your existing CSS code) */
+#about {
+  padding: 0 0 80px 0;
+  transition: 0.5s;
+}
+
+#about .slogan {
+  font-style: italic;
+  text-align: center;
+}
+
+#about .content {
+  margin-bottom: 60px;
+}
+
+#about .team-pics {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#about .team-pics .teammate {
+  text-align: center;
+  max-width: 200px;
+}
+
+#about .team-pics .teammate img {
+  min-width: 100px;
+  max-width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#about .team-pics .teammate label {
+  display: block;
+  margin: 20px 0;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+#about .team-pics .teammate label .title {
+  font-size: 16px;
+  color: gray;
+  display: block;
+}
+
+#about .more {
+  display: none;
+  margin: auto;
+  height: 50px;
+}
+
+@media (max-width: 800px) {
+  #about .team-pics {
+    height: 300px;
+    overflow: hidden;
+    align-content: baseline;
+    transition: 0.5s;
+  }
+  #about .team-pics.expand {
+    height: 1330px;
+  }
+  #about .more {
+    display: block;
+  }
+}
+
+#services {
+  padding: 0 0 80px 0;
+}
+
+#services ul {
+  color: gray;
+  max-width: 800px;
+  font-size: 20px;
+  margin: 30px auto;
+  padding: 0 20px 0 100px;
+  line-height: 35px;
+}
+
+#services a {
+  color: gray;
+}
+
+@media (max-width: 800px) {
+  #services ul {
+    padding-left: 60px;
+  }
+}
+
+#testimonials {
+  text-align: center;
+  padding: 0 0 80px 0;
+}
+
+#testimonials .signature {
+  text-align: right;
+  font-style: italic;
+}
+
+#testimonials .review {
+  margin: 20px;
+  max-width: 400px;
+  display: inline-block;
+  text-align: justify;
+  vertical-align: top;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 0 80px 0;
+}
+
+#contact .contact-method {
+  color: gray;
+  font-size: 20px;
+  line-height: 35px;
+  padding: 0 40px;
+}
+
+#contact .contact-method a {
+  color: gray;
+}
+
+#contact .contact-method img {
+  height: 25px;
+  padding: 10px;
+  vertical-align: middle;
+  margin: 0 0 5px 0;
+}
+
+.spacer {
+  display: block;
+  height: 80px;
+  width: 100%;
+}
