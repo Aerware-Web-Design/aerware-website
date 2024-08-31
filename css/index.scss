@@ -131,22 +131,22 @@ footer {
 }
 
 #home {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
   height: 100vh;
   background: url('/img/seattle-skyline-3.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
-  overflow: hidden;
 
   .logo-container {
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
+    background: none;
     text-align: center;
     width: 100%;
     max-width: 770px;
+    padding: 10px 0;
 
     .logo {
       display: block;
@@ -154,46 +154,38 @@ footer {
       max-width: 100%;
       height: auto;
       margin: 0 auto;
+      transform: translateY(-50px);
     }
-  }
-
-  .tagline-container {
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-    text-align: center;
 
     .tagline {
-      display: inline-block;
       color: white;
       font-size: 18px;
       line-height: 1.5;
-      padding: 20px;
+      margin-top: 20px;
+      padding: 15px;
       background-color: rgba(0, 0, 0, 0.7);
       border-radius: 5px;
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
   @media (max-width: 600px) {
+    background-position: center center;
+    background-size: cover;
     background-attachment: scroll;
+    padding-top: 80px;
 
     .logo-container {
-      top: 80px;
-
       .logo {
         width: 250px;
+        transform: translateY(-30px);
       }
-    }
-
-    .tagline-container {
-      bottom: 30px;
 
       .tagline {
         font-size: 16px;
-        padding: 15px;
+        padding: 10px;
       }
     }
   }
