@@ -131,65 +131,57 @@ footer {
 }
 
 #home {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  height: 100vh;
-  background: url('/img/seattle-skyline-3.jpg') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-
-  .logo-container {
-    background: none;
-    text-align: center;
-    width: 100%;
-    max-width: 770px;
-    padding: 10px 0;
-
-    .logo {
-      display: block;
-      width: 300px;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto;
-      transform: translateY(-50px);
-    }
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 100px 0 50px;
+	background: url('/img/seattle-skyline-3.jpg') no-repeat center center;
+	background-size: contain;
+	background-color: #f0f0f0; // Add a background color that complements your image
+  
+	.logo-container {
+	  background: none;
+	  text-align: center;
+	  width: 100%;
+	  max-width: 770px;
+	  padding: 10px 0;
+  
+	  .logo {
+		display: block;
+		width: 300px;
+		max-width: 100%;
+		height: auto;
+		margin: 0 auto;
+	  }
+	}
+  
+	.tagline {
+	  color: white;
+	  font-size: 18px;
+	  line-height: 1.5;
+	  margin-top: 20px;
+	  padding: 15px;
+	  background-color: rgba(0, 0, 0, 0.7);
+	  border-radius: 5px;
+	  max-width: 600px;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+  
+	@media (max-width: 600px) {
+	  padding-top: 80px;
+  
+	  .logo-container .logo {
+		width: 250px;
+	  }
+  
+	  .tagline {
+		font-size: 16px;
+		padding: 10px;
+	  }
+	}
   }
-
-  .tagline {
-    color: white;
-    font-size: 18px;
-    line-height: 1.5;
-    margin-top: auto;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media (max-width: 600px) {
-    background-position: center center;
-    background-size: cover;
-    background-attachment: scroll;
-    padding-top: 80px;
-
-    .logo-container .logo {
-      width: 250px;
-      transform: translateY(-30px);
-    }
-
-    .tagline {
-      font-size: 16px;
-      padding: 10px;
-    }
-  }
-}
 
 #about {
   padding: 0 0 80px 0;
