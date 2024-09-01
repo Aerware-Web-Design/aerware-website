@@ -176,7 +176,7 @@ footer {
   border-radius: 5px;
   max-width: 600px;
   margin-top: auto; /* This will push the tagline towards the bottom */
-  margin-bottom: 20vh; /* Adjust this value to move the tagline higher or lower */
+  margin-bottom: 15vh; /* Adjust this value to move the tagline higher or lower */
   margin-left: auto;
   margin-right: auto;
 }
