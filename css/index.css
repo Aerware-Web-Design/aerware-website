@@ -155,6 +155,7 @@ footer {
   width: 100%;
   max-width: 770px;
   padding: 10px 0;
+  margin-bottom: auto; /* Push logo to the top */
 }
 
 #home .logo-container .logo {
@@ -170,11 +171,12 @@ footer {
   color: white;
   font-size: 18px;
   line-height: 1.5;
-  margin-top: auto;
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   max-width: 600px;
+  margin-top: auto; /* This will push the tagline towards the bottom */
+  margin-bottom: 10vh; /* Adjust this value to move the tagline higher or lower */
   margin-left: auto;
   margin-right: auto;
 }
@@ -186,13 +188,16 @@ footer {
     background-attachment: scroll;
     padding-top: 80px;
   }
+  
   #home .logo-container .logo {
     width: 250px;
     transform: translateY(-30px);
   }
+  
   #home .tagline {
     font-size: 16px;
     padding: 10px;
+    margin-bottom: 5vh; /* Adjust for mobile if needed */
   }
 }
 
