@@ -172,7 +172,7 @@ footer {
   font-size: 18px;
   line-height: 1.5;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   max-width: 600px;
   margin-top: auto; /* This will push the tagline towards the bottom */
@@ -341,4 +341,3 @@ footer {
   height: 80px;
   width: 100%;
 }
-
