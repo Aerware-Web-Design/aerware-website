@@ -169,7 +169,7 @@ footer {
 
 #home .tagline {
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -195,7 +195,7 @@ footer {
   }
   
   #home .tagline {
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px;
     margin-bottom: 5vh; /* Adjust for mobile if needed */
   }
