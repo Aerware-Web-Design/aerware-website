@@ -284,7 +284,7 @@ footer {
 }
 
 #services a {
-  color: gray;
+  color: blue;
 }
 
 @media (max-width: 800px) {
@@ -326,7 +326,7 @@ footer {
 }
 
 #contact .contact-method a {
-  color: gray;
+  color: blue;
 }
 
 #contact .contact-method img {
