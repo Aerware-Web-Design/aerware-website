@@ -35,6 +35,7 @@ p {
   line-height: 35px;
 }
 
+/* Updated Navbar Section */
 nav {
   position: fixed;
   top: 0;
@@ -43,7 +44,7 @@ nav {
   display: flex;
   justify-content: flex-start; /* Aligns items to the left */
   align-items: center;
-  background: rgba(0, 0, 0, 0.8); /* Opaque black background */
+  background: rgba(0, 0, 0, 0.5); /* Opaque black background with 50% opacity */
   transition: 0.5s;
   padding: 10px 20px;
   z-index: 1000;
@@ -65,7 +66,6 @@ nav a {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  transition: none;
 }
 
 nav a:hover {
@@ -89,7 +89,7 @@ nav .menu-button .menu-button-image {
 }
 
 nav.opaque {
-  background: white;
+  background: rgba(255, 255, 255, 0.9); /* White background when navbar becomes opaque */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -101,6 +101,7 @@ nav.opaque .menu-button-image {
   background: no-repeat center / 100% url('../img/bars-solid.svg');
 }
 
+/* Footer Styles */
 footer {
   background: black;
   color: white;
@@ -117,6 +118,7 @@ footer {
   }
 }
 
+/* Home Section */
 #home {
   display: flex;
   flex-direction: column;
@@ -154,7 +156,7 @@ footer {
   font-size: 20px;
   line-height: 1.5;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for tagline */
   border-radius: 5px;
   max-width: 600px;
   margin-top: auto;
@@ -163,6 +165,7 @@ footer {
   margin-right: auto;
 }
 
+/* Bordered Section */
 .bordered-section {
   border: 1px solid #c0c0c0;
   border-radius: 8px;
@@ -376,9 +379,7 @@ footer {
   #about .team-pics {
     height: 300px;
     overflow: hidden;
-   
-
- align-content: baseline;
+    align-content: baseline;
     transition: 0.5s;
   }
 
