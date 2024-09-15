@@ -1,111 +1,47 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
-
-// Variables
-$font-stack: 'Lato', sans-serif;
-$primary-color: black;
-$secondary-color: white;
-$text-color: gray;
-$link-color: blue;
-$border-color: #c0c0c0;
-$background-color: #f9f9f9;
-
-// Mixins
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin section-padding {
-  padding: 0 0 80px 0;
-}
-
-// Global Styles
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: $font-stack;
-  margin: 0;
-}
-
-h1 {
-  color: $secondary-color;
-  background: $primary-color;
-  text-transform: uppercase;
-  font-size: 60px;
-  font-weight: normal;
-  text-align: center;
-  margin: 0 0 80px 0;
-  width: 100%;
-  line-height: 200px;
-
-  @media(max-width: 800px) {
-    font-size: 30px;
-    line-height: 100px;
-  }
-}
-
-p {
-  color: $text-color;
-  font-size: 20px;
-  margin: 30px 0;
-  line-height: 35px;
-}
-
-// Navigation Styles
 nav {
   position: fixed;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: transparent;
   transition: 0.5s;
-  padding: 10px 0;
+  width: 100%;
+  padding: 10px 20px;
   z-index: 1000;
-
-  .nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+  box-sizing: border-box;
 
   .nav-logo {
-    display: flex;
-    align-items: center;
-
-    &-img {
-      height: 40px;
-      width: auto;
-    }
+    height: 40px;
+    width: auto;
+    margin-right: 20px;
   }
 
   .nav-links {
     display: flex;
+    margin-left: auto;
   }
 
   a {
     padding: 10px 20px;
-    color: $secondary-color;
+    color: white;
     text-transform: uppercase;
     text-decoration: none;
     transition: none;
 
     &:hover {
-      color: $primary-color;
+      color: black;
       background: rgba(255, 255, 255, 0.5);
     }
   }
 
   .menu-button {
     display: none;
+    text-align: right;
     cursor: pointer;
     height: 20px;
     padding: 20px;
 
-    &-image {
+    .menu-button-image {
       display: inline-block;
       height: 20px;
       width: 20px;
@@ -113,12 +49,28 @@ nav {
     }
   }
 
+  @media (max-width: 600px) {
+    top: 0;
+    height: 60px;
+    overflow: hidden;
+    padding: 0 20px;
+
+    .nav-links {
+      display: none;
+    }
+
+    a, .menu-button {
+      display: block;
+      padding: 20px;
+    }
+  }
+
   &.opaque {
-    background: $secondary-color;
+    background: white;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 
     a {
-      color: $primary-color;
+      color: black;
     }
 
     .menu-button-image {
@@ -127,12 +79,10 @@ nav {
   }
 
   &.expand {
-    background: $secondary-color;
-
-    .nav-content {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+    height: auto;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
 
     .nav-links {
       display: flex;
@@ -141,266 +91,17 @@ nav {
     }
 
     a {
-      color: $primary-color;
+      color: black;
       width: 100%;
-      padding: 15px 20px;
 
-      &:not(.nav-logo):hover {
-        color: $secondary-color;
-        background: $primary-color;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
-
-    .menu-button {
-      display: block;
-    }
-  }
-}
-
-// Footer Styles
-footer {
-  background: $primary-color;
-  color: $secondary-color;
-  font-size: 16px;
-  display: block;
-  line-height: 200px;
-  width: 100%;
-  text-align: center;
-
-  @media(max-width: 800px) {
-    line-height: 100px;
-  }
-}
-
-// Home Section
-#home {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  height: 80vh;
-  background: url('/img/seattle-skyline-3.jpg') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-
-  .logo-container {
-    background: none;
-    text-align: center;
-    width: 100%;
-    max-width: 770px;
-    padding: 10px 0;
-    margin-bottom: auto;
-
-    .logo {
-      display: block;
-      width: 300px;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto;
-      transform: translateY(-50px);
-    }
-  }
-
-  .tagline {
-    color: $secondary-color;
-    font-size: 20px;
-    line-height: 1.5;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    max-width: 600px;
-    margin-top: auto;
-    margin-bottom: 15vh;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media (max-width: 600px) {
-    background-position: center center;
-    background-size: cover;
-    background-attachment: scroll;
-    padding-top: 80px;
-
-    .logo-container .logo {
-      width: 250px;
-      transform: translateY(-30px);
-    }
-
-    .tagline {
-      font-size: 18px;
-      padding: 10px;
-      margin-bottom: 5vh;
-    }
-  }
-}
-
-// Bordered Section Styles
-.bordered-section {
-  border: 1px solid $border-color;
-  border-radius: 8px;
-  padding: 30px;
-  margin: 20px auto;
-  max-width: 840px;
-  background-color: $background-color;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-// About Section
-#about {
-  @include section-padding;
-  transition: 0.5s;
-
-  .slogan {
-    font-style: italic;
-    text-align: center;
-  }
-
-  .content {
-    @extend .bordered-section;
-    margin-bottom: 60px;
-  }
-
-  .team-pics {
-    @include flex-center;
-    gap: 40px;
-    width: 100%;
-    flex-wrap: wrap;
-
-    .teammate {
-      text-align: center;
-      max-width: 200px;
-
-      img {
-        min-width: 100px;
-        max-width: 200px;
-        height: 200px;
-        border-radius: 50%;
-      }
-
-      label {
-        display: block;
-        margin: 20px 0;
-        font-size: 20px;
-        line-height: 25px;
-
-        .title {
-          font-size: 16px;
-          color: $text-color;
-          display: block;
-        }
-      }
-    }
-  }
-
-  .more {
-    display: none;
-    margin: auto;
-    height: 50px;
-  }
-
-  @media (max-width: 800px) {
-    .team-pics {
-      height: 300px;
-      overflow: hidden;
-      align-content: baseline;
-      transition: 0.5s;
-
-      &.expand {
-        height: 1330px;
+      &:not(.menu-button):hover {
+        color: white;
+        background: black;
       }
     }
 
-    .more {
-      display: block;
+    .menu-button-image {
+      background: no-repeat center / 100% url('../img/bars-solid.svg');
     }
-  }
-}
-
-// Services Section
-#services {
-  @include section-padding;
-
-  .content {
-    @extend .bordered-section;
-  }
-
-  ul {
-    color: $text-color;
-    font-size: 20px;
-    margin: 30px 0;
-    padding-left: 40px;
-    line-height: 35px;
-  }
-
-  a {
-    color: $link-color;
-  }
-}
-
-// Testimonials Section
-#testimonials {
-  @include section-padding;
-  text-align: center;
-
-  .content {
-    @extend .bordered-section;
-  }
-
-  .signature {
-    text-align: right;
-    font-style: italic;
-  }
-
-  .review {
-    margin: 20px 0;
-    text-align: justify;
-  }
-}
-
-// Contact Section
-#contact {
-  @include flex-center;
-  flex-wrap: wrap;
-  @include section-padding;
-
-  .contact-method {
-    color: $text-color;
-    font-size: 20px;
-    line-height: 35px;
-    padding: 0 40px;
-
-    a {
-      color: $link-color;
-    }
-
-    img {
-      height: 25px;
-      padding: 10px;
-      vertical-align: middle;
-      margin: 0 0 5px 0;
-    }
-  }
-}
-
-.spacer {
-  display: block;
-  height: 80px;
-  width: 100%;
-}
-
-// Responsive adjustments for bordered sections
-@media (max-width: 900px) {
-  .bordered-section {
-    margin: 20px;
-    padding: 20px;
   }
 }
