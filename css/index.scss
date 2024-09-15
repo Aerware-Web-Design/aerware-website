@@ -28,10 +28,8 @@ h1 {
 
 p {
   color: gray;
-  max-width: 800px;
   font-size: 20px;
-  margin: 30px auto;
-  padding: 0 20px;
+  margin: 30px 0;
   line-height: 35px;
 }
 
@@ -194,6 +192,17 @@ footer {
   }
 }
 
+/* New styles for bordered sections */
+.bordered-section {
+  border: 1px solid #c0c0c0; /* Light silver color */
+  border-radius: 8px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 840px; /* Slightly wider than the max-width of paragraphs to account for padding */
+  background-color: #f9f9f9; /* Very light grey background for subtle contrast */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
 #about {
   padding: 0 0 80px 0;
   transition: 0.5s;
@@ -204,6 +213,7 @@ footer {
   }
 
   .content {
+    @extend .bordered-section;
     margin-bottom: 60px;
   }
 
@@ -268,23 +278,20 @@ footer {
 #services {
   padding: 0 0 80px 0;
 
+  .content {
+    @extend .bordered-section;
+  }
+
   ul {
     color: gray;
-    max-width: 800px;
     font-size: 20px;
-    margin: 30px auto;
-    padding: 0 20px 0 100px;
+    margin: 30px 0;
+    padding-left: 40px;
     line-height: 35px;
   }
 
   a {
-    color: gray;
-  }
-
-  @media (max-width: 800px) {
-    ul {
-      padding-left: 60px;
-    }
+    color: blue;
   }
 }
 
@@ -292,17 +299,18 @@ footer {
   text-align: center;
   padding: 0 0 80px 0;
 
+  .content {
+    @extend .bordered-section;
+  }
+
   .signature {
     text-align: right;
     font-style: italic;
   }
 
   .review {
-    margin: 20px;
-    max-width: 400px;
-    display: inline-block;
+    margin: 20px 0;
     text-align: justify;
-    vertical-align: top;
   }
 }
 
@@ -319,7 +327,7 @@ footer {
     padding: 0 40px;
 
     a {
-      color: gray;
+      color: blue;
     }
 
     img {
@@ -335,4 +343,12 @@ footer {
   display: block;
   height: 80px;
   width: 100%;
+}
+
+/* Responsive adjustments for bordered sections */
+@media (max-width: 900px) {
+  .bordered-section {
+    margin: 20px;
+    padding: 20px;
+  }
 }
