@@ -1,17 +1,38 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+// Variables
+$font-stack: 'Lato', sans-serif;
+$primary-color: black;
+$secondary-color: white;
+$text-color: gray;
+$link-color: blue;
+$border-color: #c0c0c0;
+$background-color: #f9f9f9;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin section-padding {
+  padding: 0 0 80px 0;
+}
+
+// Global Styles
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: $font-stack;
   margin: 0;
 }
 
 h1 {
-  color: white;
-  background: black;
+  color: $secondary-color;
+  background: $primary-color;
   text-transform: uppercase;
   font-size: 60px;
   font-weight: normal;
@@ -27,42 +48,64 @@ h1 {
 }
 
 p {
-  color: gray;
+  color: $text-color;
   font-size: 20px;
   margin: 30px 0;
   line-height: 35px;
 }
 
+// Navigation Styles
 nav {
   position: fixed;
-  display: block;
+  width: 100%;
   background: transparent;
   transition: 0.5s;
-  width: 100%;
   padding: 10px 0;
   z-index: 1000;
 
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+
+    &-img {
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
   a {
     padding: 10px 20px;
-    color: white;
+    color: $secondary-color;
     text-transform: uppercase;
     text-decoration: none;
     transition: none;
 
     &:hover {
-      color: black;
+      color: $primary-color;
       background: rgba(255, 255, 255, 0.5);
     }
   }
 
   .menu-button {
     display: none;
-    text-align: right;
     cursor: pointer;
     height: 20px;
     padding: 20px;
 
-    .menu-button-image {
+    &-image {
       display: inline-block;
       height: 20px;
       width: 20px;
@@ -70,24 +113,12 @@ nav {
     }
   }
 
-  @media (max-width: 600px) {
-    top: 0;
-    height: 60px;
-    overflow: hidden;
-    padding: 0;
-
-    a, .menu-button {
-      display: block;
-      padding: 20px;
-    }
-  }
-
   &.opaque {
-    background: white;
+    background: $secondary-color;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 
     a {
-      color: black;
+      color: $primary-color;
     }
 
     .menu-button-image {
@@ -96,27 +127,46 @@ nav {
   }
 
   &.expand {
-    height: 300px;
-    background: white;
+    background: $secondary-color;
 
-    a {
-      color: black;
-
-      &:not(.menu-button):hover {
-        color: white;
-        background: black;
-      }
+    .nav-content {
+      flex-direction: column;
+      align-items: flex-start;
     }
 
-    .menu-button-image {
-      background: no-repeat center / 100% url('../img/bars-solid.svg');
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    a {
+      color: $primary-color;
+      width: 100%;
+      padding: 15px 20px;
+
+      &:not(.nav-logo):hover {
+        color: $secondary-color;
+        background: $primary-color;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .menu-button {
+      display: block;
     }
   }
 }
 
+// Footer Styles
 footer {
-  background: black;
-  color: white;
+  background: $primary-color;
+  color: $secondary-color;
   font-size: 16px;
   display: block;
   line-height: 200px;
@@ -128,6 +178,7 @@ footer {
   }
 }
 
+// Home Section
 #home {
   display: flex;
   flex-direction: column;
@@ -147,7 +198,7 @@ footer {
     width: 100%;
     max-width: 770px;
     padding: 10px 0;
-    margin-bottom: auto; /* Push logo to the top */
+    margin-bottom: auto;
 
     .logo {
       display: block;
@@ -160,7 +211,7 @@ footer {
   }
 
   .tagline {
-    color: white;
+    color: $secondary-color;
     font-size: 20px;
     line-height: 1.5;
     padding: 15px;
@@ -185,26 +236,27 @@ footer {
     }
 
     .tagline {
-      font-size: 20px;
+      font-size: 18px;
       padding: 10px;
       margin-bottom: 5vh;
     }
   }
 }
 
-/* New styles for bordered sections */
+// Bordered Section Styles
 .bordered-section {
-  border: 1px solid #c0c0c0; /* Light silver color */
+  border: 1px solid $border-color;
   border-radius: 8px;
   padding: 30px;
   margin: 20px auto;
-  max-width: 840px; /* Slightly wider than the max-width of paragraphs to account for padding */
-  background-color: #f9f9f9; /* Very light grey background for subtle contrast */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 840px;
+  background-color: $background-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+// About Section
 #about {
-  padding: 0 0 80px 0;
+  @include section-padding;
   transition: 0.5s;
 
   .slogan {
@@ -218,9 +270,7 @@ footer {
   }
 
   .team-pics {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    @include flex-center;
     gap: 40px;
     width: 100%;
     flex-wrap: wrap;
@@ -244,7 +294,7 @@ footer {
 
         .title {
           font-size: 16px;
-          color: gray;
+          color: $text-color;
           display: block;
         }
       }
@@ -275,15 +325,16 @@ footer {
   }
 }
 
+// Services Section
 #services {
-  padding: 0 0 80px 0;
+  @include section-padding;
 
   .content {
     @extend .bordered-section;
   }
 
   ul {
-    color: gray;
+    color: $text-color;
     font-size: 20px;
     margin: 30px 0;
     padding-left: 40px;
@@ -291,13 +342,14 @@ footer {
   }
 
   a {
-    color: blue;
+    color: $link-color;
   }
 }
 
+// Testimonials Section
 #testimonials {
+  @include section-padding;
   text-align: center;
-  padding: 0 0 80px 0;
 
   .content {
     @extend .bordered-section;
@@ -314,20 +366,20 @@ footer {
   }
 }
 
+// Contact Section
 #contact {
-  display: flex;
-  justify-content: center;
+  @include flex-center;
   flex-wrap: wrap;
-  padding: 0 0 80px 0;
+  @include section-padding;
 
   .contact-method {
-    color: gray;
+    color: $text-color;
     font-size: 20px;
     line-height: 35px;
     padding: 0 40px;
 
     a {
-      color: blue;
+      color: $link-color;
     }
 
     img {
@@ -345,7 +397,7 @@ footer {
   width: 100%;
 }
 
-/* Responsive adjustments for bordered sections */
+// Responsive adjustments for bordered sections
 @media (max-width: 900px) {
   .bordered-section {
     margin: 20px;
