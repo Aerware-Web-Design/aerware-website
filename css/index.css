@@ -43,7 +43,7 @@ nav {
   display: flex;
   justify-content: flex-start; /* Aligns items to the left */
   align-items: center;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.8); /* Opaque black background */
   transition: 0.5s;
   padding: 10px 20px;
   z-index: 1000;
@@ -58,7 +58,6 @@ nav .nav-logo {
 
 nav .nav-links {
   display: flex;
-  /* Remove margin-left: auto; to align links to the left */
 }
 
 nav a {
@@ -68,8 +67,6 @@ nav a {
   text-decoration: none;
   transition: none;
 }
-
-/* Rest of the nav styles remain the same */
 
 nav a:hover {
   color: black;
@@ -379,7 +376,9 @@ footer {
   #about .team-pics {
     height: 300px;
     overflow: hidden;
-    align-content: baseline;
+   
+
+ align-content: baseline;
     transition: 0.5s;
   }
 
