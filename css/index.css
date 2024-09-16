@@ -44,7 +44,7 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Same opacity as tagline */
   transition: 0.5s;
   padding: 10px 20px;
   z-index: 1000;
@@ -122,11 +122,11 @@ footer {
 #home {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Aligns content to the top, but with space */
+  justify-content: flex-start;
   align-items: center;
-  padding-top: 100px; /* Increased padding to push the content down */
-  padding-bottom: 80px; /* Space below the section */
-  min-height: 64vh; /* Ensures home section takes up 67% of the viewport */
+  padding-top: 100px;
+  padding-bottom: 80px;
+  min-height: 64vh;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
@@ -138,7 +138,7 @@ footer {
   text-align: center;
   width: 100%;
   max-width: 770px;
-  padding: 20px 0; /* Adds padding around the logo */
+  padding: 20px 0;
   margin-bottom: auto;
 }
 
@@ -148,7 +148,7 @@ footer {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
-  transform: translateY(30px); /* Moves the logo down */
+  transform: translateY(30px);
 }
 
 /* Tagline styling */
@@ -157,11 +157,11 @@ footer {
   font-size: 20px;
   line-height: 1.5;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Same opacity as navbar */
   border-radius: 5px;
   max-width: 600px;
-  margin-top: 50px; /* Moves the tagline down */
-  margin-bottom: 40px; /* Adds space below the tagline */
+  margin-top: 50px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -172,12 +172,13 @@ footer {
   padding: 30px;
   margin: 20px auto;
   max-width: 840px;
-  background-color: #f9f9f9;
+  background-color: rgba(0, 0, 0, 0.5); /* Same opacity as navbar and tagline */
+  color: white; /* Ensure text remains readable on the darker background */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #about {
-  padding: 0 0 100px 0; /* Increased padding-bottom to help stretch the page */
+  padding: 0 0 100px 0;
   transition: 0.5s;
 }
 
@@ -198,7 +199,8 @@ footer {
   padding: 30px;
   margin: 20px auto;
   max-width: 840px;
-  background-color: #f9f9f9;
+  background-color: rgba(0, 0, 0, 0.5); /* Same opacity as navbar and tagline */
+  color: white; /* Ensure text remains readable on the darker background */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
