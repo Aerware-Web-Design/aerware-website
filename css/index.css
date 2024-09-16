@@ -35,16 +35,16 @@ p {
   line-height: 35px;
 }
 
-/* Updated Navbar Section */
+/* Navbar Section */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: flex-start; /* Aligns items to the left */
+  justify-content: flex-start;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5); /* Opaque black background with 50% opacity */
+  background: rgba(0, 0, 0, 0.5);
   transition: 0.5s;
   padding: 10px 20px;
   z-index: 1000;
@@ -52,7 +52,7 @@ nav {
 }
 
 nav .nav-logo {
-  height: 40px; /* Adjust this value to control the logo size */
+  height: 40px;
   width: auto;
   margin-right: 20px;
 }
@@ -89,7 +89,7 @@ nav .menu-button .menu-button-image {
 }
 
 nav.opaque {
-  background: rgba(255, 255, 255, 0.9); /* White background when navbar becomes opaque */
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -118,45 +118,18 @@ footer {
   }
 }
 
+/* Home Section */
 #home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 40px;
   min-height: 65vh; /* Set to 65% of the viewport height */
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
-}
-
-/* Add some space at the bottom of the page */
-.spacer {
-  height: 300px; /* Adjust this to add more vertical space if needed */
-}
-
-
-
-
-
-
-#home .logo-container {
-  background: none;
-  text-align: center;
-  width: 100%;
-  max-width: 770px;
-  padding: 10px 0;
-  margin-bottom: auto;
-}
-
-#home .logo-container .logo {
-  display: block;
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  transform: translateY(-50px);
 }
 
 #home .tagline {
@@ -167,14 +140,9 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   max-width: 600px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
-  transform: translateY(-370px); /* Move the tagline up */
-  text-align: center; /* Center the text */
+  margin-top: 40px; /* Moves the tagline down */
+  text-align: center;
 }
-
 
 /* Bordered Section */
 .bordered-section {
@@ -331,11 +299,6 @@ footer {
     background-size: cover;
     background-attachment: scroll;
     padding-top: 80px;
-  }
-
-  #home .logo-container .logo {
-    width: 250px;
-    transform: translateY(-30px);
   }
 
   #home .tagline {
