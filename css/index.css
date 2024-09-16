@@ -122,10 +122,10 @@ footer {
 #home {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Aligns content to the top, but with space */
   align-items: center;
-  padding-top: 60px;
-  padding-bottom: 80px; /* Increased padding-bottom for more space */
+  padding-top: 100px; /* Increased padding to push the content down */
+  padding-bottom: 80px; /* Space below the section */
   min-height: 65vh; /* Ensures home section takes up 65% of the viewport */
   background-size: cover;
   background-attachment: fixed;
@@ -138,7 +138,7 @@ footer {
   text-align: center;
   width: 100%;
   max-width: 770px;
-  padding: 10px 0;
+  padding: 20px 0; /* Adds padding around the logo */
   margin-bottom: auto;
 }
 
@@ -148,7 +148,7 @@ footer {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
-  transform: translateY(-50px); /* Adjust the position of the logo */
+  transform: translateY(30px); /* Moves the logo down */
 }
 
 /* Tagline styling */
