@@ -121,15 +121,16 @@ footer {
 #home {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Ensures content is aligned to the top */
+  justify-content: center; /* Centers content vertically */
   align-items: center;
-  padding-top: 50px; /* Adjust padding as needed */
-  padding-bottom: 50px;
-  min-height: 60vh; /* Increased minimum height to 60% of viewport */
+  padding-top: 20px; /* Small top padding */
+  padding-bottom: 20px;
+  height: auto; /* Let the content define the height */
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
 }
+
 
 
 
