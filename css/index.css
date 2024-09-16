@@ -125,11 +125,12 @@ footer {
   align-items: center;
   padding-top: 50px; /* Adjust padding as needed */
   padding-bottom: 50px;
-  min-height: 50vh; /* Minimum height: 50% of viewport */
+  min-height: 60vh; /* Increased minimum height to 60% of viewport */
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
 }
+
 
 
 
