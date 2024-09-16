@@ -16,8 +16,8 @@ h1 {
   font-size: 60px;
   font-weight: normal;
   text-align: center;
-  margin: 0 0 40px 0; /* Adjusted bottom margin */
-  padding: 10px 0; /* Reduced padding */
+  margin: 0 0 80px 0; /* Adjusted bottom margin */
+  padding: 20px 0; /* Doubled padding */
   width: 100%;
 }
 
@@ -25,7 +25,7 @@ h1 {
   h1 {
     font-size: 30px;
     line-height: normal;
-    padding: 5px 0; /* Further reduced padding for smaller screens */
+    padding: 10px 0; /* Further reduced padding for smaller screens */
   }
 }
 
@@ -123,11 +123,11 @@ footer {
 #home {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Aligns content to the top, but with space */
+  justify-content: flex-start;
   align-items: center;
-  padding-top: 100px; /* Increased padding to push the content down */
-  padding-bottom: 80px; /* Space below the section */
-  min-height: 64vh; /* Ensures home section takes up 67% of the viewport */
+  padding-top: 100px;
+  padding-bottom: 80px;
+  min-height: 64vh;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
@@ -149,7 +149,7 @@ footer {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
-  transform: translateY(30px); /* Moves the logo down */
+  transform: translateY(30px);
 }
 
 /* Tagline styling */
@@ -173,8 +173,8 @@ footer {
 #get-in-touch h1 {
   background: rgba(0, 0, 0, 0.5); /* Same transparent black background */
   color: white;
-  padding: 10px 0; /* Reduced padding for more compact headers */
-  margin-bottom: 20px; /* Reduced margin */
+  padding: 20px 0; /* Doubled padding */
+  margin-bottom: 40px; /* Increased margin */
 }
 
 /* Bordered Section */
@@ -352,7 +352,9 @@ footer {
     display: none;
   }
 
-  nav a, nav .menu-button {
+  nav a,
+
+ nav .menu-button {
     display: block;
     padding: 20px;
   }
