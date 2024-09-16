@@ -11,7 +11,7 @@ body {
 
 h1 {
   color: white;
-  background: black;
+  background: rgba(0, 0, 0, 0.5); /* Opaque black background for all H1 sections */
   text-transform: uppercase;
   font-size: 60px;
   font-weight: normal;
@@ -44,7 +44,7 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  background: rgba(0, 0, 0, 0.5);
   transition: 0.5s;
   padding: 10px 20px;
   z-index: 1000;
@@ -71,6 +71,34 @@ nav a {
 nav a:hover {
   color: black;
   background: rgba(255, 255, 255, 0.5);
+}
+
+nav .menu-button {
+  display: none;
+  text-align: right;
+  cursor: pointer;
+  height: 20px;
+  padding: 20px;
+}
+
+nav .menu-button .menu-button-image {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: no-repeat center / 100% url('../img/bars-white-solid.svg');
+}
+
+nav.opaque {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav.opaque a {
+  color: black;
+}
+
+nav.opaque .menu-button-image {
+  background: no-repeat center / 100% url('../img/bars-solid.svg');
 }
 
 /* Footer Styles */
@@ -137,12 +165,18 @@ footer {
   text-align: center;
 }
 
-/* Section background transparency */
-#about, #services, #testimonials {
-  background: rgba(0, 0, 0, 0.5); /* Transparent black background */
-  padding: 50px 0;
+/* Black background sections (About Us, Services, Testimonials, Get In Touch titles) */
+#about h1,
+#services h1,
+#testimonials h1,
+#get-in-touch h1 {
+  background: rgba(0, 0, 0, 0.5); /* Same transparent black background */
+  color: white;
+  padding: 20px 0;
+  margin-bottom: 40px;
 }
 
+/* Bordered Section */
 .bordered-section {
   border: 1px solid #c0c0c0;
   border-radius: 8px;
@@ -165,6 +199,19 @@ footer {
 
 #about .content {
   margin-bottom: 60px;
+}
+
+#about .content,
+#services .content,
+#testimonials .content,
+#get-in-touch .content {
+  border: 1px solid #c0c0c0;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 840px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #about .team-pics {
@@ -205,6 +252,10 @@ footer {
   display: none;
   margin: auto;
   height: 50px;
+}
+
+#services {
+  padding: 0 0 80px 0;
 }
 
 #services ul {
@@ -300,7 +351,8 @@ footer {
     display: none;
   }
 
-  nav a, nav .menu-button {
+  nav a,
+  nav .menu-button {
     display: block;
     padding: 20px;
   }
