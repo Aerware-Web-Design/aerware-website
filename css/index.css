@@ -132,6 +132,26 @@ footer {
   background-position: center center;
 }
 
+/* Logo container */
+#home .logo-container {
+  background: none;
+  text-align: center;
+  width: 100%;
+  max-width: 770px;
+  padding: 10px 0;
+  margin-bottom: auto;
+}
+
+#home .logo-container .logo {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  transform: translateY(-50px); /* Adjust the position of the logo */
+}
+
+/* Tagline styling */
 #home .tagline {
   color: white;
   font-size: 20px;
@@ -140,7 +160,8 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   max-width: 600px;
-  margin-top: 40px; /* Moves the tagline down */
+  margin-top: 50px; /* Moves the tagline down */
+  margin-bottom: 40px; /* Adds space below the tagline */
   text-align: center;
 }
 
