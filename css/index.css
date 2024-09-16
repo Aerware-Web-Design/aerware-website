@@ -44,7 +44,7 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5); /* Same opacity as tagline */
+  background: rgba(0, 0, 0, 0.5); /* Transparent black background */
   transition: 0.5s;
   padding: 10px 20px;
   z-index: 1000;
@@ -71,34 +71,6 @@ nav a {
 nav a:hover {
   color: black;
   background: rgba(255, 255, 255, 0.5);
-}
-
-nav .menu-button {
-  display: none;
-  text-align: right;
-  cursor: pointer;
-  height: 20px;
-  padding: 20px;
-}
-
-nav .menu-button .menu-button-image {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background: no-repeat center / 100% url('../img/bars-white-solid.svg');
-}
-
-nav.opaque {
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-nav.opaque a {
-  color: black;
-}
-
-nav.opaque .menu-button-image {
-  background: no-repeat center / 100% url('../img/bars-solid.svg');
 }
 
 /* Footer Styles */
@@ -157,7 +129,7 @@ footer {
   font-size: 20px;
   line-height: 1.5;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.5); /* Same opacity as navbar */
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
   border-radius: 5px;
   max-width: 600px;
   margin-top: 50px;
@@ -165,15 +137,19 @@ footer {
   text-align: center;
 }
 
-/* Bordered Section */
+/* Section background transparency */
+#about, #services, #testimonials {
+  background: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  padding: 50px 0;
+}
+
 .bordered-section {
   border: 1px solid #c0c0c0;
   border-radius: 8px;
   padding: 30px;
   margin: 20px auto;
   max-width: 840px;
-  background-color: rgba(0, 0, 0, 0.5); /* Same opacity as navbar and tagline */
-  color: white; /* Ensure text remains readable on the darker background */
+  background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -189,19 +165,6 @@ footer {
 
 #about .content {
   margin-bottom: 60px;
-}
-
-#about .content,
-#services .content,
-#testimonials .content {
-  border: 1px solid #c0c0c0;
-  border-radius: 8px;
-  padding: 30px;
-  margin: 20px auto;
-  max-width: 840px;
-  background-color: rgba(0, 0, 0, 0.5); /* Same opacity as navbar and tagline */
-  color: white; /* Ensure text remains readable on the darker background */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #about .team-pics {
@@ -242,10 +205,6 @@ footer {
   display: none;
   margin: auto;
   height: 50px;
-}
-
-#services {
-  padding: 0 0 80px 0;
 }
 
 #services ul {
