@@ -121,16 +121,15 @@ footer {
 #home {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers content vertically */
+  justify-content: center;
   align-items: center;
-  padding-top: 40px; /* Increase padding for more height */
+  padding-top: 40px;
   padding-bottom: 40px;
-  height: auto; /* Keeps the section height dynamic */
+  min-height: 100vh; /* Ensure home section takes full screen height */
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
 }
-
 
 
 
