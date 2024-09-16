@@ -163,7 +163,7 @@ footer {
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
-  transform: translateY(-570px); /* Move the tagline up */
+  transform: translateY(-370px); /* Move the tagline up */
   text-align: center; /* Center the text */
 }
 
