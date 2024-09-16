@@ -127,7 +127,7 @@ footer {
   padding-top: 100px;
   padding-bottom: 50px;
   height: 80vh;
-  background: url('/img/seattle-skyline-3.jpg') no-repeat center center;
+ /* background: url('/img/seattle-skyline-3.jpg') no-repeat center center; */
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
