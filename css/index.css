@@ -123,9 +123,9 @@ footer {
   flex-direction: column;
   justify-content: center; /* Centers content vertically */
   align-items: center;
-  padding-top: 20px; /* Small top padding */
-  padding-bottom: 20px;
-  height: auto; /* Let the content define the height */
+  padding-top: 40px; /* Increase padding for more height */
+  padding-bottom: 40px;
+  height: auto; /* Keeps the section height dynamic */
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
