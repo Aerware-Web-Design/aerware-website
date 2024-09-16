@@ -121,16 +121,16 @@ footer {
 #home {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Pushes content to the top */
+  justify-content: flex-start; /* Ensures content is aligned to the top */
   align-items: center;
   padding-top: 50px; /* Adjust padding as needed */
   padding-bottom: 50px;
-  /* Remove or adjust the height */
-  /* height: 80vh; */ /* Commenting this out will allow the height to adjust to content */
+  min-height: 50vh; /* Minimum height: 50% of viewport */
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
 }
+
 
 
 #home .logo-container {
