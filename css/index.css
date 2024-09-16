@@ -118,20 +118,20 @@ footer {
   }
 }
 
-/* Home Section */
 #home {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start; /* Pushes content to the top */
   align-items: center;
-  padding-top: 100px;
+  padding-top: 50px; /* Adjust padding as needed */
   padding-bottom: 50px;
-  height: 80vh;
- /* background: url('/img/seattle-skyline-3.jpg') no-repeat center center; */
+  /* Remove or adjust the height */
+  /* height: 80vh; */ /* Commenting this out will allow the height to adjust to content */
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
 }
+
 
 #home .logo-container {
   background: none;
