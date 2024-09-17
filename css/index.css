@@ -125,7 +125,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 600px; /* Changed from min-height: 100vh to a fixed height */
   padding: 20px;
   box-sizing: border-box;
   background-image: url('../img/seattle-skyline-3.png');
@@ -308,8 +308,20 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  #home {
+    height: 500px; /* Slightly shorter on tablets */
+  }
+
+  #home .tagline {
+    font-size: 20px;
+    padding: 15px;
+  }
+}
+
 @media (max-width: 600px) {
   #home {
+    height: 400px; /* Even shorter on mobile phones */
     background-position: center center;
     background-size: cover;
     background-attachment: scroll;
