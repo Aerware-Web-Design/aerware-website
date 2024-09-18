@@ -125,7 +125,14 @@
 				const home = document.getElementById('home');
 				const windowHeight = window.innerHeight;
 				const navHeight = document.querySelector('nav').offsetHeight;
-				home.style.height = `${windowHeight - navHeight}px`;
+				const aboutHeader = document.querySelector('#about h1');
+				const aboutHeaderHeight = aboutHeader ? aboutHeader.offsetHeight : 0;
+				const buffer = 20; // Add a small buffer
+
+				// Subtract the about header height and buffer from the calculated height
+				const homeHeight = windowHeight - navHeight - aboutHeaderHeight - buffer;
+				
+				home.style.height = `${homeHeight}px`;
 			}
 
 			// Set the height initially
@@ -133,6 +140,9 @@
 
 			// Update the height when the window is resized
 			window.addEventListener('resize', setHomeHeight);
+
+			// Update the height when the page is fully loaded (for accurate header height calculation)
+			window.addEventListener('load', setHomeHeight);
 		</script>
 	</body>
 </html>
