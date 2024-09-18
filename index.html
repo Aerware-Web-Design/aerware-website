@@ -120,5 +120,19 @@
 		</footer>
 
 		<script src="js/index.js"></script>
+		<script>
+			function setHomeHeight() {
+				const home = document.getElementById('home');
+				const windowHeight = window.innerHeight;
+				const navHeight = document.querySelector('nav').offsetHeight;
+				home.style.height = `${windowHeight - navHeight}px`;
+			}
+
+			// Set the height initially
+			setHomeHeight();
+
+			// Update the height when the window is resized
+			window.addEventListener('resize', setHomeHeight);
+		</script>
 	</body>
 </html>
