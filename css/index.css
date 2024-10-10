@@ -125,14 +125,14 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 400px; /* Minimum height for smaller screens */
+  min-height: 100vh; /* Full viewport height */
   padding: 20px;
   box-sizing: border-box;
   background-image: url('../img/seattle-skyline-3.jpg');
-  background-size: cover;
-  background-position: center center;
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center center; /* Centers the image */
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; /* Optional, makes the background stay in place on scroll */
 }
 
 /* Tagline styling */
