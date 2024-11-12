@@ -158,17 +158,18 @@ footer {
   margin: 0 0 40px 0;
 }
 
-/* Dark transparent background for the bordered section */
+/* General transparent, dark background for bordered sections */
 .bordered-section {
   background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
-  color: white; /* Text color to stand out against dark background */
-  border: 1px solid #c0c0c0;
-  border-radius: 8px;
-  padding: 30px;
-  margin: 20px auto;
-  max-width: 840px;
+  color: white; /* Ensures text is readable */
+  padding: 20px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center; /* Center-aligns text similar to the tagline */
 }
+
 
 #about {
   padding: 0 0 100px 0;
