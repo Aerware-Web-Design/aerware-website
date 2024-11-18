@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AerwareHealth Insights</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/aerwarehealth_logo_white.png" alt="AerwareHealth Logo">
+            AerwareHealth
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Insights</a></li>
+                <li><a href="#">Recommendations</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="profile"></div>
+    </header>
+
+    <aside>
+        <ul>
+            <li><a href="#">Patient Overview</a></li>
+            <li><a href="#">Health Insights</a></li>
+            <li><a href="#">Records</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <!-- Split the overview into 3 sections within the horizontal box -->
+        <section class="recommendations-box" style="display: flex; justify-content: space-between;">
+            <div class="overview-section">
+                <h3>Patient Details</h3>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Age:</strong> 45</p>
+                <p><strong>Height:</strong> 5'9"</p>
+                <p><strong>Weight:</strong> 180 lbs</p>
+            </div>
+            <div class="overview-section">
+                <h3>Contact & Insurance</h3>
+                <p><strong>Insurance:</strong> HealthInsure Inc.</p>
+                <p><strong>Address:</strong> 123 Elm Street, Springfield, IL</p>
+                <p><strong>Contact:</strong> freddy@kruger.com</p>
+            </div>
+            <div class="overview-section">
+                <h3>Visit Info</h3>
+                <p><strong>Condition:</strong> Stable, follow-up needed for blood pressure.</p>
+                <p><strong>Last Visit:</strong> 09/15/2024</p>
+                <p><strong>Next Visit:</strong> 11/01/2024</p>
+            </div>
+        </section><br>
+
+        <!-- First row of 3 boxes for chart data -->
+        <section class="dashboard">
+            <div class="chart-box">
+                <h2>Weight vs Blood Pressure</h2>
+                <img src="assets/BP_TIME.png" alt="Weight vs Blood Pressure Chart" width="100%">
+            </div>
+            <div class="chart-box">
+                <h2>Vital Signs</h2>
+                <img src="assets/VT_TIME.png" alt="Vital Signs Chart" width="100%">
+            </div>
+            <div class="chart-box">
+                <h2>Cholesterol Levels</h2>
+                <img src="assets/C_TIME.png" alt="Cholesterol Levels Chart" width="100%">
+            </div>
+        </section>
+<br>
+        <!-- Second row of 3 boxes for chart data -->
+        <section class="dashboard">
+            <div class="chart-box">
+                <h2>Blood Sugar Levels</h2>
+                <img src="assets/BS_TIME.png" alt="Blood Sugar Levels Chart" width="100%">
+            </div>
+            <div class="chart-box">
+                <h2>Heart Rate</h2>
+                <img src="assets/H_TIME.png" alt="Heart Rate Chart" width="100%">
+            </div>
+            <div class="chart-box">
+                <h2>Respiratory Rate</h2>
+                <img src="assets/T_TIME.png" alt="Respiratory Rate Chart" width="100%">
+            </div>
+        </section>
+
+        <!-- Consult AI Section -->
+        <section class="consult-ai">
+            <div class="chatbox">
+                <h3>Consult AI</h3>
+                <div class="chat-history">
+                    <p><strong>AI:</strong> Based on the data, I recommend adjusting the medication dosage.</p>
+                    <p><strong>AI:</strong> Suggest routine blood pressure monitoring.</p>
+                </div>
+
+                <!-- Chat Input for Doctor to Ask Questions -->
+                <div class="chat-input">
+                    <textarea placeholder="Enter your question here..."></textarea>
+                    <button>Submit</button>
+                </div>
+            </div>
+        </section>
+	<br><br><br><br>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AerwareHealth. All rights reserved.</p>
+    </footer>
+</body>
+</html>

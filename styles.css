@@ -1,0 +1,727 @@
+/* =================================================
+   FOUNDATION STYLES
+   Base resets, fonts, and core styles
+   ================================================= */
+
+/* Font Imports */
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('assets/noto-sans.woff2') format('woff');
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('assets/libre-baskerville.woff2') format('woff');
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Base HTML/Body Setup */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/bg_image.png');
+    background-color: #f4f4f4;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Page Wrapper - Key for Fixed Footer Layout */
+.page-wrapper {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 60px; /* Exactly footer height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* =================================================
+   SHARED VARIABLES
+   Color schemes and theme variables
+   ================================================= */
+:root {
+    --navbar-bg-light: rgba(255, 255, 255, 0.5);
+    --navbar-bg-dark: rgba(44, 44, 44, 0.5);
+    --navbar-text-light: #000000;
+    --navbar-text-dark: #ffffff;
+}
+
+/* =================================================
+   SHARED LAYOUT COMPONENTS
+   Header, footer, navigation, and common containers
+   ================================================= */
+
+/* Main Container */
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto 0; /* Top margin matches header height */
+    padding: 20px;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(44, 44, 44, 0.1);
+    color: var(--navbar-text-dark);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 50px;
+    font-size: 1.0rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    grid-gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #E1D8AA;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(44, 44, 44, 0.1);
+    color: var(--navbar-text-dark);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+/* Shared Components */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.btn-primary {
+    background: #CDAD7D;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary:hover {
+    background: #B69662;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* =================================================
+   INDEX.HTML STYLES
+   Homepage specific styles
+   ================================================= */
+   .hero {
+       background: rgba(44, 44, 44, 0.3); /* Frosted glass background */
+       backdrop-filter: blur(10px); /* Apply blur effect */
+       padding: 40px; /* Add internal spacing */
+       text-align: left; /* Ensure left-alignment of text */
+       color: #1e3a56;
+       display: flex;
+       flex-direction: column; /* Ensure vertical stacking */
+       justify-content: flex-start; /* Push content down */
+       align-items: flex-start;
+       margin-top: 150px; /* Adjusted for spacing */
+       border-radius: 10px; /* Rounded corners for the frosted effect */
+       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add depth with shadow */
+       max-width: 1000px; /* Restrict width to center the content */
+       margin-left: auto; /* Center the hero horizontally */
+       margin-right: auto;
+   }
+
+   .hero-content {
+       margin: 0 auto; /* Keep it centered horizontally */
+       max-width: 800px; /* Restrict maximum width */
+       text-align: left; /* Align text to the left */
+       padding: 20px; /* Internal spacing */
+   }
+
+   .hero h2 {
+       font-size: 3.5rem;
+       margin-bottom: 20px;
+       color: #CDAD7D;
+       font-family: 'Libre Baskerville', serif;
+   }
+
+   .hero p {
+       font-size: 1.2rem;
+       line-height: 1.6;
+       color: #EBEAE5;
+       margin-bottom: 20px;
+   }
+
+   .hero-buttons {
+       display: flex;
+       justify-content: flex-start; /* Align buttons to the left */
+       gap: 20px; /* Add spacing between buttons */
+       margin-top: 20px;
+   }
+
+   @media (max-width: 800px) {
+       .hero {
+           padding: 20px;
+           margin-top: 100px; /* Adjust for smaller screens */
+       }
+
+       .hero h2 {
+           font-size: 2.8rem;
+       }
+
+       .hero p {
+           font-size: 1rem;
+       }
+   }
+
+   /* =================================================
+    ABOUT.HTML STYLES
+    About page specific styles
+    ================================================= */
+
+    .about-hero {
+       background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
+       backdrop-filter: blur(10px); /* Blur effect for modern look */
+       padding: 40px 20px; /* Spacing inside */
+       border-radius: 10px; /* Rounded corners for a clean design */
+       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Depth with shadow */
+       color: #EBEAE5; /* Light text for readability */
+       text-align: center; /* Center the text horizontally */
+       margin: 20px auto; /* Center the entire section */
+       max-width: 1000px; /* Restrict width for a polished layout */
+       display: flex;
+       flex-direction: column;
+       align-items: center; /* Center align horizontally */
+       justify-content: flex-start; /* Align content at the top */
+       min-height: 300px; /* Maintain section height consistency */
+   }
+
+   .about-hero-content {
+       max-width: 800px; /* Center the content */
+       margin: 0 auto; /* Ensure content is horizontally centered */
+       padding-top: 10px; /* Add slight padding to balance text visually */
+   }
+
+ .about-hero h2 {
+     font-size: 3.2rem;
+     color: #CDAD7D; /* Accent color for heading */
+     font-family: 'Libre Baskerville', serif;
+     margin-bottom: 15px;
+ }
+
+ .about-hero p {
+     font-size: 1.4rem;
+     line-height: 1.6;
+     color: #EBEAE5; /* Light text for readability */
+     margin: 0 auto;
+     max-width: 800px; /* Keep the paragraph aligned */
+ }
+
+ /* About Section */
+ .about-section {
+     padding: 40px 20px;
+     background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
+     backdrop-filter: blur(10px);
+     color: #EBEAE5;
+     border-radius: 10px;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add depth */
+     text-align: center;
+     margin-top: 20px;
+     margin-bottom: 20px;
+ }
+
+ .about-section h3 {
+     font-size: 2.4rem;
+     color: #CDAD7D;
+     font-family: 'Libre Baskerville', serif;
+     margin-bottom: 15px;
+ }
+
+ .about-section p {
+     font-size: 1.3rem;
+     line-height: 1.6;
+     margin: 0 auto;
+     max-width: 900px;
+     color: #EBEAE5;
+ }
+
+ /* Mission Section */
+.mission-section {
+    background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
+    backdrop-filter: blur(10px); /* Blur for frosted appearance */
+    padding: 40px 20px; /* Add internal spacing */
+    border-radius: 10px; /* Rounded corners for clean design */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add depth with shadow */
+    color: #EBEAE5; /* Light text for readability */
+    text-align: center; /* Center the text */
+    margin: 40px auto; /* Center the section vertically and horizontally */
+    max-width: 1000px; /* Restrict width for better layout */
+}
+
+.mission-section h3 {
+    font-size: 2.4rem;
+    color: #CDAD7D; /* Accent color for heading */
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 15px;
+}
+
+.mission-section p {
+    font-size: 1.3rem;
+    line-height: 1.8; /* Improved readability with line spacing */
+    margin: 0 auto; /* Center paragraph text */
+    max-width: 800px; /* Keep paragraph width balanced */
+    color: #EBEAE5; /* Consistent light text color */
+}
+
+ /* Get in Touch Section */
+ .get-in-touch-section {
+     width: 100%;
+     max-width: 1200px;
+     padding: 20px 15px;
+     background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
+     backdrop-filter: blur(10px);
+     border-radius: 10px;
+     text-align: center;
+     margin-top: 50px; /* Push this section further down */
+     margin-bottom: 20px;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+ }
+
+ .get-in-touch-section h3 {
+     color: #CDAD7D;
+     font-family: 'Libre Baskerville', serif;
+     font-size: 2.4rem;
+     margin-bottom: 10px;
+ }
+
+ .get-in-touch-section p {
+     color: #EBEAE5;
+     font-size: 1.3rem;
+     line-height: 1.6;
+     margin-bottom: 10px;
+ }
+
+ /* Team Section */
+ .team-section {
+     padding: 20px;
+     background: rgba(255, 255, 255, 0.1); /* Match frosted glass look */
+     border-radius: 10px;
+     margin-top: 20px;
+     text-align: center;
+ }
+
+ .team-section h4 {
+     color: #CDAD7D;
+     font-family: 'Libre Baskerville', serif;
+     font-size: 2rem;
+     margin-bottom: 15px;
+ }
+
+ .team {
+     display: flex;
+     justify-content: center;
+     gap: 30px;
+     flex-wrap: wrap;
+     margin: 10px 0;
+ }
+
+ .teammate {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 10px;
+     max-width: 180px;
+ }
+
+ .teammate img {
+     border-radius: 50%;
+     width: 150px;
+     height: 150px;
+     object-fit: cover;
+ }
+
+ .teammate strong {
+     color: #CDAD7D;
+     font-size: 1.2rem;
+ }
+
+ .teammate p {
+     color: #EBEAE5;
+     font-size: 1rem;
+ }
+
+ .contact-button {
+     margin: 30px 0;
+ }
+
+ /* Responsive Adjustments */
+ @media (max-width: 800px) {
+     .about-hero-content {
+         padding: 10px;
+     }
+
+     .about-section p {
+         font-size: 1.1rem;
+     }
+
+     .mission-section p {
+         font-size: 1.1rem;
+     }
+
+     .get-in-touch-section p {
+         font-size: 1.1rem;
+     }
+
+     .teammate img {
+         width: 130px;
+         height: 130px;
+     }
+
+     .teammate strong {
+         font-size: 1rem;
+     }
+ }
+
+/* =================================================
+   CONTACT.HTML STYLES
+   Styles specific to the Contact page
+   ================================================= */
+
+/* Contact Hero Section */
+.contact-hero {
+    background: rgba(44, 44, 44, 0.1);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px; /* Create space below hero */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle depth */
+}
+
+.contact-hero h2 {
+    font-size: 2.8rem;
+    color: #CDAD7D;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 15px;
+}
+
+.contact-hero p.pro-statement {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #EBEAE5;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Embedded Form Section */
+.embedded-form-container {
+    padding: 20px;
+    background: rgba(44, 44, 44, 0.2);
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.embedded-form-container h3 {
+    font-size: 2rem;
+    color: #CDAD7D; /* Accent color */
+    margin-bottom: 10px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.embedded-form-container p {
+    font-size: 1.2rem;
+    color: #EBEAE5;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Embedded Form */
+.embedded-form iframe,
+.embedded-form script {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+}
+
+/* Buttons inside the form (if applicable) */
+.embedded-form button,
+.embedded-form input[type="submit"] {
+    background: #CDAD7D;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Noto Sans', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.embedded-form button:hover,
+.embedded-form input[type="submit"]:hover {
+    background: #B69662;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 800px) {
+    .contact-hero h2 {
+        font-size: 2rem;
+    }
+
+    .contact-hero p.pro-statement {
+        font-size: 1.2rem;
+    }
+
+    .embedded-form-container {
+        padding: 15px;
+    }
+
+    .embedded-form-container h3 {
+        font-size: 1.6rem;
+    }
+
+    .embedded-form-container p {
+        font-size: 1rem;
+    }
+}
+
+/* Contact Section Styles */
+/* Contact Section Styles */
+.contact-section {
+    padding: 60px 20px; /* Adds space around the frosted container */
+    display: flex;
+    justify-content: center; /* Centers the frosted container horizontally */
+    align-items: center;
+    text-align: center; /* Aligns text content inside */
+}
+
+.contact-section .frosted-container {
+    background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
+    backdrop-filter: blur(10px); /* Adds blur for modern look */
+    border-radius: 10px;
+    padding: 40px; /* Internal padding for spacing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds depth */
+    max-width: 800px; /* Consistent width */
+    width: 100%; /* Responsive scaling */
+    color: #EBEAE5; /* Light text color */
+    display: flex; /* Flexbox for centering */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align content horizontally */
+    text-align: center; /* Ensures text alignment */
+}
+
+.contact-section .contact-heading {
+    font-size: 2.4rem;
+    color: #CDAD7D; /* Accent color */
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 20px;
+    text-align: center; /* Center-aligns heading text */
+}
+
+.contact-section .contact-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #EBEAE5; /* Matches the frosted section text color */
+    text-align: center; /* Ensures center alignment */
+}
+
+.contact-section .embedded-form {
+    margin-top: 20px;
+    width: 100%; /* Matches frosted container width */
+    text-align: center; /* Center-aligns form content */
+}
+
+/* =================================================
+   SERVICES.HTML STYLES
+   Styles specific to the Services page
+   ================================================= */
+
+/* Services Overview Section */
+
+.services-overview {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center; /* Centers the frosted pane horizontally */
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-overview .frosted-container {
+    background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border-radius: 10px;
+    padding: 40px; /* Internal spacing matches other frosted panes */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add depth */
+    max-width: 1200px; /* Matches width of other frosted sections */
+    width: 100%; /* Ensures responsiveness */
+}
+
+.services-overview h2 {
+    font-size: 2.4rem;
+    color: #CDAD7D;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 20px;
+}
+
+.services-overview p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #EBEAE5;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+
+/* Services List Section */
+.services-list {
+    display: flex;
+    justify-content: space-between; /* Splits columns */
+    gap: 40px; /* Adds space between the columns */
+    padding: 40px 20px;
+    background: rgba(44, 44, 44, 0.2); /* Subtle darker background with transparency */
+    backdrop-filter: blur(10px); /* Adds blur effect for modern look */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+
+.services-list h4 {
+    font-size: 2rem;
+    color: #CDAD7D; /* Reusing the existing orange color */
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 30px; /* Adds spacing between heading and list */
+    text-align: center;
+}
+
+.services-list .column {
+    flex: 1;
+    list-style: disc; /* Adds bullets */
+    margin: 0;
+    padding: 0 20px; /* Adds padding inside each column */
+    color: #EBEAE5; /* Light text for the services */
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.services-list .column li {
+    font-size: 1.2rem;
+    line-height: 1.8; /* Adds spacing between lines */
+    margin-bottom: 10px;
+}
+
+/* Call to Action Section */
+.services-cta {
+    text-align: center;
+    padding: 40px 20px; /* Adds extra padding for clarity */
+    background: rgba(44, 44, 44, 0.2); /* Transparent with blur */
+    backdrop-filter: blur(10px); /* Consistent blur effect */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+    margin-top: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.services-cta p {
+    font-size: 1.4rem; /* Slightly larger for readability */
+    line-height: 1.8;
+    color: #EBEAE5; /* Matches the services section */
+    margin-bottom: 20px; /* Adds space between paragraphs */
+}
+
+.services-cta .cta-text {
+    font-size: 1.4rem;
+    color: #E1D8AA; /* Warm light yellow font for emphasis */
+    margin-bottom: 10px; /* Space below */
+}
+
+.services-cta .cta-link {
+    font-size: 1.4rem;
+    color: #CDAD7D; /* Accent orange for links and additional text */
+}
+
+.services-cta a {
+    color: #CDAD7D; /* Accent orange for links */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.services-cta a:hover {
+    text-decoration: underline; /* Subtle hover effect */
+}
+
+/* Sliding Scale Section */
+.services-payment {
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+    background: rgba(44, 44, 44, 0.2); /* Matches styling of other sections */
+    backdrop-filter: blur(10px); /* Consistent blur */
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+
+.services-payment p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #EBEAE5;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Ensure Footer Does Not Overlap Content */
+.page-wrapper {
+    min-height: calc(100vh - 60px); /* Footer height adjustment */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

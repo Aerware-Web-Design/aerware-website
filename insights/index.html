@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AerwareHealth Insights</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/aerwarehealth_logo_white.png" alt="AerwareHealth Logo">
+            AerwareHealth
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Insights</a></li>
+                <li><a href="#">Recommendations</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="profile"></div>
+    </header>
+
+    <aside>
+        <ul>
+            <li><a href="#">Patient Overview</a></li>
+            <li><a href="#">Health Insights</a></li>
+            <li><a href="#">Records</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section class="dashboard">
+            <div class="overview-card">
+                <h2>Patient Overview</h2>
+                <p>Name: John Doe</p>
+                <p>Birthdate: 01/01/1980</p>
+                <p>Address: 123 Elm Street, Springfield, IL</p>
+                <p>Insurance: HealthInsure Inc.</p>
+                <p>Vitals: Stable</p>
+            </div>
+
+            <div class="health-data">
+                <h2>Health Data Trends</h2>
+                <!-- Placeholder for the Weight vs Blood Pressure Chart -->
+                <img src="assets/BP_TIME.png" alt="Weight vs Blood Pressure Chart" width="100%">
+            </div>
+
+            <div class="additional-data">
+                <h2>Vital Signs</h2>
+                <!-- Placeholder for Vital Signs Comparison -->
+                <img src="assets/VT_TIME.png" alt="Vital Signs Comparison" width="100%">
+            </div>
+        </section>
+
+        <!-- Patient Health Trends -->
+        <section class="ai-recommendations">
+            <div class="recommendations-box">
+                <h3>AI-Generated Recommendations</h3>
+                <p><strong>Reason for Visit:</strong> High Blood Pressure</p>
+                <p><strong>Diagnosis:</strong> Hypertension Stage 1</p>
+                <p><strong>Recommendations:</strong> Adjust medication dosage. Suggest routine blood pressure monitoring.</p>
+            </div>
+        </section>
+
+        <!-- Consult AI Section -->
+        <section class="consult-ai">
+            <div class="chatbox">
+                <h3>Consult AI</h3>
+                <div class="chat-history">
+                    <p><strong>AI:</strong> Based on the data, I recommend adjusting the medication dosage.</p>
+                    <p><strong>AI:</strong> Suggest routine blood pressure monitoring.</p>
+                </div>
+
+                <!-- Chat Input for Doctor to Ask Questions -->
+                <div class="chat-input">
+                    <textarea placeholder="Enter your question here..."></textarea>
+                    <button>Submit</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AerwareHealth. All rights reserved.</p>
+    </footer>
+</body>
+</html>

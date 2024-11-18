@@ -1,0 +1,731 @@
+/* Fonts */
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('assets/noto-sans.woff2') format('woff');
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url('./assets/bg_image.png');
+    background-color: #f4f4f4;
+    color: #333;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 100px; /* Increased padding above footer */
+}
+
+main {
+    flex: 1;
+    margin-top: 120px; /* Increased space below header */
+    margin-bottom: 100px; /* Increased space above footer */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+    --navbar-bg-light: rgba(255, 255, 255, 0.5);
+    --navbar-bg-dark: rgba(44, 44, 44, 0.5);
+    --navbar-text-light: #000000;
+    --navbar-text-dark: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: var(--navbar-bg-dark);
+    backdrop-filter: blur(10px);
+    color: var(--navbar-text-dark);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+    margin-bottom: 80px;
+}
+
+.light-mode header {
+    background: var(--navbar-bg-light);
+    color: var(--navbar-text-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 20px;
+        justify-content: center;
+        column-gap: 100px;
+    }
+}
+
+
+.hero-content,
+.mission-section,
+.team-section,
+.get-in-touch-section,
+.services-overview,
+.services-list,
+.services-payment {
+    color: #CDAD7D; /* Orange color for text */
+}
+
+
+.btn-primary {
+    background: linear-gradient(135deg, #2c2c2c, #3d3d3d, #1e1e1e);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #434343, #000000);
+    color: #00b3b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    grid-gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #00b3b3;
+}
+
+/* Hero Section */
+.hero {
+    background: transparent;
+    padding: 20px;
+    text-align: center;
+    color: #1e3a56;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #1e3a56;
+}
+
+.hero p {
+    margin-bottom: 0px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 50px;
+}
+
+@media (max-width: 800px) {
+    .hero p {
+        margin: 50px 0;
+    }
+}
+
+/* Hero Content */
+.hero-content {
+    background: rgba(255, 255, 255, 0.2);
+    color: #CDAD7D; /* Orange color for Pro Statement text */
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    width: 100%;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Affiliate Bar Section */
+.affiliate-bar {
+    width: 60%;
+    max-width: 800px;
+    height: 50px;
+    margin: 30px auto;
+    border: 2px solid rgba(30, 58, 86, 0.6);
+    background-color: rgba(30, 58, 86, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.affiliate-bar p {
+    font-size: 1.0rem;
+    color: #1e3a56;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* About Us Page */
+.about-section {
+    padding: 40px 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+/* Mission Section */
+.mission-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Team Section */
+.team-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Get in Touch Section */
+.get-in-touch-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 100px; /* Add space below the section */
+}
+
+/* Common section styles */
+.mission-section h3,
+.team-section h3,
+.get-in-touch-section h3 {
+    margin: 0 0 25px 0;
+    font-size: 2.2rem;
+    color: #1e3a56;
+}
+
+.mission-section p,
+.team-section p,
+.get-in-touch-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Team specific styles */
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 40px 0;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.teammate {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Space between items */
+    max-width: 150px; /* Optional: Limit the width */
+}
+
+.teammate img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    object-fit: cover; /* Ensures consistent image styling */
+}
+
+.teammate strong {
+    font-size: 1rem;
+    color: #1e3a56;
+}
+
+.teammate p {
+    font-size: 0.9rem;
+    color: #1e3a56;
+    margin: 0; /* Removes extra spacing */
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .mission-section,
+    .team-section,
+    .get-in-touch-section {
+        padding: 30px 20px;
+    }
+
+    .team {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+/* Contact button styles */
+.contact-button {
+    margin: 25px 0;
+}
+
+/* Hero Section for Technology Page */
+.hero-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Technology Overview Section */
+.tech-overview {
+    padding: 40px 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.tech-overview .container {
+    padding: 40px;
+    text-align: left;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+}
+
+@media (max-width: 800px) {
+    .tech-overview .container {
+        padding: 30px;
+    }
+}
+
+.tech-overview h3 {
+    font-size: 2rem;
+    color: #1e3a56;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.tech-overview p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Features Section */
+.features-section {
+    padding: 60px 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.features-section h3 {
+    font-size: 2rem;
+    color: #1e3a56;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.feature-item {
+    flex-basis: 48%;
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.feature-item h4 {
+    color: #1e3a56;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Use Cases Section */
+.use-cases-section {
+    padding: 60px 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.use-cases-section h3 {
+    font-size: 2rem;
+    color: #1e3a56;
+    margin-bottom: 40px;
+}
+
+.use-cases {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.use-case-item {
+    flex: 1;
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.use-case-item h4 {
+    color: #1e3a56;
+    margin-bottom: 10px;
+}
+
+.use-case-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 60px 50px;
+    background-color: #1e3a56;
+    color: white;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta-section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-section a {
+    background-color: white;
+    color: #1e3a56;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-section a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 40px 20px;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.contact-section h3 {
+    font-size: 2rem;
+    color: #1e3a56;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.contact-section .container {
+    width: fit-content;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    margin: 40px auto;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    display: inline-block;
+    background-color: #1e3a56;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #2b4977;
+}
+
+/* Services Overview Section */
+/* Services Overview Section */
+.services-overview {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
+    backdrop-filter: blur(30px); /* Blur effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+}
+
+.services-overview h3 {
+    font-size: 2.2rem;
+    color: #1e3a56;
+    margin-bottom: 15px;
+}
+
+.services-overview p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Services List Section */
+.services-list {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
+    backdrop-filter: blur(30px); /* Blur effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.services-list h4 {
+    font-size: 1.8rem;
+    color: #1e3a56;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.services-list ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.services-list ul li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Call to Action Section */
+.services-cta {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
+    backdrop-filter: blur(30px); /* Blur effect */
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.services-cta p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.services-cta a {
+    color: #00b3b3;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.services-cta a:hover {
+    color: #005f5f;
+}
+
+/* Flexible Payment Section */
+.services-payment {
+    padding: 30px 20px;
+    margin-bottom: 60px; /* Separation from footer */
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
+    backdrop-filter: blur(30px); /* Blur effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+}
+
+.services-payment p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    font-style: italic;
+}
+
+/* Main Content Spacing */
+main {
+    margin-bottom: 120px; /* Matches spacing in about-section */
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: var(--navbar-bg-dark);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navbar-text-dark);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Light mode footer */
+.light-mode footer {
+    background: var(--navbar-bg-light);
+    color: var(--navbar-text-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}

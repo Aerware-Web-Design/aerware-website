@@ -1,0 +1,420 @@
+/* =================================================
+   FOUNDATION STYLES
+   Base resets, fonts, and core styles
+   ================================================= */
+
+/* Font Imports */
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('assets/noto-sans.woff2') format('woff');
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('assets/libre-baskerville.woff2') format('woff');
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Base HTML/Body Setup */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/bg_image.png');
+    background-color: #f4f4f4;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Page Wrapper - Key for Fixed Footer Layout */
+.page-wrapper {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 60px; /* Exactly footer height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* =================================================
+   SHARED VARIABLES
+   Color schemes and theme variables
+   ================================================= */
+:root {
+    --navbar-bg-light: rgba(255, 255, 255, 0.5);
+    --navbar-bg-dark: rgba(44, 44, 44, 0.5);
+    --navbar-text-light: #000000;
+    --navbar-text-dark: #ffffff;
+}
+
+/* =================================================
+   SHARED LAYOUT COMPONENTS
+   Header, footer, navigation, and common containers
+   ================================================= */
+
+/* Main Container */
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto 0; /* Top margin matches header height */
+    padding: 20px;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(44, 44, 44, 0.1);
+    color: var(--navbar-text-dark);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 50px;
+    font-size: 1.0rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    grid-gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #E1D8AA;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(44, 44, 44, 0.1);
+    color: var(--navbar-text-dark);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+/* Shared Components */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.btn-primary {
+    background: #CDAD7D;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary:hover {
+    background: #B69662;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* =================================================
+   INDEX.HTML STYLES
+   Homepage specific styles
+   ================================================= */
+.hero {
+    background: transparent;
+    padding: 0 5%; /* Adjust horizontal padding */
+    text-align: left; /* Ensure left-alignment of text */
+    color: #1e3a56;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    justify-content: flex-start; /* Push content down */
+    align-items: flex-start;
+    margin-top: 200px; /* Increased to push content down */
+}
+
+.hero-content {
+    margin: 0 auto; /* Keep it centered horizontally */
+    max-width: 800px; /* Restrict maximum width */
+    text-align: left; /* Align text to the left */
+    margin-top: 150px; /* Add margin to push it down */
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #CDAD7D;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #EBEAE5;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 20px; /* Add spacing between buttons */
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        padding: 20px;
+        margin-top: 150px; /* Slightly adjust for smaller screens */
+    }
+
+    .hero h2 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* =================================================
+   ABOUT.HTML STYLES
+   About page specific styles
+   ================================================= */
+
+/* Hero Section */
+.about-hero {
+    background: transparent;
+    padding: 20px 10%; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #EBEAE5;
+    position: relative;
+    min-height: 300px; /* Adjust height for tighter visuals */
+    margin-top: -60px; /* Moves the section up */
+    margin-bottom: 10px; /* Reduced spacing after the section */
+}
+
+.about-hero-content {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 10px; /* Reduced padding around content */
+}
+
+.about-hero h2 {
+    font-size: 3.2rem; /* Adjust font size */
+    margin-bottom: 15px; /* Reduced spacing below heading */
+    color: #CDAD7D;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.about-hero p {
+    font-size: 1.4rem; /* Slightly larger for readability */
+    line-height: 1.6; /* Tighter line height */
+    color: #EBEAE5;
+    margin: 0 auto;
+    max-width: 900px; /* Restrict width */
+    padding-bottom: 15px; /* Reduced space below text */
+}
+
+/* Content Container */
+.content-container {
+    margin-top: -60px; /* Further aligns sections closer */
+}
+
+/* About Section */
+.about-section {
+    padding: 20px 15px; /* Reduced padding for tighter visuals */
+    color: #EBEAE5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Bring elements closer together */
+    text-align: center;
+    margin-top: 0px; /* Raise the section */
+    margin-bottom: 5px; /* Minimize space below */
+}
+
+/* Mission Section */
+.mission-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 15px; /* Further reduced padding */
+    background: transparent;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px; /* Proper separation from the previous section */
+    margin-bottom: 10px; /* Reduced spacing after the section */
+}
+
+.mission-section h3 {
+    color: #CDAD7D;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.4rem; /* Slightly smaller heading */
+    margin-bottom: 10px; /* Reduced spacing below heading */
+}
+
+.mission-section p {
+    color: #EBEAE5;
+    font-size: 1.3rem; /* Slightly smaller font */
+    line-height: 1.6; /* Tighter line height */
+    margin: 0 auto;
+    max-width: 900px; /* Narrower content area */
+    padding: 3px 0; /* Reduced spacing */
+}
+
+/* Team Section */
+.team-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 15px; /* Further reduced padding */
+    background: transparent;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px; /* Proper separation from the previous section */
+    margin-bottom: 10px; /* Reduced spacing after the section */
+}
+
+.team-section h3 {
+    color: #CDAD7D;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.4rem; /* Slightly smaller heading */
+    margin-bottom: 10px; /* Reduced spacing below heading */
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Reduced spacing between teammates */
+    margin: 5px 0; /* Further reduced top and bottom spacing */
+    flex-wrap: wrap;
+}
+
+.teammate {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Reduced space between items */
+    max-width: 150px; /* Slightly smaller max width */
+}
+
+.teammate img {
+    border-radius: 50%; /* Keeps images in a circle */
+    width: 150px; /* Adjust image size */
+    height: 150px;
+    margin-bottom: 5px; /* Reduced margin below image */
+    object-fit: cover;
+}
+
+.teammate strong {
+    color: #CDAD7D;
+    font-size: 1.1rem; /* Slightly smaller font for names */
+}
+
+.teammate p {
+    color: #EBEAE5;
+    font-size: 0.9rem; /* Slightly smaller font */
+    margin: 0;
+}
+
+/* Get in Touch Section */
+.get-in-touch-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 15px; /* Further reduced padding */
+    background: transparent;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px; /* Proper separation from the previous section */
+    margin-bottom: 20px; /* Slightly reduced margin above footer */
+}
+
+.get-in-touch-section h3 {
+    color: #CDAD7D;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.4rem; /* Slightly smaller heading */
+    margin-bottom: 10px; /* Reduced spacing below heading */
+}
+
+.get-in-touch-section p {
+    color: #EBEAE5;
+    font-size: 1.3rem; /* Slightly smaller font */
+    line-height: 1.6; /* Tighter line height */
+    margin-bottom: 10px; /* Reduced spacing */
+}
+
+.contact-button {
+    margin: 30px 0; /* Increased margin-top to create more space above the button */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 800px) {
+    .about-hero-content {
+        padding: 10px; /* Reduced padding */
+    }
+
+    .team {
+        flex-direction: column;
+        gap: 15px; /* Reduced gap on smaller screens */
+    }
+
+    .mission-section p {
+        font-size: 1.1rem; /* Adjust font size for smaller screens */
+    }
+
+    .get-in-touch-section p {
+        font-size: 1.1rem; /* Adjust font size for smaller screens */
+    }
+
+    .teammate img {
+        width: 130px; /* Smaller size on mobile */
+        height: 130px;
+    }
+
+    .teammate strong {
+        font-size: 1rem; /* Smaller font size */
+    }
+}
