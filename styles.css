@@ -85,13 +85,14 @@ main {
     background: linear-gradient(to right, #101820, #101820 50%, #101820 100%);
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Logo left, links right */
-    padding: 0 20px; /* Adjust padding for better fit */
+    justify-content: space-between;
+    padding: 0 20px;
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Include padding in width calculation */
-    overflow: hidden; /* Prevent content overflow */
+    box-sizing: border-box;
+    min-width: 320px; /* Prevent navbar from breaking on very small screens */
 }
+
 
 /* Logo Styling */
 .navbar-logo {
