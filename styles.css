@@ -622,23 +622,22 @@ footer {
    ================================================= */
 
 /* Services Overview Section */
-
-/* Services Overview Section */
 .services-overview {
-    padding: 40px 20px; /* Consistent internal spacing */
+    padding: 40px 20px; /* Matches other frosted sections */
     display: flex;
     justify-content: center; /* Centers the frosted container horizontally */
     align-items: center;
     text-align: center; /* Center-aligns text inside */
-    margin-bottom: 20px; /* Space below the section */
+    margin-top: 40px; /* Adds consistent space above */
+    margin-bottom: 40px; /* Adds consistent space below */
 }
 
 .services-overview .frosted-container {
-    background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
-    backdrop-filter: blur(10px); /* Apply blur effect */
-    border-radius: 10px; /* Consistent rounded corners */
-    padding: 40px; /* Matches the padding of other frosted sections */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    background: rgba(44, 44, 44, 0.2); /* Match transparency with other sections */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 10px; /* Same rounded corners */
+    padding: 40px; /* Matches padding of other frosted sections */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for consistency */
     max-width: 800px; /* Matches the width of other frosted sections */
     width: 100%; /* Ensures responsiveness */
     color: #EBEAE5; /* Matches text color */
@@ -648,19 +647,19 @@ footer {
 }
 
 .services-overview h2 {
-    font-size: 2.4rem;
-    color: #CDAD7D;
+    font-size: 2rem; /* Matches heading size of other sections */
+    color: #CDAD7D; /* Accent color */
+    margin-bottom: 20px; /* Consistent space below heading */
     font-family: 'Libre Baskerville', serif;
-    margin-bottom: 20px;
 }
 
 .services-overview p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.2rem; /* Matches paragraph font size */
+    line-height: 1.8; /* Adjust for better readability */
+    margin-bottom: 30px; /* Consistent space below the paragraph */
     color: #EBEAE5;
     font-family: 'Noto Sans', sans-serif;
 }
-
 
 
 /* Services List Section */
