@@ -767,31 +767,35 @@ footer {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
     font-family: 'Noto Sans', sans-serif;
     color: #EBEAE5;
+    max-width: 900px; /* Centers and constrains the section width */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Customer List */
 .customer-list {
     list-style: none; /* Removes default bullets */
     padding: 0;
-    margin: 0 auto; /* Centers the entire list container */
+    margin: 0;
     display: flex;
     flex-direction: column; /* Stack customers vertically */
-    gap: 20px; /* Adds space between customer boxes */
-    align-items: center; /* Centers each customer box */
+    gap: 25px; /* Adds consistent spacing between rows */
+    align-items: center; /* Center-aligns each customer box */
 }
 
 /* Individual Customer Row */
 .customer-list li {
     display: flex;
     align-items: center; /* Aligns logo and text vertically */
-    gap: 15px; /* Space between logo and name */
-    justify-content: center; /* Centers the entire content (logo + name) */
-    padding: 10px 15px; /* Adds padding around each item */
+    justify-content: flex-start; /* Ensures even alignment for logo and name */
+    gap: 15px; /* Space between logo and customer name */
+    padding: 15px 20px; /* Adds padding around each item */
     background: rgba(44, 44, 44, 0.5); /* Subtle background for each row */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional depth */
-    width: auto; /* Ensures the box is just wide enough for the content */
-    text-align: center; /* Centers text within the box */
+    width: 100%; /* Ensures rows span evenly */
+    max-width: 800px; /* Constrains row width for consistency */
+    text-align: left; /* Ensures text aligns consistently */
 }
 
 /* Customer Logo */
@@ -812,6 +816,8 @@ footer {
     font-size: 1.2rem;
     font-weight: 400;
     color: #EBEAE5;
+    text-align: left; /* Aligns text properly */
+    flex: 1; /* Ensures text takes up remaining space evenly */
 }
 
 /* Ensure Footer Does Not Overlap Content */
