@@ -77,33 +77,34 @@ main {
 }
 
 /* Header and Navigation */
+/* General Navbar Styling */
 .main-header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px;
+    height: 60px; /* Reduce header height */
     background: linear-gradient(to right, #101820, #101820 50%, #101820 100%);
     display: flex;
     align-items: center;
     justify-content: space-between; /* Logo left, links right */
-    padding: 0 50px; /* Space around the edges */
+    padding: 0 20px; /* Reduce padding for smaller screens */
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Include padding in width */
+    box-sizing: border-box;
 }
 
 /* Navigation Bar */
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Logo left, links right */
-    width: 100%; /* Ensures nav spans the full width */
+    justify-content: space-between;
+    width: 100%;
 }
 
 /* Logo Styling */
 .navbar-logo {
-    height: 50px; /* Adjust logo size */
-    max-height: 100%;
+    height: 40px; /* Smaller logo for compact spacing */
+    width: auto; /* Maintain aspect ratio */
 }
 
 /* Navigation Links */
@@ -112,20 +113,17 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 20px; /* Space between links */
-}
-
-nav ul li {
-    margin: 0; /* Remove extra spacing */
+    gap: 10px; /* Reduce spacing between links */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 300;
-    padding: 5px 10px;
-    transition: border-bottom 0.3s ease; /* Smooth hover effect */
+    font-size: 0.9rem; /* Reduce link font size */
+    padding: 5px 8px; /* Smaller padding around links */
     white-space: nowrap; /* Prevent links from wrapping */
+    transition: border-bottom 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -135,21 +133,21 @@ nav ul li a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .main-header {
-        padding: 0 20px; /* Smaller padding for mobile */
-        height: 60px; /* Adjust header height */
-    }
-
-    nav ul {
-        flex-direction: row; /* Ensure links remain in a single row */
-        gap: 10px; /* Reduce spacing for smaller screens */
+        height: 50px; /* Further reduce header height on smaller screens */
+        padding: 0 10px; /* Minimal padding for tight spaces */
     }
 
     .navbar-logo {
-        height: 40px; /* Scale down logo size for mobile */
+        height: 30px; /* Scale down logo */
+    }
+
+    nav ul {
+        gap: 5px; /* Minimize spacing between links */
     }
 
     nav ul li a {
-        font-size: 0.9rem; /* Slightly smaller text for mobile */
+        font-size: 0.8rem; /* Smaller font for links */
+        padding: 4px 6px; /* Compact padding for tighter layout */
     }
 }
 
