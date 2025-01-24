@@ -88,6 +88,7 @@ main {
     padding: 0 50px; /* Adjust for spacing */
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding in width */
 }
 
 /* Navigation Bar */
@@ -114,7 +115,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: auto; /* Pushes the links group to the right */
+    margin: 0; /* Ensures no extra margin for alignment */
 }
 
 nav ul li a {
@@ -131,21 +132,30 @@ nav ul li a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .main-header {
+        height: auto; /* Adjust header height on mobile */
+        padding: 10px 20px; /* Smaller padding for mobile */
+    }
+
     nav {
-        flex-direction: column;
+        flex-direction: column; /* Stack logo and links vertically */
         align-items: center;
-        height: auto;
-        padding: 10px;
+        padding: 10px 0;
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Stack links vertically */
         align-items: center;
         gap: 10px;
     }
 
     .navbar-logo {
-        margin-bottom: 10px;
+        margin-bottom: 15px; /* Space between logo and links */
+        height: 40px; /* Smaller logo size on mobile */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Slightly smaller font for mobile */
     }
 }
 
