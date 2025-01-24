@@ -742,6 +742,7 @@ footer {
     backdrop-filter: blur(10px); /* Consistent blur */
     border-radius: 10px;
     margin-top: 20px;
+    margin-bottom: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
 }
 
