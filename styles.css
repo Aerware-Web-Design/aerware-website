@@ -754,6 +754,54 @@ footer {
     margin-bottom: 10px;
 }
 
+
+/* Customers Section */
+.services-customers {
+    text-align: center;
+    padding: 40px 20px; /* Adds padding for spacing */
+    background: rgba(44, 44, 44, 0.2); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for modern look */
+    border-radius: 10px;
+    margin-top: 40px; /* Adds spacing above */
+    margin-bottom: 40px; /* Adds spacing below */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+    font-family: 'Noto Sans', sans-serif;
+    color: #EBEAE5; /* Light text for readability */
+}
+
+/* Section Title */
+.services-customers h2 {
+    font-size: 2rem;
+    color: #CDAD7D; /* Accent orange for the title */
+    margin-bottom: 20px; /* Space below title */
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Section Description */
+.services-customers p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px; /* Space below paragraph */
+    color: #EBEAE5; /* Light text color */
+}
+
+/* Customer List */
+.services-customers ul {
+    list-style: disc; /* Adds bullets */
+    margin: 0 auto; /* Center-aligns list */
+    padding: 0;
+    display: inline-block; /* Keeps the list compact */
+    text-align: left; /* Aligns text to the left inside the box */
+}
+
+.services-customers ul li {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 10px; /* Adds spacing between list items */
+    color: #EBEAE5;
+}
+
+
 /* Ensure Footer Does Not Overlap Content */
 .page-wrapper {
     min-height: calc(100vh - 60px); /* Footer height adjustment */
