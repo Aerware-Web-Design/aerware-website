@@ -536,7 +536,6 @@ footer {
 }
 
 /* Contact Section Styles */
-/* Contact Section Styles */
 .contact-section {
     padding: 60px 20px; /* Adds space around the frosted container */
     display: flex;
@@ -717,6 +716,7 @@ footer {
     line-height: 1.6;
     color: #EBEAE5;
     font-family: 'Noto Sans', sans-serif;
+    margin-bottom: 10px;
 }
 
 /* Ensure Footer Does Not Overlap Content */
