@@ -708,7 +708,6 @@ footer {
     backdrop-filter: blur(10px); /* Consistent blur */
     border-radius: 10px;
     margin-top: 20px;
-    margin-bottom 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
 }
 
@@ -717,6 +716,7 @@ footer {
     line-height: 1.6;
     color: #EBEAE5;
     font-family: 'Noto Sans', sans-serif;
+    margin-bottom: 10px;
 }
 
 /* Ensure Footer Does Not Overlap Content */
