@@ -623,23 +623,28 @@ footer {
 
 /* Services Overview Section */
 
+/* Services Overview Section */
 .services-overview {
-    padding: 40px 20px;
+    padding: 40px 20px; /* Consistent internal spacing */
     display: flex;
-    justify-content: center; /* Centers the frosted pane horizontally */
+    justify-content: center; /* Centers the frosted container horizontally */
     align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: center; /* Center-aligns text inside */
+    margin-bottom: 20px; /* Space below the section */
 }
 
 .services-overview .frosted-container {
     background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
     backdrop-filter: blur(10px); /* Apply blur effect */
-    border-radius: 10px;
-    padding: 40px; /* Internal spacing matches other frosted panes */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add depth */
-    max-width: 900px; /* Matches width of other frosted sections */
+    border-radius: 10px; /* Consistent rounded corners */
+    padding: 40px; /* Matches the padding of other frosted sections */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    max-width: 800px; /* Matches the width of other frosted sections */
     width: 100%; /* Ensures responsiveness */
+    color: #EBEAE5; /* Matches text color */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-aligns content */
 }
 
 .services-overview h2 {
