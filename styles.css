@@ -760,73 +760,48 @@ footer {
     text-align: center;
     padding: 40px 20px; /* Space around the section */
     background: rgba(44, 44, 44, 0.2); /* Transparent background */
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 10px; /* Rounded corners */
     margin-top: 40px;
     margin-bottom: 40px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds subtle depth */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     font-family: 'Noto Sans', sans-serif;
-    color: #EBEAE5;
+    color: #EBEAE5; /* Matches text color */
 }
 
-/* Heading and Description */
 .services-customers h2 {
-    font-size: 2rem;
-    margin-bottom: 20px; /* Adds consistent spacing below the heading */
+    font-size: 2rem; /* Heading size */
+    margin-bottom: 20px; /* Space below the heading */
     color: #CDAD7D; /* Accent color */
     font-family: 'Libre Baskerville', serif;
 }
 
 .services-customers p {
     font-size: 1.2rem;
-    margin-bottom: 30px; /* Adds consistent spacing below the description */
-    line-height: 1.6;
+    margin-bottom: 30px; /* Space below the paragraph */
+    line-height: 1.6; /* Improves readability */
 }
 
-/* Customer List */
-.customer-list {
-    list-style: none; /* Remove default bullets */
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column; /* Stack customers vertically */
-    gap: 20px; /* Space between customer rows */
-    align-items: center; /* Centers each customer box */
+/* Customer Logos Grid */
+.customer-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible columns */
+    gap: 20px; /* Space between logos */
+    justify-items: center; /* Centers each logo */
+    margin-top: 20px; /* Space above the grid */
 }
 
-/* Individual Customer Row */
-.customer-list li {
-    display: flex;
-    align-items: center; /* Align logo and name vertically */
-    gap: 15px; /* Space between logo and name */
-    padding: 10px 15px; /* Adds padding inside the row */
-    background: rgba(44, 44, 44, 0.5); /* Subtle background for rows */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    width: 100%; /* Takes up available width of parent */
-    max-width: 600px; /* Constrains row width to a reasonable size */
-    text-align: left; /* Aligns text properly */
-}
-
-/* Customer Logo */
-.customer-list img {
-    height: 50px; /* Keeps logo size consistent */
-    width: auto; /* Maintain aspect ratio */
+/* Individual Logo Styling */
+.customer-logo img {
+    width: 100px; /* Logo width */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Optional rounded corners */
-    visibility: hidden; /* Placeholder when no logo */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Optional hover effect */
 }
 
-.customer-list img[src] {
-    visibility: visible; /* Displays logo when src is present */
-}
-
-/* Customer Name */
-.customer-list span {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #EBEAE5; /* Matches section text color */
-    text-align: left;
-    flex-grow: 1; /* Ensures text takes up remaining space */
+.customer-logo img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 /* Ensure Footer Does Not Overlap Content */
