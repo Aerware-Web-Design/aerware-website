@@ -760,7 +760,7 @@ footer {
     text-align: center;
     padding: 40px 20px; /* Space around the section */
     background: rgba(44, 44, 44, 0.2); /* Transparent background */
-    backdrop-filter: blur(10px); /* Consistent blur effect */
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -769,18 +769,17 @@ footer {
     color: #EBEAE5;
 }
 
-/* Section Heading */
+/* Heading and Description */
 .services-customers h2 {
     font-size: 2rem;
-    margin-bottom: 15px; /* Space below the heading */
+    margin-bottom: 20px; /* Adds consistent spacing below the heading */
     color: #CDAD7D; /* Accent color */
     font-family: 'Libre Baskerville', serif;
 }
 
-/* Section Description */
 .services-customers p {
     font-size: 1.2rem;
-    margin-bottom: 25px; /* Space below the description */
+    margin-bottom: 30px; /* Adds consistent spacing below the description */
     line-height: 1.6;
 }
 
@@ -791,8 +790,8 @@ footer {
     margin: 0;
     display: flex;
     flex-direction: column; /* Stack customers vertically */
-    gap: 20px; /* Consistent space between rows */
-    align-items: center; /* Center-align customer rows */
+    gap: 25px; /* Adds even spacing between customer rows */
+    align-items: center; /* Centers each customer box */
 }
 
 /* Individual Customer Row */
@@ -800,24 +799,25 @@ footer {
     display: flex;
     align-items: center; /* Align logo and name vertically */
     gap: 15px; /* Space between logo and name */
-    padding: 10px 20px; /* Space inside each row */
+    padding: 10px 20px; /* Adds space inside each row */
     background: rgba(44, 44, 44, 0.5); /* Subtle background for rows */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    width: 100%; /* Row spans the full section width */
-    text-align: left; /* Ensures text alignment */
+    width: 100%; /* Keeps row width consistent */
+    max-width: 900px; /* Optional: Constrain row width */
+    text-align: left; /* Ensures text aligns properly */
 }
 
 /* Customer Logo */
 .customer-list img {
-    height: 50px; /* Keep logos consistent */
+    height: 50px; /* Consistent logo size */
     width: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Optional rounded corners */
-    visibility: hidden; /* Hides logo placeholders */
+    visibility: hidden; /* Placeholder when no logo */
 }
 
 .customer-list img[src] {
-    visibility: visible; /* Makes logos visible when src is present */
+    visibility: visible; /* Displays logo when src is present */
 }
 
 /* Customer Name */
