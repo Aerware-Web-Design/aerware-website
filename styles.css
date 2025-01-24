@@ -76,87 +76,81 @@ main {
     box-sizing: border-box;
 }
 
-/* General Navbar Styling (Desktop) */
+/* General Navbar Styling */
 .main-header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px; /* Keep original desktop height */
+    height: 80px;
     background: linear-gradient(to right, #101820, #101820 50%, #101820 100%);
     display: flex;
     align-items: center;
     justify-content: space-between; /* Logo left, links right */
-    padding: 0 50px; /* Maintain proper desktop spacing */
+    padding: 0 20px; /* Adjust padding for better fit */
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-}
-
-/* Navigation Bar */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Logo left, links right */
-    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow: hidden; /* Prevent content overflow */
 }
 
 /* Logo Styling */
 .navbar-logo {
-    height: 50px; /* Keep original desktop logo size */
-    max-height: 100%;
+    height: 50px; /* Standard desktop logo size */
+    width: auto; /* Maintain aspect ratio */
 }
 
-/* Navigation Links (Desktop) */
+/* Navigation Links */
 nav ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 20px; /* Maintain spacing between links */
-    justify-content: flex-end; /* Keep links right-aligned */
+    gap: 15px; /* Reduce spacing between links */
+    justify-content: flex-end; /* Ensure links are aligned to the right */
+    flex-wrap: nowrap; /* Prevent links from wrapping to a new line */
+    overflow: hidden; /* Prevent horizontal scrolling */
 }
 
 nav ul li {
-    margin: 0; /* No extra margin needed */
+    margin: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 300;
-    font-size: 1rem; /* Standard font size for desktop */
-    padding: 5px 10px;
-    white-space: nowrap; /* Prevent wrapping */
+    font-size: 1rem; /* Standard font size */
+    padding: 5px 8px; /* Compact padding to save space */
+    white-space: nowrap; /* Prevent links from breaking onto multiple lines */
     transition: border-bottom 0.3s ease;
 }
 
 nav ul li a:hover {
-    border-bottom: 2px solid #E1D8AA; /* Gold hover effect */
+    border-bottom: 2px solid #E1D8AA; /* Subtle hover effect */
 }
 
-/* Responsive Design (Mobile-Specific Changes) */
+/* Responsive Adjustments (Mobile-Specific Fixes) */
 @media (max-width: 768px) {
     .main-header {
-        height: 60px; /* Reduce height for mobile */
-        padding: 0 20px; /* Smaller padding for mobile */
+        height: 60px; /* Compact navbar height on mobile */
+        padding: 0 10px; /* Reduce side padding to save space */
     }
 
     nav ul {
-        gap: 10px; /* Reduce spacing between links for mobile */
-        justify-content: flex-end; /* Ensure links stay right-aligned */
+        gap: 10px; /* Reduce space between links further */
     }
 
     nav ul li a {
         font-size: 0.9rem; /* Slightly smaller font size for mobile */
-        padding: 4px 6px; /* Reduce padding around links */
-    }
-
-    .navbar-logo {
-        height: 40px; /* Reduce logo size for mobile */
+        padding: 4px 6px; /* Compact padding around links */
     }
 
     nav ul li:last-child {
-        margin-right: 10px; /* Add space after the last link to avoid screen edge */
+        margin-right: 5px; /* Ensure extra space after the last link */
+    }
+
+    .navbar-logo {
+        height: 40px; /* Smaller logo for mobile */
     }
 }
 
