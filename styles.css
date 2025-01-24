@@ -629,7 +629,7 @@ footer {
     justify-content: center; /* Centers the frosted pane horizontally */
     align-items: center;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .services-overview .frosted-container {
