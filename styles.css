@@ -755,7 +755,7 @@ footer {
 }
 
 
-/* Customers Section */
+/* Services Customers Section */
 .services-customers {
     text-align: center;
     padding: 40px 20px;
@@ -769,39 +769,24 @@ footer {
     color: #EBEAE5;
 }
 
-/* Section Title */
-.services-customers h2 {
-    font-size: 2rem;
-    color: #CDAD7D; /* Accent orange for title */
-    margin-bottom: 20px;
-    font-family: 'Libre Baskerville', serif;
-}
-
-/* Section Description */
-.services-customers p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
 /* Customer List */
 .customer-list {
-    list-style: none; /* Remove default bullets */
+    list-style: none; /* Removes default bullets */
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column; /* Stack customers vertically */
-    gap: 20px; /* Space between customers */
-    align-items: flex-start; /* Aligns to the left */
-    max-width: 600px; /* Optional: Limits width for cleaner layout */
-    margin: 0 auto; /* Center the list container */
+    gap: 20px; /* Adds space between customers */
+    align-items: flex-start; /* Aligns content to the left */
+    max-width: 600px; /* Limits width for a clean layout */
+    margin: 0 auto; /* Centers the list */
 }
 
 /* Individual Customer Row */
 .customer-list li {
     display: flex;
-    align-items: center; /* Align logo and text vertically */
-    gap: 20px; /* Space between logo and name */
+    align-items: center; /* Aligns logo and name vertically */
+    gap: 15px; /* Space between logo and name */
     padding: 10px 15px; /* Adds padding around each item */
     background: rgba(44, 44, 44, 0.5); /* Subtle background for each row */
     border-radius: 5px; /* Rounded corners */
@@ -810,14 +795,16 @@ footer {
 
 /* Customer Logo */
 .customer-list img {
-    height: 50px; /* Adjust size as needed */
-    width: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: Rounded logo corners */
+    height: 50px; /* Keeps logo size consistent */
+    width: auto; /* Maintains aspect ratio */
+    border-radius: 5px; /* Optional: Rounded corners */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for logos */
-    font-size: 0; /* Hides fallback alt text visually */
+    visibility: hidden; /* Hides logo placeholder when src is missing */
 }
 
-
+.customer-list img[src] {
+    visibility: visible; /* Makes logo visible when src is present */
+}
 
 /* Customer Name */
 .customer-list span {
