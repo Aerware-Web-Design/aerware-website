@@ -76,41 +76,43 @@ main {
     box-sizing: border-box;
 }
 
-/* General Navbar Styling */
+/* General Navbar Styling (Desktop) */
 .main-header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 60px; /* Navbar height */
+    height: 80px; /* Keep original height */
     background: linear-gradient(to right, #101820, #101820 50%, #101820 100%);
     display: flex;
     align-items: center;
     justify-content: space-between; /* Logo left, links right */
-    padding: 0 20px; /* Padding around the entire navbar */
+    padding: 0 50px; /* Keep original desktop padding */
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
-/* Navigation Links */
+/* Logo Styling */
+.navbar-logo {
+    height: 50px; /* Keep desktop logo size */
+    max-height: 100%;
+}
+
+/* Navigation Links (Desktop) */
 nav ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 10px; /* Space between links */
-}
-
-nav ul li:last-child {
-    margin-right: 10px; /* Adds space after the "Contact" link */
+    gap: 20px; /* Original desktop spacing between links */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 300;
-    font-size: 0.9rem;
-    padding: 5px 8px;
+    font-size: 1rem; /* Original desktop font size */
+    padding: 5px 10px; /* Original padding for links */
     white-space: nowrap;
     transition: border-bottom 0.3s ease;
 }
@@ -119,20 +121,29 @@ nav ul li a:hover {
     border-bottom: 2px solid #E1D8AA; /* Gold hover effect */
 }
 
-/* Responsive Design */
+/* Responsive Design (Mobile-Only Changes) */
 @media (max-width: 768px) {
     .main-header {
-        height: 50px; /* Reduced height on mobile */
-        padding: 0 15px; /* Increased left/right padding on smaller screens */
+        height: 60px; /* Reduce header height on mobile */
+        padding: 0 15px; /* Add more space on the sides for mobile */
     }
 
-    nav ul li:last-child {
-        margin-right: 15px; /* Additional space on mobile */
+    nav ul {
+        gap: 10px; /* Reduce spacing between links on mobile */
+        justify-content: flex-end; /* Keep links aligned to the right */
     }
 
     nav ul li a {
-        font-size: 0.8rem; /* Smaller font for mobile */
-        padding: 4px 6px; /* Compact padding */
+        font-size: 0.9rem; /* Slightly smaller font for mobile */
+        padding: 4px 8px; /* Compact padding for links */
+    }
+
+    nav ul li:last-child {
+        margin-right: 10px; /* Add space after "Contact" link on mobile */
+    }
+
+    .navbar-logo {
+        height: 40px; /* Reduce logo size for mobile */
     }
 }
 
