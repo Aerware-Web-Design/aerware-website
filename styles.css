@@ -77,41 +77,39 @@ main {
 }
 
 /* Header and Navigation */
-header {
+.main-header {
     position: fixed;
     top: 0;
     width: 100%;
     height: 80px;
     background: linear-gradient(to right, #101820, #101820 50%, #101820 100%);
     display: flex;
-    justify-content: space-between; /* Space between logo and links */
     align-items: center;
-    padding: 0 50px; /* Adjust spacing for content */
-    color: var(--navbar-text-dark);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 50px; /* Adjust for spacing */
     z-index: 1000;
-    font-size: 1.0rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation Bar */
 nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensures full width for content alignment */
 }
 
 /* Logo Styling */
 .navbar-logo {
     height: 50px; /* Adjust size as needed */
     max-height: 100%;
-    margin-right: auto; /* Push links to the right */
-    text-decoration: none;
+    margin-right: auto; /* Pushes navigation to the right */
 }
 
 /* Navigation Links */
 nav ul {
     display: flex;
     list-style: none;
-    gap: 20px; /* Modern gap syntax for consistent spacing */
+    gap: 20px; /* Adds spacing between links */
     margin: 0;
     padding: 0;
 }
@@ -120,8 +118,32 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 300;
-    padding: 0 5px;
+    padding: 5px 10px;
     transition: border-bottom 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #E1D8AA; /* Gold hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-logo {
+        margin-bottom: 10px;
+    }
 }
 
 nav ul li a:hover {
