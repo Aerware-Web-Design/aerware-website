@@ -799,6 +799,7 @@ footer {
 
 /* Individual Customer Row */
 .customer-list li {
+    list-style: none;
     display: flex;
     align-items: center; /* Align logo and text vertically */
     gap: 20px; /* Space between logo and name */
