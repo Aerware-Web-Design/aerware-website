@@ -638,7 +638,7 @@ footer {
     border-radius: 10px;
     padding: 40px; /* Internal spacing matches other frosted panes */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add depth */
-    max-width: 1200px; /* Matches width of other frosted sections */
+    max-width: 900px; /* Matches width of other frosted sections */
     width: 100%; /* Ensures responsiveness */
 }
 
