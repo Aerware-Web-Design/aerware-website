@@ -335,7 +335,7 @@ footer {
     color: #EBEAE5; /* Light text for readability */
     text-align: center; /* Center the text */
     margin: 40px auto; /* Center the section vertically and horizontally */
-    max-width: 1000px; /* Restrict width for better layout */
+    max-width: 1200px; /* Restrict width for better layout */
 }
 
 .mission-section h3 {
@@ -349,7 +349,7 @@ footer {
     font-size: 1.3rem;
     line-height: 1.8; /* Improved readability with line spacing */
     margin: 0 auto; /* Center paragraph text */
-    max-width: 800px; /* Keep paragraph width balanced */
+    max-width: 1200px; /* Keep paragraph width balanced */
     color: #EBEAE5; /* Consistent light text color */
 }
 
