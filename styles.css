@@ -623,29 +623,25 @@ footer {
 
 /* Services Overview Section */
 .services-overview {
-    padding: 40px 20px; /* Matches other frosted sections */
-    display: flex;
-    justify-content: center; /* Centers the frosted container horizontally */
-    align-items: center;
-    text-align: center; /* Center-aligns text inside */
-    margin-top: 40px; /* Adds consistent space above */
-    margin-bottom: 40px; /* Adds consistent space below */
+    width: 100%;
+    max-width: 1200px; /* Match the width of other sections */
+    margin: 40px auto; /* Center the section and add vertical spacing */
+    padding: 40px 20px;
+    background: rgba(44, 44, 44, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #EBEAE5;
 }
 
 .services-overview .frosted-container {
-    background: rgba(44, 44, 44, 0.2); /* Match transparency with other sections */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    border-radius: 10px; /* Same rounded corners */
-    padding: 40px; /* Matches padding of other frosted sections */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for consistency */
-    max-width: 800px; /* Matches the width of other frosted sections */
-    width: 100%; /* Ensures responsiveness */
-    color: #EBEAE5; /* Matches text color */
+    width: 100%;
+    color: #EBEAE5;
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center-aligns content */
+    flex-direction: column;
+    align-items: center;
 }
-
 .services-overview h2 {
     font-size: 2rem; /* Matches heading size of other sections */
     color: #CDAD7D; /* Accent color */
