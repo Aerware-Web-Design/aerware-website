@@ -814,7 +814,10 @@ footer {
     width: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Optional: Rounded logo corners */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for logos */
+    font-size: 0; /* Hides fallback alt text visually */
 }
+
+
 
 /* Customer Name */
 .customer-list span {
