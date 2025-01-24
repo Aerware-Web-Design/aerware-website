@@ -90,9 +90,7 @@ main {
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    min-width: 320px; /* Prevent navbar from breaking on very small screens */
 }
-
 
 /* Logo Styling */
 .navbar-logo {
