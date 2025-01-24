@@ -760,28 +760,6 @@ footer {
     text-align: center;
     padding: 40px 20px;
     background: rgba(44, 44, 44, 0.2); /* Transparent background */
-    backdrop-filter: blur(10px); /* Consistent blur effect */
-    border-radius: 10px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
-    font-family: 'Noto Sans', sans-serif;
-    color: #EBEAE5; /* Light text for readability */
-}
-
-/* Section Title */
-.services-customers h2 {
-    font-size: 2rem;
-    color: #CDAD7D; /* Accent orange for the title */
-    margin-bottom: 20px;
-    font-family: 'Libre Baskerville', serif;
-}
-
-/* Customers Section */
-.services-customers {
-    text-align: center;
-    padding: 40px 20px;
-    background: rgba(44, 44, 44, 0.2); /* Transparent background */
     backdrop-filter: blur(10px);
     border-radius: 10px;
     margin-top: 40px;
@@ -808,27 +786,30 @@ footer {
 
 /* Customer List */
 .customer-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-direction: column; /* Stacks customers vertically */
-    gap: 20px; /* Adds space between customers */
-    align-items: flex-start; /* Aligns content to the left */
-    margin: 0 auto;
+    flex-direction: column; /* Stack customers vertically */
+    gap: 20px; /* Space between customers */
+    align-items: flex-start; /* Aligns to the left */
     max-width: 600px; /* Optional: Limits width for cleaner layout */
+    margin: 0 auto; /* Center the list container */
 }
 
 /* Individual Customer Row */
-.customer {
+.customer-list li {
     display: flex;
-    align-items: center; /* Vertically centers logo and text */
-    gap: 20px; /* Space between logo and text */
+    align-items: center; /* Align logo and text vertically */
+    gap: 20px; /* Space between logo and name */
+    padding: 10px 15px; /* Adds padding around each item */
     background: rgba(44, 44, 44, 0.5); /* Subtle background for each row */
-    padding: 10px 15px; /* Adds spacing inside each row */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional depth */
 }
 
 /* Customer Logo */
-.customer img {
+.customer-list img {
     height: 50px; /* Adjust size as needed */
     width: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Optional: Rounded logo corners */
@@ -836,7 +817,7 @@ footer {
 }
 
 /* Customer Name */
-.customer span {
+.customer-list span {
     font-size: 1.2rem;
     font-weight: 400;
     color: #EBEAE5;
