@@ -758,12 +758,12 @@ footer {
 /* Customers Section */
 .services-customers {
     text-align: center;
-    padding: 40px 20px; /* Adds padding for spacing */
+    padding: 40px 20px;
     background: rgba(44, 44, 44, 0.2); /* Transparent background */
-    backdrop-filter: blur(10px); /* Blur effect for modern look */
+    backdrop-filter: blur(10px); /* Consistent blur effect */
     border-radius: 10px;
-    margin-top: 40px; /* Adds spacing above */
-    margin-bottom: 40px; /* Adds spacing below */
+    margin-top: 40px;
+    margin-bottom: 40px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
     font-family: 'Noto Sans', sans-serif;
     color: #EBEAE5; /* Light text for readability */
@@ -773,7 +773,7 @@ footer {
 .services-customers h2 {
     font-size: 2rem;
     color: #CDAD7D; /* Accent orange for the title */
-    margin-bottom: 20px; /* Space below title */
+    margin-bottom: 20px;
     font-family: 'Libre Baskerville', serif;
 }
 
@@ -781,26 +781,47 @@ footer {
 .services-customers p {
     font-size: 1.2rem;
     line-height: 1.8;
-    margin-bottom: 20px; /* Space below paragraph */
-    color: #EBEAE5; /* Light text color */
+    margin-bottom: 20px;
 }
 
-/* Customer List */
-.services-customers ul {
-    list-style: disc; /* Adds bullets */
-    margin: 0 auto; /* Center-aligns list */
-    padding: 0;
-    display: inline-block; /* Keeps the list compact */
-    text-align: left; /* Aligns text to the left inside the box */
+/* Customer Logos Grid */
+.customer-logos {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+    justify-content: center;
+    gap: 20px; /* Adds spacing between items */
+    margin-top: 20px;
 }
 
-.services-customers ul li {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 10px; /* Adds spacing between list items */
+/* Each Customer Block */
+.customer {
+    display: flex;
+    flex-direction: column; /* Stack logo and text vertically */
+    align-items: center;
+    width: 150px; /* Adjust width for consistency */
+    text-align: center;
+}
+
+/* Customer Logos */
+.customer img {
+    max-width: 100%; /* Ensures logos scale properly */
+    height: auto; /* Maintains aspect ratio */
+    margin-bottom: 10px; /* Space between logo and text */
+    filter: grayscale(100%); /* Optional: Grayscale for logos */
+    transition: filter 0.3s ease; /* Smooth hover effect */
+}
+
+.customer img:hover {
+    filter: none; /* Removes grayscale on hover */
+}
+
+/* Customer Text */
+.customer p {
+    font-size: 1rem;
     color: #EBEAE5;
+    margin: 0;
+    line-height: 1.4;
 }
-
 
 /* Ensure Footer Does Not Overlap Content */
 .page-wrapper {
