@@ -773,24 +773,25 @@ footer {
 .customer-list {
     list-style: none; /* Removes default bullets */
     padding: 0;
-    margin: 0;
+    margin: 0 auto; /* Centers the entire list container */
     display: flex;
     flex-direction: column; /* Stack customers vertically */
-    gap: 20px; /* Adds space between customers */
-    align-items: flex-start; /* Aligns content to the left */
-    max-width: 600px; /* Limits width for a clean layout */
-    margin: 0 auto; /* Centers the list */
+    gap: 20px; /* Adds space between customer boxes */
+    align-items: center; /* Centers each customer box */
 }
 
 /* Individual Customer Row */
 .customer-list li {
     display: flex;
-    align-items: center; /* Aligns logo and name vertically */
+    align-items: center; /* Aligns logo and text vertically */
     gap: 15px; /* Space between logo and name */
+    justify-content: center; /* Centers the entire content (logo + name) */
     padding: 10px 15px; /* Adds padding around each item */
     background: rgba(44, 44, 44, 0.5); /* Subtle background for each row */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional depth */
+    width: auto; /* Ensures the box is just wide enough for the content */
+    text-align: center; /* Centers text within the box */
 }
 
 /* Customer Logo */
