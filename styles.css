@@ -81,20 +81,28 @@ main {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px; /* Keep original height */
+    height: 80px; /* Keep original desktop height */
     background: linear-gradient(to right, #101820, #101820 50%, #101820 100%);
     display: flex;
     align-items: center;
     justify-content: space-between; /* Logo left, links right */
-    padding: 0 50px; /* Keep original desktop padding */
+    padding: 0 50px; /* Maintain proper desktop spacing */
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
+/* Navigation Bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo left, links right */
+    width: 100%;
+}
+
 /* Logo Styling */
 .navbar-logo {
-    height: 50px; /* Keep desktop logo size */
+    height: 50px; /* Keep original desktop logo size */
     max-height: 100%;
 }
 
@@ -104,16 +112,21 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 20px; /* Original desktop spacing between links */
+    gap: 20px; /* Maintain spacing between links */
+    justify-content: flex-end; /* Keep links right-aligned */
+}
+
+nav ul li {
+    margin: 0; /* No extra margin needed */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 300;
-    font-size: 1rem; /* Original desktop font size */
-    padding: 5px 10px; /* Original padding for links */
-    white-space: nowrap;
+    font-size: 1rem; /* Standard font size for desktop */
+    padding: 5px 10px;
+    white-space: nowrap; /* Prevent wrapping */
     transition: border-bottom 0.3s ease;
 }
 
@@ -121,29 +134,29 @@ nav ul li a:hover {
     border-bottom: 2px solid #E1D8AA; /* Gold hover effect */
 }
 
-/* Responsive Design (Mobile-Only Changes) */
+/* Responsive Design (Mobile-Specific Changes) */
 @media (max-width: 768px) {
     .main-header {
-        height: 60px; /* Reduce header height on mobile */
-        padding: 0 15px; /* Add more space on the sides for mobile */
+        height: 60px; /* Reduce height for mobile */
+        padding: 0 20px; /* Smaller padding for mobile */
     }
 
     nav ul {
-        gap: 10px; /* Reduce spacing between links on mobile */
-        justify-content: flex-end; /* Keep links aligned to the right */
+        gap: 10px; /* Reduce spacing between links for mobile */
+        justify-content: flex-end; /* Ensure links stay right-aligned */
     }
 
     nav ul li a {
-        font-size: 0.9rem; /* Slightly smaller font for mobile */
-        padding: 4px 8px; /* Compact padding for links */
-    }
-
-    nav ul li:last-child {
-        margin-right: 10px; /* Add space after "Contact" link on mobile */
+        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+        padding: 4px 6px; /* Reduce padding around links */
     }
 
     .navbar-logo {
         height: 40px; /* Reduce logo size for mobile */
+    }
+
+    nav ul li:last-child {
+        margin-right: 10px; /* Add space after the last link to avoid screen edge */
     }
 }
 
