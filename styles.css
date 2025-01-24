@@ -83,37 +83,49 @@ header {
     width: 100%;
     height: 80px;
     background: linear-gradient(to right, #101820, #101820 50%, #101820 100%);
+    display: flex;
     justify-content: space-between; /* Space between logo and links */
-    backdrop-filter: none;
+    align-items: center;
+    padding: 0 50px; /* Adjust spacing for content */
     color: var(--navbar-text-dark);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px 50px;
     font-size: 1.0rem;
 }
 
+/* Navigation Bar */
 nav {
     display: flex;
     align-items: center;
 }
 
+/* Logo Styling */
+.navbar-logo {
+    height: 50px; /* Adjust size as needed */
+    max-height: 100%;
+    margin-right: auto; /* Push links to the right */
+    text-decoration: none;
+}
+
+/* Navigation Links */
 nav ul {
     display: flex;
     list-style: none;
-    grid-gap: 20px;
+    gap: 20px; /* Modern gap syntax for consistent spacing */
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 300;
+    padding: 0 5px;
+    transition: border-bottom 0.3s ease; /* Smooth hover effect */
 }
 
 nav ul li a:hover {
-    border-bottom: 2px solid #E1D8AA;
+    border-bottom: 2px solid #E1D8AA; /* Gold hover underline */
 }
 
 /* Footer */
