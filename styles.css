@@ -95,18 +95,18 @@ main {
     height: 50px;
 }
 
+/* Container for navigation */
 nav {
     display: flex;
-    align-items: center;
+    justify-content: flex-end; /* Right aligns the ul within nav */
+    flex: 1; /* Takes up remaining space */
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Aligns items to the right */
     list-style: none;
     margin: 0;
-    margin-left: auto;
     padding: 0;
     gap: 20px;
 }
@@ -119,6 +119,7 @@ nav ul li a {
     white-space: nowrap;
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
     .main-header {
         height: 60px;
@@ -130,11 +131,28 @@ nav ul li a {
     }
     
     nav ul {
-        gap: 15px;
+        gap: 12px; /* Reduce gap between items */
     }
     
     nav ul li a {
-        font-size: 0.9rem;
+        font-size: 0.85rem; /* Slightly smaller font */
+        padding: 5px 8px; /* Add some padding to make tap targets bigger */
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    nav ul {
+        gap: 8px; /* Further reduce gap */
+    }
+    
+    nav ul li a {
+        font-size: 0.8rem; /* Even smaller font */
+        padding: 4px 6px;
+    }
+    
+    .main-header {
+        padding: 0 10px; /* Less padding on header */
     }
 }
 
