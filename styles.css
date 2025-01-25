@@ -106,6 +106,7 @@ nav {
     height: 50px; /* Keep it consistent */
     width: auto;
     padding: 10px; /* Add padding around the logo */
+    margin-top: 15px;
     margin-left: 10px; /* Optional: Add space from the edge */
 }
 
