@@ -85,27 +85,33 @@ main {
     background: linear-gradient(to right, #101820, #101820 50%, #101820 100%);
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 20px;
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
+/* Logo Styling */
 .navbar-logo {
     height: 50px;
+    width: auto;
 }
 
+/* Navigation Links */
 nav {
-    margin-left: auto; /* This pushes nav to the right while keeping logo left */
+    margin-left: auto;
 }
 
 nav ul {
     display: flex;
-    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 20px;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0;
 }
 
 nav ul li a {
@@ -113,28 +119,36 @@ nav ul li a {
     text-decoration: none;
     font-weight: 300;
     font-size: 1rem;
+    padding: 5px 8px;
     white-space: nowrap;
+    transition: border-bottom 0.3s ease;
 }
 
+nav ul li a:hover {
+    border-bottom: 2px solid #E1D8AA;
+}
+
+/* Mobile Adjustments */
 @media (max-width: 768px) {
     .main-header {
         height: 60px;
         padding: 0 15px;
     }
-    
-    .navbar-logo {
-        height: 35px;
-    }
-    
+
     nav ul {
-        gap: 12px;
+        gap: 10px;
     }
-    
+
     nav ul li a {
-        font-size: 0.85rem;
-        padding: 5px 8px;
+        font-size: 0.9rem;
+        padding: 4px 6px;
+    }
+
+    .navbar-logo {
+        height: 40px;
     }
 }
+
 
 
 /* Footer */
