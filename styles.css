@@ -89,70 +89,52 @@ main {
     padding: 0 20px;
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
 }
 
-/* Logo Styling */
 .navbar-logo {
-    height: 50px; /* Standard desktop logo size */
-    width: auto; /* Maintain aspect ratio */
+    height: 50px;
 }
 
-/* Navigation Links */
+nav {
+    display: flex;
+    align-items: center;
+}
+
 nav ul {
     display: flex;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 15px; /* Reduce spacing between links */
-    justify-content: flex-end; /* Ensure links are aligned to the right */
-    flex-wrap: nowrap; /* Prevent links from wrapping to a new line */
-    overflow: hidden; /* Prevent horizontal scrolling */
-}
-
-nav ul li {
-    margin: 0;
+    gap: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 300;
-    font-size: 1rem; /* Standard font size */
-    padding: 5px 8px; /* Compact padding to save space */
-    white-space: nowrap; /* Prevent links from breaking onto multiple lines */
-    transition: border-bottom 0.3s ease;
+    font-size: 1rem;
+    white-space: nowrap;
 }
 
-nav ul li a:hover {
-    border-bottom: 2px solid #E1D8AA; /* Subtle hover effect */
-}
-
-/* Responsive Adjustments (Mobile-Specific Fixes) */
 @media (max-width: 768px) {
     .main-header {
-        height: 60px; /* Compact navbar height on mobile */
-        padding: 0 10px; /* Reduce side padding to save space */
+        height: 60px;
+        padding: 0 15px;
     }
-
-    nav ul {
-        gap: 10px; /* Reduce space between links further */
-    }
-
-    nav ul li a {
-        font-size: 0.9rem; /* Slightly smaller font size for mobile */
-        padding: 4px 6px; /* Compact padding around links */
-    }
-
-    nav ul li:last-child {
-        margin-right: 5px; /* Ensure extra space after the last link */
-    }
-
+    
     .navbar-logo {
-        height: 40px; /* Smaller logo for mobile */
+        height: 35px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
     }
 }
-
 
 /* Footer */
 footer {
