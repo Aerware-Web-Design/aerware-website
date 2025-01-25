@@ -77,83 +77,106 @@ main {
 }
 
 /* Navbar Base */
-/* Navbar Container */
+/* Header Styling */
 .main-header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px; /* Desktop height */
     background: linear-gradient(to right, #101820, #101820 50%, #101820 100%);
     display: flex;
-    align-items: center; /* Vertically align content */
-    justify-content: space-between; /* Logo left, links right */
-    padding: 0 20px; /* Padding around navbar */
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
     z-index: 1000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box; /* Include padding in width calculation */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
 }
 
 /* Logo Styling */
-.navbar-logo {
-    height: 50px; /* Fixed height for desktop */
-    width: auto; /* Maintain aspect ratio */
-    flex-shrink: 0; /* Prevent shrinking */
-    margin-right: auto; /* Push links away from logo */
+.navbar-logo img {
+    height: 50px;
+    width: auto;
 }
 
-/* Navigation Bar */
-nav {
-    flex-grow: 1; /* Take up available space */
-    display: flex;
-    justify-content: flex-end; /* Align links to the right */
-    align-items: center; /* Vertically align links */
-}
-
-nav ul {
+/* Navigation Links Styling */
+.nav-links {
     display: flex;
     list-style: none;
-    gap: 20px; /* Space between links */
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    margin: 0;
+.nav-links li {
+    margin-left: 20px;
 }
 
-nav ul li a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 300;
-    font-size: 1rem;
-    padding: 5px 8px;
-    white-space: nowrap; /* Prevent text wrapping */
+    padding: 5px 10px;
     transition: border-bottom 0.3s ease;
 }
 
-nav ul li a:hover {
-    border-bottom: 2px solid #E1D8AA; /* Gold hover effect */
+.nav-links a:hover {
+    border-bottom: 2px solid #E1D8AA;
 }
 
-/* Mobile-Specific Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .main-header {
-        height: 60px; /* Adjust navbar height for mobile */
-        padding: 0 15px; /* Less padding for smaller screens */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #101820;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 10px 0;
     }
 
-    .navbar-logo {
-        height: 40px; /* Shrink logo for mobile */
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
     }
 
-    nav ul {
-        gap: 10px; /* Reduce spacing between links */
+    .nav-links a {
+        padding: 10px;
+        width: 100%;
     }
 
-    nav ul li a {
-        font-size: 0.9rem; /* Slightly smaller font size */
-        padding: 4px 6px; /* Compact padding */
+    .nav-links.active {
+        display: flex;
     }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
 }
 
 
