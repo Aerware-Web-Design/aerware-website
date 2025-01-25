@@ -101,10 +101,14 @@ nav {
 }
 
 /* Logo Styling */
+/* Add padding around the logo */
 .navbar-logo img {
-    height: 50px;
+    height: 50px; /* Keep it consistent */
     width: auto;
+    padding: 10px; /* Add padding around the logo */
+    margin-left: 10px; /* Optional: Add space from the edge */
 }
+
 
 /* Navigation Links Styling */
 .nav-links {
