@@ -130,53 +130,38 @@ nav {
     border-bottom: 2px solid #E1D8AA;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: #101820;
-        position: absolute;
-        top: 80px;
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full-width dropdown */
+        background: #101820; /* Background color for dropdown */
+        position: absolute; /* Position below the navbar */
+        top: 80px; /* Align with navbar height */
         left: 0;
         padding: 10px 0;
     }
 
-    .nav-links li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .nav-links a {
-        padding: 10px;
-        width: 100%;
-    }
-
     .nav-links.active {
-        display: flex;
+        display: flex; /* Show dropdown when active */
     }
 
     .menu-toggle {
-        display: block;
+        display: flex; /* Show toggle button */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
         cursor: pointer;
     }
-}
 
-/* Menu Toggle Button */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.menu-toggle span {
-    display: block;
-    height: 3px;
-    background: white;
-    border-radius: 3px;
+    .menu-toggle span {
+        display: block;
+        height: 3px;
+        background: white;
+        margin: 4px 0;
+        border-radius: 3px;
+    }
 }
 
 
