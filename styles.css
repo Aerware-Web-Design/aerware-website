@@ -77,29 +77,35 @@ main {
 }
 
 /* Navbar Base */
-/* Base Navbar */
+/* Navbar Container */
 .main-header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px; /* Consistent height for desktop */
+    height: 80px; /* Desktop height */
     background: linear-gradient(to right, #101820, #101820 50%, #101820 100%);
     display: flex;
+    align-items: center; /* Vertical alignment */
     justify-content: space-between; /* Logo left, links right */
-    align-items: center; /* Vertically center items */
-    padding: 0 20px; /* Padding for desktop */
+    padding: 0 20px;
     z-index: 1000;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Logo */
 .navbar-logo {
-    height: 50px; /* Consistent size for logo */
+    height: 50px;
     width: auto;
-    flex-shrink: 0; /* Prevent weird resizing */
+    flex-shrink: 0; /* Prevent resizing */
 }
 
 /* Navigation Links */
+nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center; /* Vertical alignment */
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -122,11 +128,11 @@ nav ul li a:hover {
     border-bottom: 2px solid #E1D8AA;
 }
 
-/* Mobile Fixes */
+/* Mobile-Specific Fixes */
 @media (max-width: 768px) {
     .main-header {
-        height: 60px; /* Adjust navbar height for mobile */
-        padding: 0 10px; /* Reduce padding for smaller screens */
+        height: 60px; /* Adjust navbar height */
+        padding: 0 15px;
     }
 
     nav ul {
@@ -134,12 +140,12 @@ nav ul li a:hover {
     }
 
     nav ul li a {
-        font-size: 0.85rem; /* Shrink font size for mobile */
+        font-size: 0.85rem; /* Smaller font size for mobile */
         padding: 4px 6px; /* Compact padding */
     }
 
     .navbar-logo {
-        height: 40px; /* Shrink logo size for mobile */
+        height: 40px; /* Shrink logo for mobile */
     }
 }
 
