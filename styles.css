@@ -132,22 +132,23 @@ nav {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hidden by default */
+        display: none; /* Start hidden on mobile */
         flex-direction: column; /* Stack links vertically */
         width: 100%; /* Full-width dropdown */
-        background: #101820; /* Background color for dropdown */
+        background: #101820; /* Dropdown background color */
         position: absolute; /* Position below the navbar */
         top: 80px; /* Align with navbar height */
         left: 0;
         padding: 10px 0;
+        z-index: 1000;
     }
 
     .nav-links.active {
-        display: flex; /* Show dropdown when active */
+        display: flex; /* Show the dropdown */
     }
 
     .menu-toggle {
-        display: flex; /* Show toggle button */
+        display: flex; /* Show the hamburger icon */
         flex-direction: column;
         justify-content: space-between;
         width: 30px;
