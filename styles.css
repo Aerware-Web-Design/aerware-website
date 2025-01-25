@@ -76,22 +76,21 @@ main {
     box-sizing: border-box;
 }
 
-/* Navbar Base */
-/* Header Styling */
+/* Main Header Styling */
 .main-header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(to right, #101820, #101820 50%, #101820 100%);
+    background: #101820; /* Dark background */
+    padding: 10px 20px;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
-    z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation Styling */
+/* Navbar Container */
 nav {
     display: flex;
     justify-content: space-between;
@@ -101,15 +100,10 @@ nav {
 }
 
 /* Logo Styling */
-/* Add padding around the logo */
 .navbar-logo img {
-    height: 50px; /* Keep it consistent */
+    height: 50px;
     width: auto;
-    padding: 10px; /* Add padding around the logo */
-    margin-top: 15px;
-    margin-left: 10px; /* Optional: Add space from the edge */
 }
-
 
 /* Navigation Links Styling */
 .nav-links {
@@ -135,38 +129,16 @@ nav {
     border-bottom: 2px solid #E1D8AA;
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Start hidden on mobile */
         flex-direction: column; /* Stack links vertically */
-        width: 100%; /* Full-width dropdown */
-        background: #101820; /* Dropdown background color */
-        position: absolute; /* Position below the navbar */
-        top: 80px; /* Align with navbar height */
+        background: #101820;
+        position: absolute;
+        top: 60px;
         left: 0;
-        padding: 10px 0;
-        z-index: 1000;
-    }
-
-    .nav-links.active {
-        display: flex; /* Show the dropdown */
-    }
-
-    .menu-toggle {
-        display: flex; /* Show the hamburger icon */
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        cursor: pointer;
-    }
-
-    .menu-toggle span {
+        width: 100%;
         display: block;
-        height: 3px;
-        background: white;
-        margin: 4px 0;
-        border-radius: 3px;
     }
 }
 
