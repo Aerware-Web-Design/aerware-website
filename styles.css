@@ -76,32 +76,27 @@ main {
     box-sizing: border-box;
 }
 
-/* General Navbar Styling */
 /* Navbar Base */
+/* Base Navbar */
 .main-header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px; /* Adjust navbar height */
+    height: 80px; /* Consistent height for desktop */
     background: linear-gradient(to right, #101820, #101820 50%, #101820 100%);
     display: flex;
-    align-items: center;
-    padding: 0 20px; /* Padding on left and right */
+    justify-content: space-between; /* Logo left, links right */
+    align-items: center; /* Vertically center items */
+    padding: 0 20px; /* Padding for desktop */
     z-index: 1000;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo Styling */
+/* Logo */
 .navbar-logo {
-    height: 50px;
+    height: 50px; /* Consistent size for logo */
     width: auto;
-}
-
-/* Navigation Bar */
-nav {
-    margin-left: auto; /* Push the links to the right */
-    display: flex;
-    align-items: center;
+    flex-shrink: 0; /* Prevent weird resizing */
 }
 
 /* Navigation Links */
@@ -113,17 +108,13 @@ nav ul {
     gap: 20px; /* Space between links */
 }
 
-nav ul li {
-    margin: 0;
-}
-
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 300;
     font-size: 1rem;
-    padding: 5px 10px;
-    white-space: nowrap;
+    padding: 5px 8px;
+    white-space: nowrap; /* Prevent wrapping */
     transition: border-bottom 0.3s ease;
 }
 
@@ -131,28 +122,24 @@ nav ul li a:hover {
     border-bottom: 2px solid #E1D8AA;
 }
 
-/* Mobile Navbar Adjustments */
+/* Mobile Fixes */
 @media (max-width: 768px) {
     .main-header {
-        height: 60px; /* Shrink navbar height for mobile */
-        padding: 0 15px;
+        height: 60px; /* Adjust navbar height for mobile */
+        padding: 0 10px; /* Reduce padding for smaller screens */
     }
 
     nav ul {
-        gap: 10px; /* Reduce space between links */
+        gap: 10px; /* Reduce spacing between links */
     }
 
     nav ul li a {
-        font-size: 0.9rem; /* Slightly smaller font for mobile */
-        padding: 4px 6px;
+        font-size: 0.85rem; /* Shrink font size for mobile */
+        padding: 4px 6px; /* Compact padding */
     }
 
     .navbar-logo {
         height: 40px; /* Shrink logo size for mobile */
-    }
-
-    nav ul {
-        justify-content: flex-end; /* Keep links aligned to the right */
     }
 }
 
