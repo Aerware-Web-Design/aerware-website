@@ -81,10 +81,12 @@ main {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #101820;
+    height: 60px; /* Match footer height */
+    background: linear-gradient(to right, #101820, #3C3F41); /* Gradient effect */
     display: flex;
     justify-content: flex-end; /* Aligns links to the right */
-    padding: 10px 20px; /* Add padding around the navbar */
+    align-items: center; /* Vertically center the content */
+    padding: 0 20px; /* Add horizontal padding */
     z-index: 1000;
 }
 
