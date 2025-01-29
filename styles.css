@@ -327,6 +327,11 @@ footer {
 /* Container for consistent spacing */
 .about-container {
     padding: clamp(40px, 5vh, 60px) 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(40px, 5vh, 60px);
+    padding: clamp(15px, 3vw, 40px);
 }
 
 .about-hero {
@@ -449,13 +454,13 @@ footer {
 
 .team-section {
     padding: clamp(15px, 3vw, 40px);
-    background: rgba(255, 255, 255, 0.1); /* This is the translucent overlay */
-    backdrop-filter: blur(10px); /* This was missing - adds the frosted effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     text-align: center;
     width: min(90%, 1200px);
-    margin: 0 auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* This was also missing */
+    margin: 0 auto; /* Remove bottom margin since container handles spacing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .team-section h4 {
@@ -522,7 +527,6 @@ footer {
         gap: 20px;
     }
 }
-
 /* =================================================
    CONTACT.HTML STYLES
    Styles specific to the Contact page
@@ -691,12 +695,15 @@ footer {
    Styles specific to the Services page
    ================================================= */
 
-/* Services Overview Section */
+/* Container for consistent spacing */
+.services-container {
+    padding: clamp(40px, 5vh, 60px) 0;
+}
 
 .services-overview {
     width: min(90%, 1200px);
-    margin: clamp(40px, 5vh, 60px) auto;  /* Standardized spacing */
-    padding: clamp(20px, 4vw, 40px);
+    margin: 0 auto clamp(40px, 5vh, 60px);
+    padding: clamp(15px, 3vw, 40px);
     background: rgba(44, 44, 44, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 10px;
@@ -716,8 +723,8 @@ footer {
 /* Services Section Frosted Style */
 .services-section {
     width: min(90%, 1200px);
-    margin: clamp(40px, 5vh, 60px) auto;  /* Standardized spacing */
-    padding: clamp(20px, 4vw, 40px);
+    margin: 0 auto clamp(40px, 5vh, 60px);
+    padding: clamp(15px, 3vw, 40px);
     background: rgba(44, 44, 44, 0.3);
     backdrop-filter: blur(10px);
     border-radius: 10px;
@@ -778,12 +785,12 @@ footer {
 /* Call to Action Section */
 .services-cta {
     text-align: center;
-    padding: clamp(15px, 3vw, 20px);
+    padding: clamp(15px, 3vw, 40px);
     background: rgba(44, 44, 44, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    margin: clamp(40px, 5vh, 60px) auto;  /* Standardized spacing */
+    margin: 0 auto clamp(40px, 5vh, 60px);
     font-family: 'Noto Sans', sans-serif;
     width: min(90%, 1200px);
 }
@@ -810,11 +817,11 @@ footer {
 .services-payment {
     font-style: italic;
     text-align: center;
-    padding: clamp(15px, 3vw, 20px);
+    padding: clamp(15px, 3vw, 40px);
     background: rgba(44, 44, 44, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    margin: clamp(40px, 5vh, 60px) auto;  /* Standardized spacing */
+    margin: 0 auto clamp(40px, 5vh, 60px);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     width: min(90%, 1200px);
 }
@@ -830,17 +837,16 @@ footer {
 /* Services Customers Section */
 .services-customers {
     text-align: center;
-    padding: clamp(20px, 4vw, 40px);
+    padding: clamp(15px, 3vw, 40px);
     background: rgba(44, 44, 44, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    margin: clamp(40px, 5vh, 60px) auto;  /* Standardized spacing */
+    margin: 0 auto clamp(40px, 5vh, 60px); /* Added bottom margin to match spacing */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     font-family: 'Noto Sans', sans-serif;
     color: #EBEAE5;
     width: min(90%, 1200px);
 }
-
 .services-customers h2 {
     font-size: clamp(1.4rem, 3vw, 2rem);
     margin-bottom: clamp(10px, 2vw, 20px);
@@ -864,10 +870,17 @@ footer {
 }
 
 .customer-logo img {
-    width: clamp(70px, 15vw, 100px);
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: clamp(90px, 18vw, 130px); /* Increased min/max size */
+    height: clamp(90px, 18vw, 130px); /* Increased height to match width */
+    object-fit: contain;
+    background-color: rgba(245, 241, 232, 0.85); /* Soft off-white */
+    padding: 10px; /* Slightly more padding for extra breathing room */
+    max-width: 95%; /* Allows logos to take up more space */
+    border-radius: 8px; /* Slightly rounded edges for a modern look */
+    border: none;
+    filter: contrast(1.15);
+    box-shadow: inset 2px 0px 8px rgba(0, 0, 0, 0.1), 
+                0px 2px 5px rgba(0, 0, 0, 0.1); /* Inner shadow for white text readability */
     transition: transform 0.3s ease;
 }
 
