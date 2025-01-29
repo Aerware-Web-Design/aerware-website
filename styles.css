@@ -235,23 +235,26 @@ footer {
    INDEX.HTML STYLES
    Homepage specific styles
    ================================================= */
-   .hero {
-       background: rgba(44, 44, 44, 0.3); /* Frosted glass background */
-       backdrop-filter: blur(10px); /* Apply blur effect */
-       padding: 40px; /* Add internal spacing */
-       text-align: left; /* Ensure left-alignment of text */
-       color: #1e3a56;
-       display: flex;
-       flex-direction: column; /* Ensure vertical stacking */
-       justify-content: flex-start; /* Push content down */
-       align-items: flex-start;
-       margin-top: 150px; /* Adjusted for spacing */
-       border-radius: 10px; /* Rounded corners for the frosted effect */
-       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add depth with shadow */
-       max-width: 1000px; /* Restrict width to center the content */
-       margin-left: auto; /* Center the hero horizontally */
-       margin-right: auto;
-   }
+.hero {
+    background: rgba(44, 44, 44, 0.3); /* Frosted glass background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    padding: 40px; /* Add internal spacing */
+    text-align: center; /* Center text alignment */
+    color: #1e3a56;
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    position: fixed; /* Keeps it centered even on scroll */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add depth */
+    max-width: 1000px; /* Restrict width */
+    width: 90%; /* Make sure it adjusts responsively */
+    height: auto; /* Allow dynamic height */
+}
 
    .hero-content {
        margin: 0 auto; /* Keep it centered horizontally */
