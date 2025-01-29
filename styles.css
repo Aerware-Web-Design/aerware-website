@@ -323,210 +323,203 @@ footer {
     ABOUT.HTML STYLES
     About page specific styles
     ================================================= */
+/* About Hero Section */
+.about-hero {
+    background: rgba(44, 44, 44, 0.3);
+    backdrop-filter: blur(10px);
+    padding: clamp(15px, 3vw, 40px);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #EBEAE5;
+    text-align: center;
+    margin: clamp(10px, 2vw, 20px) auto;
+    width: min(90%, 1200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: min(250px, 70vh);
+}
 
-    .about-hero {
-       background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
-       backdrop-filter: blur(10px); /* Blur effect for modern look */
-       padding: 40px 20px; /* Spacing inside */
-       border-radius: 10px; /* Rounded corners for a clean design */
-       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Depth with shadow */
-       color: #EBEAE5; /* Light text for readability */
-       text-align: center; /* Center the text horizontally */
-       margin: 20px auto; /* Center the entire section */
-       max-width: 1200px; /* Restrict width for a polished layout */
-       display: flex;
-       flex-direction: column;
-       align-items: center; /* Center align horizontally */
-       justify-content: flex-start; /* Align content at the top */
-       min-height: 300px; /* Maintain section height consistency */
-   }
+.about-hero-content {
+    width: 100%;
+    padding: clamp(10px, 2vw, 20px);
+    max-width: min(95%, 800px);
+}
 
-   .about-hero-content {
-       max-width: 800px; /* Center the content */
-       margin: 0 auto; /* Ensure content is horizontally centered */
-       padding-top: 10px; /* Add slight padding to balance text visually */
-   }
+.about-hero h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: #CDAD7D;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: clamp(10px, 2vw, 15px);
+    word-wrap: break-word;
+}
 
- .about-hero h2 {
-     font-size: 2.8rem;
-     color: #CDAD7D; /* Accent color for heading */
-     font-family: 'Libre Baskerville', serif;
-     margin-bottom: 15px;
- }
+.about-hero p {
+    font-size: clamp(0.9rem, 2vw, 1.4rem);
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 0 clamp(5px, 2vw, 20px);
+}
 
- .about-hero p {
-     font-size: 1.4rem;
-     line-height: 1.6;
-     color: #EBEAE5; /* Light text for readability */
-     margin: 0 auto;
-     max-width: 800px; /* Keep the paragraph aligned */
- }
+/* About Section */
+.about-section {
+    padding: clamp(15px, 3vw, 40px);
+    background: rgba(44, 44, 44, 0.3);
+    backdrop-filter: blur(10px);
+    color: #EBEAE5;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: clamp(10px, 2vw, 20px) auto;
+    width: min(90%, 1200px);
+}
 
- /* About Section */
- .about-section {
-     padding: 40px 20px;
-     background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
-     backdrop-filter: blur(10px);
-     color: #EBEAE5;
-     border-radius: 10px;
-     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add depth */
-     text-align: center;
-     margin-top: 20px;
-     margin-bottom: 20px;
- }
+.about-section h3 {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    color: #CDAD7D;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: clamp(10px, 2vw, 15px);
+}
 
- .about-section h3 {
-     font-size: 2.4rem;
-     color: #CDAD7D;
-     font-family: 'Libre Baskerville', serif;
-     margin-bottom: 15px;
- }
+.about-section p {
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    line-height: 1.6;
+    margin: 0 auto;
+    width: min(100%, 900px);
+    padding: 0 clamp(5px, 2vw, 20px);
+}
 
- .about-section p {
-     font-size: 1.3rem;
-     line-height: 1.6;
-     margin: 0 auto;
-     max-width: 900px;
-     color: #EBEAE5;
- }
-
- /* Mission Section */
+/* Mission Section */
 .mission-section {
-    background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
-    backdrop-filter: blur(10px); /* Blur for frosted appearance */
-    padding: 40px 20px; /* Add internal spacing */
-    border-radius: 10px; /* Rounded corners for clean design */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add depth with shadow */
-    color: #EBEAE5; /* Light text for readability */
-    text-align: center; /* Center the text */
-    margin: 40px auto; /* Center the section vertically and horizontally */
-    max-width: 1200px; /* Restrict width for better layout */
+    background: rgba(44, 44, 44, 0.3);
+    backdrop-filter: blur(10px);
+    padding: clamp(15px, 3vw, 40px);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #EBEAE5;
+    text-align: center;
+    margin: clamp(20px, 4vw, 40px) auto;
+    width: min(90%, 1200px);
 }
 
 .mission-section h3 {
-    font-size: 2.4rem;
-    color: #CDAD7D; /* Accent color for heading */
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    color: #CDAD7D;
     font-family: 'Libre Baskerville', serif;
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 2vw, 15px);
 }
 
 .mission-section p {
-    font-size: 1.3rem;
-    line-height: 1.8; /* Improved readability with line spacing */
-    margin: 0 auto; /* Center paragraph text */
-    max-width: 1200px; /* Keep paragraph width balanced */
-    color: #EBEAE5; /* Consistent light text color */
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    line-height: 1.8;
+    margin: 0 auto;
+    width: min(100%, 1200px);
+    padding: 0 clamp(5px, 2vw, 20px);
 }
 
- /* Get in Touch Section */
- .get-in-touch-section {
-     width: 100%;
-     max-width: 1200px;
-     padding: 20px 15px;
-     background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
-     backdrop-filter: blur(10px);
-     border-radius: 10px;
-     text-align: center;
-     margin-top: 50px; /* Push this section further down */
-     margin-bottom: 20px;
-     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
- }
+/* Get in Touch Section */
+.get-in-touch-section {
+    width: min(90%, 1200px);
+    padding: clamp(15px, 3vw, 40px);
+    background: rgba(44, 44, 44, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    text-align: center;
+    margin: clamp(25px, 4vw, 50px) auto clamp(10px, 2vw, 20px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
 
- .get-in-touch-section h3 {
-     color: #CDAD7D;
-     font-family: 'Libre Baskerville', serif;
-     font-size: 2.4rem;
-     margin-bottom: 10px;
- }
+.get-in-touch-section h3 {
+    color: #CDAD7D;
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    margin-bottom: clamp(5px, 1.5vw, 10px);
+}
 
- .get-in-touch-section p {
-     color: #EBEAE5;
-     font-size: 1.3rem;
-     line-height: 1.6;
-     margin-bottom: 10px;
- }
+.get-in-touch-section p {
+    color: #EBEAE5;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    line-height: 1.6;
+    margin-bottom: clamp(5px, 1.5vw, 10px);
+    padding: 0 clamp(5px, 2vw, 20px);
+}
 
- /* Team Section */
- .team-section {
-     padding: 20px;
-     background: rgba(255, 255, 255, 0.1); /* Match frosted glass look */
-     border-radius: 10px;
-     margin-top: 20px;
-     text-align: center;
- }
+/* Team Section */
+.team-section {
+    padding: clamp(15px, 3vw, 40px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: clamp(10px, 2vw, 20px);
+    text-align: center;
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
 
- .team-section h4 {
-     color: #CDAD7D;
-     font-family: 'Libre Baskerville', serif;
-     font-size: 2rem;
-     margin-bottom: 15px;
- }
+.team-section h4 {
+    color: #CDAD7D;
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin-bottom: clamp(10px, 2vw, 15px);
+}
 
- .team {
-     display: flex;
-     justify-content: center;
-     gap: 30px;
-     flex-wrap: wrap;
-     margin: 10px 0;
- }
+.team {
+    display: flex;
+    justify-content: center;
+    gap: clamp(15px, 3vw, 30px);
+    flex-wrap: wrap;
+    margin: clamp(5px, 1vw, 10px) 0;
+}
 
- .teammate {
-     text-align: center;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     gap: 10px;
-     max-width: 180px;
- }
+.teammate {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(5px, 1vw, 10px);
+    width: min(100%, 180px);
+}
 
- .teammate img {
-     border-radius: 50%;
-     width: 150px;
-     height: 150px;
-     object-fit: cover;
- }
+.teammate img {
+    border-radius: 50%;
+    width: clamp(100px, 20vw, 150px);
+    height: clamp(100px, 20vw, 150px);
+    object-fit: cover;
+}
 
- .teammate strong {
-     color: #CDAD7D;
-     font-size: 1.2rem;
- }
+.teammate strong {
+    color: #CDAD7D;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+}
 
- .teammate p {
-     color: #EBEAE5;
-     font-size: 1rem;
- }
+.teammate p {
+    color: #EBEAE5;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+}
 
- .contact-button {
-     margin: 30px 0;
- }
+.contact-button {
+    margin: clamp(15px, 3vw, 30px) 0;
+}
 
- /* Responsive Adjustments */
- @media (max-width: 800px) {
-     .about-hero-content {
-         padding: 10px;
-     }
+@media (max-width: 800px) {
+    .team {
+        gap: 15px;
+    }
+    
+    .teammate {
+        width: min(45%, 180px);
+    }
+}
 
-     .about-section p {
-         font-size: 1.1rem;
-     }
-
-     .mission-section p {
-         font-size: 1.1rem;
-     }
-
-     .get-in-touch-section p {
-         font-size: 1.1rem;
-     }
-
-     .teammate img {
-         width: 130px;
-         height: 130px;
-     }
-
-     .teammate strong {
-         font-size: 1rem;
-     }
- }
+@media (max-width: 400px) {
+    .teammate {
+        width: 100%;
+    }
+    
+    .team {
+        gap: 20px;
+    }
+}
 
 /* =================================================
    CONTACT.HTML STYLES
