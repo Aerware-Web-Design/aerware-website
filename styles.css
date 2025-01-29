@@ -658,7 +658,7 @@ footer {
 .services-overview {
     width: 100%;
     max-width: 1200px; /* Match the width of other sections */
-    margin: 40px auto; /* Center the section and add vertical spacing */
+    margin: 20px auto; /* Center the section and add vertical spacing */
     padding: 40px 20px;
     background: rgba(44, 44, 44, 0.2);
     backdrop-filter: blur(10px);
@@ -668,73 +668,89 @@ footer {
     color: #EBEAE5;
 }
 
-.services-overview .frosted-container {
-    width: 100%;
-    color: #EBEAE5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .services-overview h2 {
-    font-size: 2rem; /* Matches heading size of other sections */
-    color: #CDAD7D; /* Accent color */
-    margin-bottom: 20px; /* Consistent space below heading */
-    font-family: 'Libre Baskerville', serif;
+    font-size: 1.8rem; /* Adjust size */
+    color: #CDAD7D; /* Match the theme color */
+    font-weight: bold; /* Make it stand out */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for contrast */
+    margin-bottom: 1rem; /* Space below the heading */
 }
 
-.services-overview p {
-    font-size: 1.2rem; /* Matches paragraph font size */
-    line-height: 1.8; /* Adjust for better readability */
-    margin-bottom: 30px; /* Consistent space below the paragraph */
-    color: #EBEAE5;
-    font-family: 'Noto Sans', sans-serif;
-}
-
-
-/* Services List Section */
-.services-list {
-    display: flex;
-    justify-content: space-between; /* Splits columns */
-    gap: 40px; /* Adds space between the columns */
+/* Services Section Frosted Style */
+.services-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto; /* Center the section and add vertical spacing */
     padding: 40px 20px;
-    background: rgba(44, 44, 44, 0.2); /* Subtle darker background with transparency */
-    backdrop-filter: blur(10px); /* Adds blur effect for modern look */
+    background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
+    backdrop-filter: blur(10px); /* Adds a modern blur effect */
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds depth */
+    color: #EBEAE5; /* Light text for readability */
+    text-align: center; /* Ensures consistent alignment */
 }
 
-.services-list h4 {
-    font-size: 2rem;
-    color: #CDAD7D; /* Reusing the existing orange color */
-    font-family: 'Libre Baskerville', serif;
-    margin-bottom: 30px; /* Adds spacing between heading and list */
+.services-title {
     text-align: center;
+    margin-bottom: 2rem;
+    color: #CDAD7D; /* Accent color for the title */
 }
 
-.services-list .column {
-    flex: 1;
-    list-style: disc; /* Adds bullets */
-    margin: 0;
-    padding: 0 20px; /* Adds padding inside each column */
-    color: #EBEAE5; /* Light text for the services */
-    font-family: 'Noto Sans', sans-serif;
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    gap: 1.5rem; /* Spacing between cards */
 }
 
-.services-list .column li {
-    font-size: 1.2rem;
-    line-height: 1.8; /* Adds spacing between lines */
-    margin-bottom: 10px;
+.service-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333; /* Ensure contrast for readability */
 }
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.service-description {
+    font-size: 1rem;
+    color: #555555;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+}
+
 
 /* Call to Action Section */
 .services-cta {
     text-align: center;
-    padding: 40px 20px; /* Adds extra padding for clarity */
+    padding: 20px 20px; /* Adds extra padding for clarity */
     background: rgba(44, 44, 44, 0.2); /* Transparent with blur */
     backdrop-filter: blur(10px); /* Consistent blur effect */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
     margin-top: 20px;
+    margin-bottom: 30px;
     font-family: 'Noto Sans', sans-serif;
 }
 
