@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aerware Technologies</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="navbar.js" defer></script>
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="main-header">
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./assets/aerwareai_logo.png" alt="Aerware Consulting Logo">
+        </div>
+        <div class="links-container" id="nav-items">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="dropdown-button" id="dropdown-button">
+            <span class="bars">☰</span>
+        </div>
     </nav>
 </header>
 
-    
 <!-- Hero Section -->
-    <section class="hero">
+<section class="hero">
     <div class="hero-content">
         <div class="logo">
             <img src="./assets/aerwareai_logo.png" alt="Aerware Consulting Logo">
@@ -41,9 +46,12 @@
         </div>
     </div>
 </section>
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Aerware Technologies. All Rights Reserved.</p>
-    </footer>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Aerware Technologies. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
+
