@@ -526,54 +526,64 @@ footer {
    Styles specific to the Contact page
    ================================================= */
 
+
 /* Contact Hero Section */
 .contact-hero {
     background: rgba(44, 44, 44, 0.1);
-    padding: 40px 20px;
+    padding: clamp(20px, 4vw, 40px);
     text-align: center;
     border-radius: 10px;
-    margin-bottom: 30px; /* Create space below hero */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle depth */
+    margin-bottom: clamp(15px, 3vw, 30px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: min(90%, 1200px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-hero h2 {
-    font-size: 2.8rem;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
     color: #CDAD7D;
     font-family: 'Libre Baskerville', serif;
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 2vw, 15px);
+    word-wrap: break-word;
 }
 
 .contact-hero p.pro-statement {
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 2vw, 1.4rem);
     line-height: 1.8;
     color: #EBEAE5;
-    max-width: 800px;
-    margin: 0 auto 20px;
+    width: min(95%, 800px);
+    margin: 0 auto clamp(10px, 2vw, 20px);
     font-family: 'Noto Sans', sans-serif;
+    padding: 0 clamp(5px, 2vw, 20px);
 }
 
 /* Embedded Form Section */
 .embedded-form-container {
-    padding: 20px;
+    padding: clamp(15px, 3vw, 20px);
     background: rgba(44, 44, 44, 0.2);
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: clamp(10px, 2vw, 20px);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: min(90%, 1200px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .embedded-form-container h3 {
-    font-size: 2rem;
-    color: #CDAD7D; /* Accent color */
-    margin-bottom: 10px;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: #CDAD7D;
+    margin-bottom: clamp(5px, 1.5vw, 10px);
     font-family: 'Libre Baskerville', serif;
 }
 
 .embedded-form-container p {
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     color: #EBEAE5;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: clamp(10px, 2vw, 20px);
+    padding: 0 clamp(5px, 2vw, 20px);
 }
 
 /* Embedded Form */
@@ -584,85 +594,94 @@ footer {
     border: none;
 }
 
+/* Contact Section Styles */
+.contact-section {
+    padding: clamp(30px, 5vw, 60px) clamp(10px, 2vw, 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-section .frosted-container {
+    background: rgba(44, 44, 44, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: clamp(20px, 4vw, 40px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: min(90%, 800px);
+    color: #EBEAE5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-section .contact-heading {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    color: #CDAD7D;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: clamp(10px, 2vw, 20px);
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.contact-section .contact-text {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    line-height: 1.8;
+    margin-bottom: clamp(15px, 3vw, 30px);
+    font-family: 'Noto Sans', sans-serif;
+    color: #EBEAE5;
+    text-align: center;
+    padding: 0 clamp(5px, 2vw, 20px);
+}
+
+.contact-section .embedded-form {
+    margin-top: clamp(10px, 2vw, 20px);
+    width: 100%;
+    text-align: center;
+}
+
 @media (max-width: 800px) {
-    /* Button container */
     .zcwf_col_fld {
         display: flex !important;
-        flex-direction: column !important; /* Stack buttons vertically */
+        flex-direction: column !important;
         align-items: center !important;
-        gap: 10px; /* Space between stacked buttons */
+        gap: clamp(8px, 1.5vw, 10px);
     }
 
-    /* Button sizing */
     .zcwf_button {
-        width: 90px;
+        width: clamp(80px, 15vw, 90px);
         min-width: unset;
-        font-size: 0.9rem;
-        padding: 8px 12px;
+        font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+        padding: clamp(6px, 1vw, 8px) clamp(10px, 1.5vw, 12px);
     }
 
-    /* Captcha container - specific to the one containing the image */
     .zcwf_col_fld:has(#imgid6292666000000666006) {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
     }
 
-    /* Captcha image */
     #imgid6292666000000666006 {
         width: auto;
         max-width: 100%;
         transform: scale(0.9);
-        margin: 0 auto 10px auto;
+        margin: 0 auto clamp(5px, 1vw, 10px) auto;
         display: block;
     }
 }
 
-/* Contact Section Styles */
-.contact-section {
-    padding: 60px 20px; /* Adds space around the frosted container */
-    display: flex;
-    justify-content: center; /* Centers the frosted container horizontally */
-    align-items: center;
-    text-align: center; /* Aligns text content inside */
-}
-
-.contact-section .frosted-container {
-    background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
-    backdrop-filter: blur(10px); /* Adds blur for modern look */
-    border-radius: 10px;
-    padding: 40px; /* Internal padding for spacing */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds depth */
-    max-width: 800px; /* Consistent width */
-    width: 100%; /* Responsive scaling */
-    color: #EBEAE5; /* Light text color */
-    display: flex; /* Flexbox for centering */
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center-align content horizontally */
-    text-align: center; /* Ensures text alignment */
-}
-
-.contact-section .contact-heading {
-    font-size: 2.4rem;
-    color: #CDAD7D; /* Accent color */
-    font-family: 'Libre Baskerville', serif;
-    margin-bottom: 20px;
-    text-align: center; /* Center-aligns heading text */
-}
-
-.contact-section .contact-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    font-family: 'Noto Sans', sans-serif;
-    color: #EBEAE5; /* Matches the frosted section text color */
-    text-align: center; /* Ensures center alignment */
-}
-
-.contact-section .embedded-form {
-    margin-top: 20px;
-    width: 100%; /* Matches frosted container width */
-    text-align: center; /* Center-aligns form content */
+@media (max-width: 400px) {
+    .contact-hero {
+        width: 95%;
+    }
+    
+    .embedded-form-container,
+    .contact-section .frosted-container {
+        width: 95%;
+        padding: 15px;
+    }
 }
 
 /* =================================================
@@ -672,10 +691,9 @@ footer {
 
 /* Services Overview Section */
 .services-overview {
-    width: 100%;
-    max-width: 1200px; /* Match the width of other sections */
-    margin: 20px auto; /* Center the section and add vertical spacing */
-    padding: 40px 20px;
+    width: min(90%, 1200px);
+    margin: clamp(10px, 2vw, 20px) auto;
+    padding: clamp(20px, 4vw, 40px);
     background: rgba(44, 44, 44, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 10px;
@@ -685,47 +703,46 @@ footer {
 }
 
 .services-overview h2 {
-    font-size: 1.8rem; /* Adjust size */
-    color: #CDAD7D; /* Match the theme color */
-    font-weight: bold; /* Make it stand out */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for contrast */
-    margin-bottom: 1rem; /* Space below the heading */
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    color: #CDAD7D;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
 }
 
 /* Services Section Frosted Style */
 .services-section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 40px auto; /* Center the section and add vertical spacing */
-    padding: 40px 20px;
-    background: rgba(44, 44, 44, 0.3); /* Frosted glass effect */
-    backdrop-filter: blur(10px); /* Adds a modern blur effect */
+    width: min(90%, 1200px);
+    margin: clamp(20px, 4vw, 40px) auto;
+    padding: clamp(20px, 4vw, 40px);
+    background: rgba(44, 44, 44, 0.3);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds depth */
-    color: #EBEAE5; /* Light text for readability */
-    text-align: center; /* Ensures consistent alignment */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    color: #EBEAE5;
+    text-align: center;
 }
 
 .services-title {
     text-align: center;
-    margin-bottom: 2rem;
-    color: #CDAD7D; /* Accent color for the title */
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+    color: #CDAD7D;
 }
 
 .services-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
-    gap: 1.5rem; /* Spacing between cards */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
 }
 
 .service-card {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #333; /* Ensure contrast for readability */
+    color: #333;
 }
 
 .service-card:hover {
@@ -734,145 +751,143 @@ footer {
 }
 
 .service-icon {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
     color: #007BFF;
-    margin-bottom: 1rem;
+    margin-bottom: clamp(0.7rem, 1.5vw, 1rem);
 }
 
 .service-title {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: clamp(0.3rem, 1vw, 0.5rem);
 }
 
 .service-description {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
     color: #555555;
 }
-
-@media (max-width: 768px) {
-    .services-container {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
-    }
-}
-
 
 /* Call to Action Section */
 .services-cta {
     text-align: center;
-    padding: 20px 20px; /* Adds extra padding for clarity */
-    background: rgba(44, 44, 44, 0.2); /* Transparent with blur */
-    backdrop-filter: blur(10px); /* Consistent blur effect */
+    padding: clamp(15px, 3vw, 20px);
+    background: rgba(44, 44, 44, 0.2);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
-    margin-top: 20px;
-    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: clamp(10px, 2vw, 20px) auto clamp(15px, 3vw, 30px);
     font-family: 'Noto Sans', sans-serif;
+    width: min(90%, 1200px);
 }
 
 .services-cta p {
-    font-size: 1.4rem; /* Slightly larger for readability */
+    font-size: clamp(1rem, 2vw, 1.4rem);
     line-height: 1.8;
-    color: #EBEAE5; /* Matches the services section */
-    margin-bottom: 20px; /* Adds space between paragraphs */
+    color: #EBEAE5;
+    margin-bottom: clamp(10px, 2vw, 20px);
 }
 
 .services-cta .cta-text {
-    font-size: 1.4rem;
-    color: #E1D8AA; /* Warm light yellow font for emphasis */
-    margin-bottom: 10px; /* Space below */
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    color: #E1D8AA;
+    margin-bottom: clamp(5px, 1.5vw, 10px);
 }
 
 .services-cta .cta-link {
-    font-size: 1.4rem;
-    color: #CDAD7D; /* Accent orange for links and additional text */
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    color: #CDAD7D;
 }
 
-.services-cta a {
-    color: #CDAD7D; /* Accent orange for links */
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.services-cta a:hover {
-    text-decoration: underline; /* Subtle hover effect */
-}
-
-/* Sliding Scale Section */
+/* Services Payment Section */
 .services-payment {
     font-style: italic;
     text-align: center;
-    padding: 20px;
-    background: rgba(44, 44, 44, 0.2); /* Matches styling of other sections */
-    backdrop-filter: blur(10px); /* Consistent blur */
+    padding: clamp(15px, 3vw, 20px);
+    background: rgba(44, 44, 44, 0.2);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+    margin: clamp(10px, 2vw, 20px) auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: min(90%, 1200px);
 }
 
 .services-payment p {
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     line-height: 1.6;
     color: #EBEAE5;
     font-family: 'Noto Sans', sans-serif;
-    margin-bottom: 10px;
+    margin-bottom: clamp(5px, 1.5vw, 10px);
 }
-
 
 /* Services Customers Section */
 .services-customers {
     text-align: center;
-    padding: 40px 20px; /* Space around the section */
-    background: rgba(44, 44, 44, 0.2); /* Transparent background */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    border-radius: 10px; /* Rounded corners */
-    margin-top: 40px;
-    margin-bottom: 40px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: clamp(20px, 4vw, 40px);
+    background: rgba(44, 44, 44, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: clamp(20px, 4vw, 40px) auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     font-family: 'Noto Sans', sans-serif;
-    color: #EBEAE5; /* Matches text color */
+    color: #EBEAE5;
+    width: min(90%, 1200px);
 }
 
 .services-customers h2 {
-    font-size: 2rem; /* Heading size */
-    margin-bottom: 20px; /* Space below the heading */
-    color: #CDAD7D; /* Accent color */
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin-bottom: clamp(10px, 2vw, 20px);
+    color: #CDAD7D;
     font-family: 'Libre Baskerville', serif;
 }
 
 .services-customers p {
-    font-size: 1.2rem;
-    margin-bottom: 30px; /* Space below the paragraph */
-    line-height: 1.6; /* Improves readability */
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    margin-bottom: clamp(15px, 3vw, 30px);
+    line-height: 1.6;
 }
 
 /* Customer Logos Grid */
 .customer-logos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible columns */
-    gap: 20px; /* Space between logos */
-    justify-items: center; /* Centers each logo */
-    margin-top: 20px; /* Space above the grid */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    gap: clamp(10px, 2vw, 20px);
+    justify-items: center;
+    margin-top: clamp(10px, 2vw, 20px);
 }
 
-/* Individual Logo Styling */
 .customer-logo img {
-    width: 100px; /* Logo width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional rounded corners */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease; /* Optional hover effect */
+    width: clamp(70px, 15vw, 100px);
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.customer-logo img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
-}
-
-/* Ensure Footer Does Not Overlap Content */
 .page-wrapper {
-    min-height: calc(100vh - 60px); /* Footer height adjustment */
+    min-height: calc(100vh - clamp(40px, 8vw, 60px));
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .customer-logos {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .services-overview,
+    .services-section,
+    .services-cta,
+    .services-payment,
+    .services-customers {
+        width: 95%;
+        padding: 15px;
+    }
 }
