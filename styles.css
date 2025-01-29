@@ -323,7 +323,7 @@ footer {
     ABOUT.HTML STYLES
     About page specific styles
     ================================================= */
-/* About Hero Section */
+
 .about-hero {
     background: rgba(44, 44, 44, 0.3);
     backdrop-filter: blur(10px);
@@ -332,7 +332,7 @@ footer {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     color: #EBEAE5;
     text-align: center;
-    margin: clamp(10px, 2vw, 20px) auto;
+    margin: clamp(40px, 5vh, 60px) auto;
     width: min(90%, 1200px);
     display: flex;
     flex-direction: column;
@@ -362,7 +362,6 @@ footer {
     padding: 0 clamp(5px, 2vw, 20px);
 }
 
-/* About Section */
 .about-section {
     padding: clamp(15px, 3vw, 40px);
     background: rgba(44, 44, 44, 0.3);
@@ -371,7 +370,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-    margin: clamp(10px, 2vw, 20px) auto;
+    margin: clamp(40px, 5vh, 60px) auto;
     width: min(90%, 1200px);
 }
 
@@ -390,7 +389,6 @@ footer {
     padding: 0 clamp(5px, 2vw, 20px);
 }
 
-/* Mission Section */
 .mission-section {
     background: rgba(44, 44, 44, 0.3);
     backdrop-filter: blur(10px);
@@ -399,7 +397,7 @@ footer {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     color: #EBEAE5;
     text-align: center;
-    margin: clamp(20px, 4vw, 40px) auto;
+    margin: clamp(40px, 5vh, 60px) auto;
     width: min(90%, 1200px);
 }
 
@@ -418,7 +416,6 @@ footer {
     padding: 0 clamp(5px, 2vw, 20px);
 }
 
-/* Get in Touch Section */
 .get-in-touch-section {
     width: min(90%, 1200px);
     padding: clamp(15px, 3vw, 40px);
@@ -426,7 +423,7 @@ footer {
     backdrop-filter: blur(10px);
     border-radius: 10px;
     text-align: center;
-    margin: clamp(25px, 4vw, 50px) auto clamp(10px, 2vw, 20px);
+    margin: clamp(40px, 5vh, 60px) auto;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -445,15 +442,13 @@ footer {
     padding: 0 clamp(5px, 2vw, 20px);
 }
 
-/* Team Section */
 .team-section {
     padding: clamp(15px, 3vw, 40px);
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    margin-top: clamp(10px, 2vw, 20px);
     text-align: center;
     width: min(90%, 1200px);
-    margin: 0 auto;
+    margin: clamp(40px, 5vh, 60px) auto;
 }
 
 .team-section h4 {
@@ -520,6 +515,7 @@ footer {
         gap: 20px;
     }
 }
+
 
 /* =================================================
    CONTACT.HTML STYLES
@@ -690,9 +686,10 @@ footer {
    ================================================= */
 
 /* Services Overview Section */
+
 .services-overview {
     width: min(90%, 1200px);
-    margin: clamp(10px, 2vw, 20px) auto;
+    margin: clamp(40px, 5vh, 60px) auto;  /* Standardized spacing */
     padding: clamp(20px, 4vw, 40px);
     background: rgba(44, 44, 44, 0.2);
     backdrop-filter: blur(10px);
@@ -713,7 +710,7 @@ footer {
 /* Services Section Frosted Style */
 .services-section {
     width: min(90%, 1200px);
-    margin: clamp(20px, 4vw, 40px) auto;
+    margin: clamp(40px, 5vh, 60px) auto;  /* Standardized spacing */
     padding: clamp(20px, 4vw, 40px);
     background: rgba(44, 44, 44, 0.3);
     backdrop-filter: blur(10px);
@@ -775,7 +772,7 @@ footer {
     backdrop-filter: blur(10px);
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    margin: clamp(10px, 2vw, 20px) auto clamp(15px, 3vw, 30px);
+    margin: clamp(40px, 5vh, 60px) auto;  /* Standardized spacing */
     font-family: 'Noto Sans', sans-serif;
     width: min(90%, 1200px);
 }
@@ -806,7 +803,7 @@ footer {
     background: rgba(44, 44, 44, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    margin: clamp(10px, 2vw, 20px) auto;
+    margin: clamp(40px, 5vh, 60px) auto;  /* Standardized spacing */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     width: min(90%, 1200px);
 }
@@ -826,7 +823,7 @@ footer {
     background: rgba(44, 44, 44, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    margin: clamp(20px, 4vw, 40px) auto;
+    margin: clamp(40px, 5vh, 60px) auto;  /* Standardized spacing */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     font-family: 'Noto Sans', sans-serif;
     color: #EBEAE5;
