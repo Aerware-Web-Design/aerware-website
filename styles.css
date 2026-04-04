@@ -897,4 +897,5 @@ footer {
 
 @media (max-width: 620px) {
   .contact-card { padding: var(--space-5) var(--space-3); }
+  .contact-wrapper { min-height: unset; align-items: flex-start; }
 }
